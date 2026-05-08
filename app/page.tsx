@@ -107,7 +107,7 @@ export default function Home() {
       <section id="hero">
         <div className="frame">
           <div className="center">
-            <span className="label eyebrow">An Invitation, Not a Tour</span>
+            <span className="label eyebrow">• NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
             <h1>
               Three valleys
               <br />
