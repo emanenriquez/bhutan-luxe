@@ -203,7 +203,7 @@ export default function Home() {
             className="img-col"
             style={{
               backgroundImage:
-                "url('/hero-monastery.jpg')",
+                "url('/photo-1.jpg')",
             }}
           />
           <div className="body">
@@ -245,7 +245,7 @@ export default function Home() {
             className="img-col"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80')",
+                "url('/photo-2.jpg')",
             }}
           />
           <div className="body">
@@ -290,7 +290,7 @@ export default function Home() {
             className="img-col"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80')",
+                "url('/photo-3.jpg')",
             }}
           />
           <div className="body">
