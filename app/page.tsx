@@ -109,11 +109,9 @@ export default function Home() {
           <div className="center">
             <span className="label eyebrow">NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
             <h1>
-              Three valleys
+              The Bhutan Few Will Ever See
               <br />
-              No roads
-              <br />
-              We arrive by <em>helicopter</em>
+              <em>Optional Helicopter Access to Remote Regions</em>
             </h1>
           </div>
           <div className="bottom">
