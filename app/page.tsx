@@ -110,8 +110,6 @@ export default function Home() {
             <span className="label eyebrow">NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
             <h1>
               The Bhutan Few Will Ever See
-              <br />
-              <em>Optional Helicopter Access to Remote Regions</em>
             </h1>
           </div>
           <div className="bottom">
