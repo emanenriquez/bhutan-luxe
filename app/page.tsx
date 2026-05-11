@@ -203,7 +203,7 @@ export default function Home() {
             className="img-col"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=1200&q=80')",
+                "url('/hero-monastery.jpg')",
             }}
           />
           <div className="body">
