@@ -114,9 +114,7 @@ export default function Home() {
           </div>
           <div className="bottom">
             <p className="lede">
-              Bhutan-Luxe is a private journey, eight guests at a time, through
-              a country that has not been packaged. Every itinerary is arranged
-              before you arrive.
+              Bhutan-Luxe is a private bespoke journey, for a group between 2-8 guests at a time. Our affiliate partner, MyBhutan, has special access, by helicopter if needed/requested, to areas that other tour operators do not.
             </p>
             <div className="stat">
               <span className="num">08</span>
