@@ -114,7 +114,7 @@ export default function Home() {
           </div>
           <div className="bottom">
             <p className="lede">
-              Bhutan-Luxe is a private bespoke journey, for a group between 2-8 guests at a time. Our affiliate partner, MyBhutan, has special access, by helicopter if needed/requested, to areas that other tour operators do not.
+              Bhutan-Luxe is a private bespoke journey. Our affiliate partner, MyBhutan, has special access by helicopter, if needed or requested, to areas that many other tour operators do not.
             </p>
             <div className="stat">
               <span className="num">2-8</span>
