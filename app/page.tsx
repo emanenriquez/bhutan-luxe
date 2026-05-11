@@ -117,7 +117,7 @@ export default function Home() {
               Bhutan-Luxe is a private bespoke journey, for a group between 2-8 guests at a time. Our affiliate partner, MyBhutan, has special access, by helicopter if needed/requested, to areas that other tour operators do not.
             </p>
             <div className="stat">
-              <span className="num">08</span>
+              <span className="num">2-8</span>
               <span className="desc">Guests · per departure</span>
             </div>
             <div className="actions">
