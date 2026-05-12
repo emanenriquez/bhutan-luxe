@@ -650,11 +650,6 @@ export default function Home() {
                           $25K – $35K+ · 10 days
                         </span>
                       </label>
-                      <label>
-                        <input type="radio" name="tier" value="bespoke" />
-                        <span className="tp-name">Bespoke</span>
-                        <span className="tp-price">Let&apos;s discuss</span>
-                      </label>
                     </div>
                     <div className="form-group" style={{ marginTop: 16 }}>
                       <label htmlFor="m_window">
@@ -797,7 +792,6 @@ export default function Home() {
               <a href="#tiers">Luxe</a>
               <a href="#tiers">Boutique-Luxe</a>
               <a href="#tiers">Ultra-Luxe</a>
-              <a href="#tiers">Bespoke</a>
             </div>
             <div className="col">
               <h5>Discretion</h5>
