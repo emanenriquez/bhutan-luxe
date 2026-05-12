@@ -110,9 +110,9 @@ export default function Home() {
             <h1>
               The Bhutan Few Will Ever See
             </h1>
-            <span className="label eyebrow">NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
           </div>
           <div className="bottom">
+            <span className="label eyebrow">NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
             <p className="lede">
               Bhutan-Luxe is a private bespoke journey. Our affiliate partner, MyBhutan, has special access by helicopter, if needed or requested, to areas that many other tour operators do not.
             </p>
