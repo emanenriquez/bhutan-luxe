@@ -71,7 +71,7 @@ img { display:block; max-width:100%; }
   min-height: 100vh;
   padding: 140px 56px 64px;
   display: grid; grid-template-rows: 1fr auto;
-  gap: 64px;
+  gap: 24px;
   z-index: 1;
 }
 #hero .center {
