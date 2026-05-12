@@ -107,10 +107,10 @@ export default function Home() {
       <section id="hero">
         <div className="frame">
           <div className="center">
-            <span className="label eyebrow">NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
             <h1>
               The Bhutan Few Will Ever See
             </h1>
+            <span className="label eyebrow">NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
           </div>
           <div className="bottom">
             <p className="lede">
