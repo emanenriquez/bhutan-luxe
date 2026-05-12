@@ -118,7 +118,7 @@ export default function Home() {
             </p>
             <div className="stat">
               <span className="num">2-8</span>
-              <span className="desc">Guests · per departure</span>
+              <span className="desc">Guests · per journey</span>
             </div>
             <div className="actions">
               <button className="btn-primary" onClick={() => openModal()}>
