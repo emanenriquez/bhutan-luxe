@@ -112,9 +112,7 @@ img { display:block; max-width:100%; }
   position: relative;
 }
 #desire .img::after {
-  content: 'Eastern Bhutan · Lhuentse'; position: absolute; bottom: 24px; left: 24px;
-  font-family:'Inter'; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(247,245,240,0.95); background: rgba(59,58,54,0.55); padding: 6px 10px;
+  content: none;
 }
 #desire .text {
   padding: 96px 80px;
