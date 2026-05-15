@@ -87,13 +87,20 @@ export default function Home() {
       {/* TOP BAR */}
       <div className="topbar">
         <a href="#" className="mark">
-          <svg width="44" height="48" viewBox="0 0 110 120" fill="none" aria-hidden="true">
-            {/* Gold mountain range — back */}
-            <path d="M5 90 L35 30 L55 58 L75 18 L105 90 Z" fill="#D4A017" />
-            {/* Orange peak — front center */}
-            <path d="M38 90 L55 48 L72 90 Z" fill="#E8622A" />
-            {/* BL letters */}
-            <text x="18" y="88" fontFamily="serif" fontWeight="bold" fontSize="52" fill="white" letterSpacing="-2">BL</text>
+          <svg width="52" height="52" viewBox="0 0 130 130" fill="none" aria-hidden="true">
+            {/* Gold mountain range — left, sweeping curves */}
+            <path d="M4 62 C10 62 18 40 28 30 C32 26 34 28 38 34 C42 40 44 46 48 50 C52 54 54 55 56 54 C44 54 36 62 4 62 Z" fill="#E8B800" />
+            <path d="M4 62 L28 30 C32 26 34 28 38 34 L48 50 C44 46 40 38 36 32 C30 36 18 56 4 62 Z" fill="#E8B800" />
+            {/* Simplified gold mountains */}
+            <path d="M2 64 L26 28 L36 44 L48 52 L2 64 Z" fill="#E8B800" />
+            <path d="M26 28 L38 14 L54 38 L48 52 L36 44 Z" fill="#D4A000" />
+            {/* Orange peak — right, in front */}
+            <path d="M58 60 L80 24 L102 60 Z" fill="#E06020" />
+            <path d="M58 60 L80 24 L86 38 L70 60 Z" fill="#C84E10" />
+            {/* White B */}
+            <text x="6" y="112" fontFamily="Georgia, 'Times New Roman', serif" fontWeight="900" fontSize="72" fill="white">B</text>
+            {/* Gold L */}
+            <text x="62" y="112" fontFamily="Georgia, 'Times New Roman', serif" fontWeight="900" fontSize="72" fill="#E8B800">L</text>
           </svg>
           <span className="word">Bhutan-Luxe</span>
         </a>
