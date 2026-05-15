@@ -87,7 +87,7 @@ export default function Home() {
       {/* TOP BAR */}
       <div className="topbar">
         <a href="#" className="mark">
-          <img src="/logo.jpeg" alt="Bhutan-Luxe" style={{ height: '52px', width: 'auto' }} />
+          <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: '52px', width: 'auto' }} />
         </a>
         <div className="meta">
           <span>Private Bhutan Journeys | Rare Access | Exceptional Comfort</span>
