@@ -58,7 +58,7 @@ img { display:block; max-width:100%; }
 /* ── HERO full-bleed ── */
 #hero {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2200&q=80') center/cover no-repeat;
+  background: url('/hero-cover.jpg') center/cover no-repeat;
   color: var(--cloud);
   overflow: hidden;
 }
