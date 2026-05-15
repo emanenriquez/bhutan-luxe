@@ -105,9 +105,7 @@ export default function Home() {
           <span className="word">Bhutan-Luxe</span>
         </a>
         <div className="meta">
-          <span>Travel Periods</span>
-          <span>Limited to 8 guests</span>
-          <span>Texas · Thimphu</span>
+          <span>Private Bhutan Journeys | Rare Access | Exceptional Comfort</span>
         </div>
         <button className="open-form" onClick={() => openModal()}>
           Request Access ↗
