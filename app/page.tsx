@@ -447,11 +447,11 @@ export default function Home() {
         <div className="wrap">
           <div className="header">
             <div>
-              <span className="label">Why Bhutan-Luxe</span>
+              <span className="label">Why Bhutan-Luxe &amp; MyBhutan</span>
               <h2>
-                Access earned over
+                Authentic insider access
                 <br />
-                <em>years</em> &nbsp;·&nbsp; Not purchased
+                <em>cultivated over time</em>
               </h2>
             </div>
             <p className="intro">
