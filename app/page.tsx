@@ -87,14 +87,18 @@ export default function Home() {
       {/* TOP BAR */}
       <div className="topbar">
         <a href="#" className="mark">
-          <svg width="24" height="16" viewBox="0 0 28 18" fill="none" aria-hidden="true">
-            <path d="M0 18 L9 4 L14 10 L19 2 L28 18 Z" fill="#C41E3A" />
-            <path d="M0 18 L9 4 L11 7 L4 18 Z" fill="#FF8C00" />
+          <svg width="44" height="48" viewBox="0 0 110 120" fill="none" aria-hidden="true">
+            {/* Gold mountain range — back */}
+            <path d="M5 90 L35 30 L55 58 L75 18 L105 90 Z" fill="#D4A017" />
+            {/* Orange peak — front center */}
+            <path d="M38 90 L55 48 L72 90 Z" fill="#E8622A" />
+            {/* BL letters */}
+            <text x="18" y="88" fontFamily="serif" fontWeight="bold" fontSize="52" fill="white" letterSpacing="-2">BL</text>
           </svg>
           <span className="word">Bhutan-Luxe</span>
         </a>
         <div className="meta">
-          <span>Spring · Autumn 2026</span>
+          <span>Travel Periods</span>
           <span>Limited to 8 guests</span>
           <span>Texas · Thimphu</span>
         </div>

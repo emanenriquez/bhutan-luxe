@@ -45,6 +45,7 @@ img { display:block; max-width:100%; }
   mix-blend-mode: normal;
 }
 .topbar .mark { display:flex; align-items:center; gap: 12px; text-decoration:none; }
+.topbar .mark svg { flex-shrink: 0; }
 .topbar .mark .word { font-family:'Playfair Display', serif; font-size:18px; letter-spacing: 0.02em; }
 .topbar .meta { display:flex; gap: 28px; font-size:10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247,245,240,0.7); }
 .topbar .open-form {
