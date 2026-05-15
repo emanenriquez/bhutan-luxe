@@ -179,9 +179,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="intro">
-            Three published tiers. Each can be lengthened, shortened, or wholly
-            redesigned around your interests. No tier is shared with another
-            party.
+            Choose from three carefully curated journey tiers, each tailored and refined around your personal interests, pace, and preferred investment level. Every journey is accompanied by your own private Bhutanese guide from arrival to departure.
           </p>
         </div>
 
