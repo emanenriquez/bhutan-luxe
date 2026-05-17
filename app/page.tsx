@@ -485,7 +485,7 @@ export default function Home() {
             <div className="img" />
             <div>
               <span className="label">On-the-ground Partner</span>
-              <h3>A decade of relationships, not a vendor list</h3>
+              <h3>Introducing our affiliate partner, MyBhutan</h3>
               <p>
                 Our affiliate partner — MyBhutan, in Thimphu — has spent more
                 than ten years building access to monasteries, valleys, and
