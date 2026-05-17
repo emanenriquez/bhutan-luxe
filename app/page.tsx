@@ -155,8 +155,8 @@ export default function Home() {
               <span className="desc">Roadless valleys</span>
             </div>
             <div className="stat">
-              <span className="num">8</span>
-              <span className="desc">Guests per group</span>
+              <span className="num">0</span>
+              <span className="desc">Number of Bhutan Stoplights</span>
             </div>
             <div className="stat">
               <span className="num">10+</span>
