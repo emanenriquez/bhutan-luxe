@@ -160,7 +160,7 @@ export default function Home() {
             </div>
             <div className="stat">
               <span className="num">10+</span>
-              <span className="desc">Years of access</span>
+              <span className="desc">Affiliate Partner Years of Access</span>
             </div>
           </div>
         </div>
