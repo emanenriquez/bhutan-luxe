@@ -455,7 +455,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="intro">
-              Bhutan-Luxe was recently established, but our affiliate partner on the ground, MyBhutan, holds relationships that took more than a decade to establish with local authorities, monastery administrators, and helicopter operators. Those relationships are what make our access possible and exclusive.
+              Bhutan-Luxe was recently established, but our affiliate partner on the ground, MyBhutan, holds relationships that took more than a decade to establish with local authorities, monastery administrators, and helicopter operators. Those relationships are what make our access possible to places rarely experienced by other visitors.
             </p>
           </div>
 
