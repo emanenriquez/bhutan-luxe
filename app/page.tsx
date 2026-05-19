@@ -111,7 +111,7 @@ export default function Home() {
               Bhutan-Luxe is a private bespoke journey. Our affiliate partner, MyBhutan, has special access by helicopter, if needed or requested, to areas that many other tour operators do not.
             </p>
             <div className="stat">
-              <span className="num">2-8</span>
+              <span className="num">2-8+</span>
               <span className="desc">Guests · per journey</span>
             </div>
             <div className="actions">
