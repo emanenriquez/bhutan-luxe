@@ -93,7 +93,7 @@ export default function Home() {
           <span>Private Bhutan Journeys | Rare Access | Exceptional Comfort</span>
         </div>
         <button className="open-form" onClick={() => openModal()}>
-          Request Access ↗
+          Inquire Privately ↗
         </button>
       </div>
 
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
             <div className="actions">
               <button className="btn-primary" onClick={() => openModal()}>
-                Request Access
+                Inquire Privately
               </button>
               <a href="#tiers" className="btn-ghost">
                 View the Tiers
@@ -216,7 +216,7 @@ export default function Home() {
             </p>
             <div className="actions">
               <button className="btn-primary" onClick={() => openModal("luxe")}>
-                Request Details
+                Inquire Privately
               </button>
               <a href="#" className="btn-line">
                 Sample Itinerary →
@@ -261,7 +261,7 @@ export default function Home() {
                 className="btn-primary"
                 onClick={() => openModal("boutique-luxe")}
               >
-                Request Details
+                Inquire Privately
               </button>
               <a href="#" className="btn-line">
                 Sample Itinerary →
@@ -306,7 +306,7 @@ export default function Home() {
                 className="btn-primary"
                 onClick={() => openModal("ultra-luxe")}
               >
-                Request Details
+                Inquire Privately
               </button>
               <a href="#" className="btn-line">
                 Sample Itinerary →
