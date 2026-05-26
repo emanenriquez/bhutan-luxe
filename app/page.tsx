@@ -104,7 +104,7 @@ export default function Home() {
             <h1>
               The Bhutan Few Will Ever See
             </h1>
-            <span className="label eyebrow">NOT SIMPLY A TOUR, BUT PRIVILEGED ACCESS</span>
+            <span className="label eyebrow">A JOURNEY IMMERSED IN REAL CULTURE</span>
           </div>
           <div className="bottom">
             <p className="lede">
