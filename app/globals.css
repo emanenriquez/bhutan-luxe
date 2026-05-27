@@ -94,7 +94,7 @@ img { display:block; max-width:100%; }
   padding-top: 32px;
 }
 #hero .bottom .lede { max-width: 560px; color: rgba(247,245,240,0.82); font-size: 15px; line-height: 1.6; margin: 0; }
-#hero .center .lede { color: rgba(247,245,240,0.82); font-size: 15px; line-height: 1.6; margin-top: 16px; text-align: right; }
+#hero .center .lede { color: rgba(247,245,240,0.82); font-size: 15px; line-height: 1.6; margin-top: 16px; text-align: left; font-weight: 700; }
 #hero .bottom .stat { text-align: right; }
 #hero .bottom .stat .num { font-family:'Playfair Display', serif; font-size: 56px; color: var(--saffron); display:block; line-height: 1; margin-bottom: 8px; }
 #hero .bottom .stat .desc { font-size:10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247,245,240,0.6); }
