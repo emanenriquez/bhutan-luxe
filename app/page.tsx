@@ -105,11 +105,11 @@ export default function Home() {
               The Bhutan Few Will Ever See
             </h1>
             <span className="label eyebrow">A JOURNEY IMMERSED IN REAL CULTURE</span>
-          </div>
-          <div className="bottom">
             <p className="lede">
               Bhutan-Luxe is dedicated to crafting refined journeys rooted in peace, authenticity, and immersive exploration of the Kingdom's timeless spirit.
             </p>
+          </div>
+          <div className="bottom">
             <div className="stat">
               <span className="num">2-8+</span>
               <span className="desc">Guests · per journey</span>
