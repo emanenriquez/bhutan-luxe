@@ -54,7 +54,7 @@ img { display:block; max-width:100%; }
   font-family:'Inter'; font-weight:500;
   font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
   color: #000000; background: var(--saffron); border: none; cursor:pointer;
-  padding: 16px 36px; border-radius: 8px;
+  padding: 9px 18px; border-radius: 8px;
 }
 
 /* ── HERO full-bleed ── */
