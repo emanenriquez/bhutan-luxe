@@ -19,13 +19,13 @@ img { display:block; max-width:100%; }
   font-size:11px; letter-spacing:0.22em; text-transform:uppercase;
 }
 .btn-primary {
-  display:inline-block; background: #ffffff; color: var(--stone);
+  display:inline-block; background: var(--crimson); color: #ffffff;
   font-family:'Inter'; font-weight:500;
   font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
   padding:16px 36px; text-decoration:none; border:none; cursor:pointer;
-  transition: background .2s, color .2s;
+  transition: background .2s;
 }
-.btn-primary:hover { background: var(--stone); color: #ffffff; }
+.btn-primary:hover { background: var(--stone); }
 .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .btn-ghost {
   display:inline-block; background: transparent; color: var(--cloud);
