@@ -23,6 +23,7 @@ img { display:block; max-width:100%; }
   font-family:'Inter'; font-weight:500;
   font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
   padding:16px 36px; text-decoration:none; border:none; cursor:pointer;
+  border-radius: 8px;
   transition: background .2s;
 }
 .btn-primary:hover { background: var(--stone); }
@@ -32,6 +33,7 @@ img { display:block; max-width:100%; }
   font-family:'Inter'; font-weight:500;
   font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
   padding:15px 32px; text-decoration:none; border:1px solid var(--gold); cursor:pointer;
+  border-radius: 8px;
   transition: background .2s, color .2s;
 }
 .btn-ghost:hover { background: var(--gold); color: var(--stone); border-color: var(--gold); }
