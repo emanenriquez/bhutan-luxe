@@ -117,9 +117,6 @@ export default function Home() {
               <span className="desc">Guests · per journey</span>
             </div>
             <div className="actions">
-              <button className="btn-primary" onClick={() => openModal()}>
-                Inquire Privately
-              </button>
               <a href="#tiers" className="btn-ghost">
                 View the Tiers
               </a>
@@ -217,9 +214,6 @@ export default function Home() {
               as it presents itself to its few invited guests.
             </p>
             <div className="actions">
-              <button className="btn-primary" onClick={() => openModal("luxe")}>
-                Inquire Privately
-              </button>
               <a href="#" className="btn-line">
                 Sample Itinerary →
               </a>
@@ -259,12 +253,6 @@ export default function Home() {
               through any other operator, and a journey between two worlds.
             </p>
             <div className="actions">
-              <button
-                className="btn-primary"
-                onClick={() => openModal("boutique-luxe")}
-              >
-                Inquire Privately
-              </button>
               <a href="#" className="btn-line">
                 Sample Itinerary →
               </a>
@@ -304,12 +292,6 @@ export default function Home() {
               Designed for those for whom access itself is the luxury.
             </p>
             <div className="actions">
-              <button
-                className="btn-primary"
-                onClick={() => openModal("ultra-luxe")}
-              >
-                Inquire Privately
-              </button>
               <a href="#" className="btn-line">
                 Sample Itinerary →
               </a>
