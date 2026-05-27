@@ -91,7 +91,6 @@ img { display:block; max-width:100%; }
 #hero h1 em { font-style: italic; color: var(--saffron); font-weight: 400; }
 #hero .bottom {
   display:grid; grid-template-columns: minmax(0,1.2fr) auto auto; gap: 56px; align-items: end;
-  border-top: 1px solid rgba(247,245,240,0.25);
   padding-top: 32px;
 }
 #hero .bottom .lede { max-width: 560px; color: rgba(247,245,240,0.82); font-size: 15px; line-height: 1.6; margin: 0; }
