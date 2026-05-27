@@ -52,9 +52,9 @@ img { display:block; max-width:100%; }
 .topbar .meta { display:flex; gap: 28px; font-size:14px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247,245,240,0.7); }
 .topbar .open-form {
   font-family:'Inter'; font-weight:500;
-  font-size:14px; letter-spacing:0.2em; text-transform:uppercase;
-  color: var(--gold); background: transparent; border: none; cursor:pointer;
-  padding: 8px 0; border-bottom: 1px solid var(--gold);
+  font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
+  color: #000000; background: var(--saffron); border: none; cursor:pointer;
+  padding: 16px 36px; border-radius: 8px;
 }
 
 /* ── HERO full-bleed ── */
