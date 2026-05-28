@@ -107,7 +107,7 @@ export default function Home() {
             <span className="label eyebrow">A JOURNEY IMMERSED IN AUTHENTIC CULTURE</span>
             <p className="lede">
               Bhutan-Luxe is dedicated to crafting refined journeys<br />
-              rooted in peace, authenticity, and immersive exploration<br />
+              rooted in peace, tranquility, and immersive exploration<br />
               of the Kingdom's timeless spirit.
             </p>
           </div>
