@@ -744,7 +744,7 @@ export default function Home() {
               >
                 WhatsApp
               </a>
-              <a href="tel:+1">+1 (Texas)</a>
+              <a href="tel:+12812504682">+1 (281) 250-4682</a>
             </div>
             <div className="col">
               <h5>Tiers</h5>
