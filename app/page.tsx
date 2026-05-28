@@ -178,7 +178,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="intro">
-            Choose from three carefully curated journey tiers, each tailored and refined around your personal interests, pace, more or less days and preferred investment level. Every journey is accompanied by your own private Bhutanese guide from arrival to departure.
+            Choose from three carefully curated journey experiences, each tailored and refined around your personal interests, pace, more or less days and desired level of discovery. Every journey is accompanied by your own private Bhutanese guide from arrival to departure.
           </p>
         </div>
 
