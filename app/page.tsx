@@ -144,7 +144,7 @@ export default function Home() {
             a century ago.
           </p>
           <p>
-            "Gross National Happiness is more important than Gross Domestic Product." Former King Jigme Singye Wangchuck. That philosophy remains a major part of Bhutan's identity and is one reason culturally curious travelers are drawn to the kingdom.
+            "Gross National Happiness is more important than Gross Domestic Product." Former King Jigme Singye Wangchuck (1972–2006). That philosophy remains a major part of Bhutan's identity and is one reason culturally curious travelers are drawn to the kingdom.
           </p>
           <div className="stats">
             <div className="stat">
