@@ -144,9 +144,7 @@ export default function Home() {
             a century ago.
           </p>
           <p>
-            Three valleys in the east have no roads, no lodges, no cell signal.
-            We access them by helicopter. You can be among the first outsiders
-            to set foot there.
+            "Gross National Happiness is more important than Gross Domestic Product." Former King Jigme Singye Wangchuck. That philosophy remains a major part of Bhutan's identity and is one reason culturally curious travelers are drawn to the kingdom.
           </p>
           <div className="stats">
             <div className="stat">
