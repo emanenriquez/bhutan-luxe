@@ -112,10 +112,6 @@ export default function Home() {
             </p>
           </div>
           <div className="bottom">
-            <div className="stat">
-              <span className="num">2-8+</span>
-              <span className="desc">Guests · per journey</span>
-            </div>
             <div className="actions">
               <a href="#tiers" className="btn-ghost">
                 Explore Experiences
