@@ -110,9 +110,7 @@ export default function Home() {
               rooted in peace, tranquility, and immersive exploration<br />
               of the Kingdom's timeless spirit.
             </p>
-          </div>
-          <div className="bottom">
-            <div className="actions">
+            <div className="actions" style={{ marginTop: '28px' }}>
               <a href="#tiers" className="btn-ghost">
                 Explore Experiences
               </a>
