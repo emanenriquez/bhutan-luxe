@@ -148,16 +148,16 @@ export default function Home() {
           </p>
           <div className="stats">
             <div className="stat">
-              <span className="num">3</span>
-              <span className="desc">Roadless valleys</span>
+              <span className="num">72%</span>
+              <span className="desc">Forest Coverage</span>
             </div>
             <div className="stat">
               <span className="num">0</span>
               <span className="desc">Number of Bhutan Stoplights</span>
             </div>
             <div className="stat">
-              <span className="num">10+</span>
-              <span className="desc">Affiliate Partner Years of Access</span>
+              <span className="num">(-)</span>
+              <span className="desc">Bhutan Absorbs More Carbon Than It Produces</span>
             </div>
           </div>
         </div>
