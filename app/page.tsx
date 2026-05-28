@@ -151,7 +151,7 @@ export default function Home() {
             </div>
             <div className="stat">
               <span className="num">(-)</span>
-              <span className="desc">Carbon Negative ·<br />- Bhutan Absorbs More Carbon Than It Produces</span>
+              <span className="desc">Carbon Negative<br />- Bhutan Absorbs More Carbon Than It Produces</span>
             </div>
           </div>
         </div>
