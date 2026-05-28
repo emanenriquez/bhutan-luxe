@@ -104,7 +104,7 @@ export default function Home() {
             <h1>
               The Bhutan Few Will Ever See
             </h1>
-            <span className="label eyebrow">A JOURNEY IMMERSED IN REAL CULTURE</span>
+            <span className="label eyebrow">A JOURNEY IMMERSED IN AUTHENTIC CULTURE</span>
             <p className="lede">
               Bhutan-Luxe is dedicated to crafting refined journeys<br />
               rooted in peace, authenticity, and immersive exploration<br />
