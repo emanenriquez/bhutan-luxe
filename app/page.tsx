@@ -737,14 +737,16 @@ export default function Home() {
               <a href="mailto:concierge@bhutan-luxe.com">
                 concierge@bhutan-luxe.com
               </a>
-              <a
-                href="https://wa.me/84937302252"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp
-              </a>
-              <a href="tel:+12812504682">+1 (281) 250-4682</a>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <a
+                  href="https://wa.me/84937302252"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
+                <a href="tel:+12812504682">+1 (281) 250-4682</a>
+              </span>
             </div>
             <div className="col">
               <h5>Tiers</h5>
