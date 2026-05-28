@@ -118,7 +118,7 @@ export default function Home() {
             </div>
             <div className="actions">
               <a href="#tiers" className="btn-ghost">
-                View the Tiers
+                Explore Experiences
               </a>
             </div>
           </div>
