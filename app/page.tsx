@@ -764,7 +764,6 @@ export default function Home() {
           </div>
           <div className="footnote">
             <span>© 2026 Bhutan Luxury Travel · Texas</span>
-            <span>In partnership with MyBhutan, Thimphu</span>
           </div>
         </div>
       </footer>
