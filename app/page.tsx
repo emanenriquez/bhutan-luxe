@@ -170,7 +170,7 @@ export default function Home() {
         <div className="header">
           <div className="num">03</div>
           <div>
-            <span className="label">Experience Tiers</span>
+            <span className="label">Curated Bhutan Experiences</span>
             <h2>
               Journeys of Discovery
               <br />
