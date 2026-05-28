@@ -172,9 +172,9 @@ export default function Home() {
           <div>
             <span className="label">Experience Tiers</span>
             <h2>
-              Choose your
+              Curated Journeys for Different
               <br />
-              level of <em>access</em>
+              Styles of <em>Discovery</em>
             </h2>
           </div>
           <p className="intro">
