@@ -427,7 +427,7 @@ export default function Home() {
               <h2>
                 Authentic Cultural <em>Immersion</em>
               </h2>
-              <img src="/dance-group.jpg" alt="Bhutanese cultural dance ceremony" style={{ width: '100%', height: '340px', marginTop: '28px', borderRadius: '0', objectFit: 'cover' }} />
+              <img src="/monks-watching-dance.jpg" alt="Monks watching Bhutanese cultural dance" style={{ width: '100%', marginTop: '28px', borderRadius: '0', display: 'block' }} />
             </div>
             <div style={{ paddingTop: '180px' }}>
               <p className="intro" style={{ fontSize: '20px', fontFamily: "'Playfair Display', serif", color: 'var(--saffron)', lineHeight: 1.4 }}>Bhutan-Luxe designs the journey; Our on-the-ground partner ensures:</p>
