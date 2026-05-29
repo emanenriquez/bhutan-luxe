@@ -218,7 +218,7 @@ img { display:block; max-width:100%; }
 /* ── TRUST ── */
 #trust { background: var(--forest); padding: 140px 0; color: var(--cloud); }
 #trust .wrap { max-width: 1280px; margin: 0 auto; padding: 0 56px; }
-#trust .header { display:grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 80px; align-items: end; }
+#trust .header { display:grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 80px; align-items: start; }
 #trust .label { color: var(--gold); display:block; margin-bottom: 18px; }
 #trust h2 { font-size: clamp(36px, 4vw, 56px); line-height: 1.04; }
 #trust h2 em { font-style: italic; color: var(--saffron); }
