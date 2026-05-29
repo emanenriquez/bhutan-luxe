@@ -428,7 +428,7 @@ export default function Home() {
                 Authentic Cultural <em>Immersion</em>
               </h2>
             </div>
-            <p className="intro">Our on-the-ground Partner ensures</p>
+            <p className="intro" style={{ fontSize: '32px', color: 'var(--cloud)', lineHeight: 1.2 }}>Bhutan-Luxe designs the journey; our Bhutanese partners bring it to life. They ensure:</p>
             <ul className="intro-list">
               <li>Authentic cultural immersion beyond the tourist trails</li>
               <li>Meaningful connections with local communities</li>
