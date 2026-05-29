@@ -428,7 +428,7 @@ export default function Home() {
                 Authentic Cultural <em>Immersion</em>
               </h2>
             </div>
-            <div style={{ paddingTop: '38px' }}>
+            <div style={{ paddingTop: '100px' }}>
               <p className="intro" style={{ fontSize: '20px', fontFamily: "'Playfair Display', serif", color: 'var(--saffron)', lineHeight: 1.4 }}>Bhutan-Luxe designs the journey; Our on-the-ground partner ensures:</p>
               <ul className="intro-list">
                 <li>Authentic cultural immersion beyond the tourist trails</li>
