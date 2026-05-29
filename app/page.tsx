@@ -463,20 +463,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="partner-row">
-            <div className="img" />
-            <div>
-              <span className="label">On-the-ground Partner</span>
-              <h3>Introducing our affiliate partner, MyBhutan</h3>
-              <a
-                href="https://www.mybhutan.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                mybhutan.com →
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
