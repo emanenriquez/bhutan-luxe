@@ -428,9 +428,15 @@ export default function Home() {
                 Authentic Cultural <em>Immersion</em>
               </h2>
             </div>
-            <p className="intro">
-              Bhutan-Luxe was recently established, but our affiliate partner on the ground, MyBhutan, holds relationships that took more than a decade to establish with local authorities, monastery administrators, and helicopter operators. Those relationships are what make our access possible to places rarely experienced by other visitors.
-            </p>
+            <p className="intro">Our on-the-ground Partner ensures</p>
+            <ul className="intro-list">
+              <li>Authentic cultural immersion beyond the tourist trails</li>
+              <li>Meaningful connections with local communities</li>
+              <li>Seamless support throughout your journey</li>
+              <li>Decade-plus network of trusted local relationships</li>
+              <li>Access to regions few visitors ever reach</li>
+              <li>You have Bhutan&apos;s most respected and experienced guides</li>
+            </ul>
           </div>
 
           <div className="quotes">

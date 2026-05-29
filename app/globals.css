@@ -223,6 +223,8 @@ img { display:block; max-width:100%; }
 #trust h2 { font-size: clamp(36px, 4vw, 56px); line-height: 1.04; }
 #trust h2 em { font-style: italic; color: var(--saffron); }
 #trust .intro { color: rgba(247,245,240,0.72); font-size: 15px; max-width: 520px; }
+#trust .intro-list { color: rgba(247,245,240,0.72); font-size: 15px; max-width: 520px; list-style: none; padding: 0; margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+#trust .intro-list li::before { content: "→ "; color: var(--saffron); }
 
 .quotes { display:grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gold); margin-bottom: 96px; }
 .quote { background: var(--forest); padding: 56px 48px; display:flex; flex-direction:column; align-items:flex-start; }
