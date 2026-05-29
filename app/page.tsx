@@ -428,15 +428,17 @@ export default function Home() {
                 Authentic Cultural <em>Immersion</em>
               </h2>
             </div>
-            <p className="intro" style={{ fontSize: '20px', fontFamily: "'Playfair Display', serif", color: 'var(--saffron)', lineHeight: 1.4 }}>Bhutan-Luxe designs the journey; Our on-the-ground partner ensures:</p>
-            <ul className="intro-list">
-              <li>Authentic cultural immersion beyond the tourist trails</li>
-              <li>Meaningful connections with local communities</li>
-              <li>Seamless support throughout your journey</li>
-              <li>Optimizes a decade-plus network of trusted local relationships</li>
-              <li>Access to regions few visitors ever reach</li>
-              <li>You have Bhutan&apos;s most respected and experienced guides</li>
-            </ul>
+            <div>
+              <p className="intro" style={{ fontSize: '20px', fontFamily: "'Playfair Display', serif", color: 'var(--saffron)', lineHeight: 1.4 }}>Bhutan-Luxe designs the journey; Our on-the-ground partner ensures:</p>
+              <ul className="intro-list">
+                <li>Authentic cultural immersion beyond the tourist trails</li>
+                <li>Meaningful connections with local communities</li>
+                <li>Seamless support throughout your journey</li>
+                <li>Optimizes a decade-plus network of trusted local relationships</li>
+                <li>Access to regions few visitors ever reach</li>
+                <li>You have Bhutan&apos;s most respected and experienced guides</li>
+              </ul>
+            </div>
           </div>
 
           <div className="quotes">
