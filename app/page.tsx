@@ -423,11 +423,9 @@ export default function Home() {
         <div className="wrap">
           <div className="header">
             <div>
-              <span className="label">Why Bhutan-Luxe &amp; MyBhutan</span>
+              <span className="label">Why Bhutan-Luxe &amp; Affiliate Partner</span>
               <h2>
-                Authentic insider access
-                <br />
-                <em>cultivated over time</em>
+                Authentic Cultural <em>Immersion</em>
               </h2>
             </div>
             <p className="intro">
