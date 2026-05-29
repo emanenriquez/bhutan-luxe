@@ -429,7 +429,7 @@ export default function Home() {
               </h2>
               <img src="/dance-group.jpg" alt="Bhutanese cultural dance ceremony" style={{ width: '100%', height: '340px', marginTop: '28px', borderRadius: '0', objectFit: 'cover' }} />
             </div>
-            <div style={{ paddingTop: '160px' }}>
+            <div style={{ paddingTop: '260px' }}>
               <p className="intro" style={{ fontSize: '20px', fontFamily: "'Playfair Display', serif", color: 'var(--saffron)', lineHeight: 1.4 }}>Bhutan-Luxe designs the journey; Our on-the-ground partner ensures:</p>
               <ul className="intro-list">
                 <li>Authentic cultural immersion beyond the tourist trails</li>
