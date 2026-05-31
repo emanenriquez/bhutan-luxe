@@ -189,7 +189,7 @@ img { display:block; max-width:100%; }
 /* ── REGIONS map ── */
 #regions { background: var(--cloud); color: var(--stone); padding: 140px 0; }
 #regions .wrap { max-width: 1280px; margin: 0 auto; padding: 0 56px; }
-#regions .header { display:grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: end; }
+#regions .header { display:grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: start; }
 #regions .label { color: var(--forest); display:block; margin-bottom: 18px; }
 #regions h2 { font-size: clamp(36px, 4vw, 56px); line-height: 1.04; color: var(--stone); }
 #regions h2 em { font-style: italic; color: var(--crimson); }
