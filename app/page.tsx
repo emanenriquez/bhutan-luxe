@@ -297,8 +297,7 @@ export default function Home() {
         <div className="wrap">
           <div className="header">
             <div>
-              <span className="label">Regions Accessed</span>
-              <h2>
+<h2>
                 Regions and <em>Routes</em>
               </h2>
             </div>
