@@ -303,9 +303,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="intro">
-              Five access points across Bhutan. Three of them require permits
-              and clearances that take weeks to arrange. We begin that work the
-              moment your inquiry is received.
+              Some of Bhutan's most remarkable regions remain beyond the reach of ordinary travel. Through trusted local relationships, special permits, and meticulous advance planning, we create opportunities for experiences few visitors ever encounter.
             </p>
           </div>
 
