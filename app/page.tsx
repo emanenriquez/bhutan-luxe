@@ -423,7 +423,7 @@ export default function Home() {
         <div className="wrap">
           <div className="header">
             <div>
-              <span className="label">Bhutan-Luxe — Why Our Guests See More of the Real Bhutan</span>
+              <span className="label">Why Our Guests See More of the Real Bhutan</span>
               <h2>
                 Authentic Cultural <em>Immersion</em>
               </h2>
