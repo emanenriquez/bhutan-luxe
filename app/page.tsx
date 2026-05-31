@@ -442,27 +442,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="quotes">
-            <div className="quote">
-              <span className="qm">&ldquo;</span>
-              <blockquote>
-                I have traveled to over sixty countries. Nothing prepared me
-                for what we saw in the eastern valleys. I don&apos;t know that
-                I&apos;ll travel anywhere else the same way again.
-              </blockquote>
-              <cite>— Dallas, TX &nbsp;·&nbsp; Ultra-Luxe guest, 2025</cite>
-            </div>
-            <div className="quote">
-              <span className="qm">&ldquo;</span>
-              <blockquote>
-                The discretion was absolute. Every detail was arranged before
-                we arrived. We simply showed up and experienced it.
-              </blockquote>
-              <cite>
-                — Houston, TX &nbsp;·&nbsp; Boutique-Luxe guest, 2025
-              </cite>
-            </div>
-          </div>
 
         </div>
       </section>
