@@ -299,9 +299,7 @@ export default function Home() {
             <div>
               <span className="label">Regions Accessed</span>
               <h2>
-                Where the
-                <br />
-                <em>helicopters</em> go
+                Regions and <em>Routes</em>
               </h2>
             </div>
             <p className="intro">
