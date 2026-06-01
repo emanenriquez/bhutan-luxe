@@ -306,7 +306,10 @@ export default function Home() {
             </p>
           </div>
 
-          <img src="/route-map.jpg" alt="Tour Routes of Bhutan" style={{ width: '80%', display: 'block', borderRadius: '0', margin: '0 auto' }} />
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '40px' }}>
+            <img src="/route-map.jpg" alt="Tour Routes of Bhutan" style={{ width: '72%', display: 'block', borderRadius: '0', flexShrink: 0 }} />
+            <img src="/global-map.jpg" alt="Bhutan Asia Location" style={{ width: '25%', display: 'block', borderRadius: '0', flexShrink: 0 }} />
+          </div>
         </div>
       </section>
 
