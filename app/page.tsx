@@ -9,6 +9,7 @@ const TOTAL_STEPS = 3;
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+  const [mapLightbox, setMapLightbox] = useState(false);
   const [step, setStep] = useState(1);
   const [pending, startTransition] = useTransition();
   const [done, setDone] = useState(false);
@@ -304,7 +305,12 @@ export default function Home() {
                 Some of Bhutan's most remarkable regions remain beyond the reach of ordinary travel. Through trusted local relationships, special permits, and meticulous advance planning, we create opportunities for experiences few visitors ever encounter.
               </p>
             </div>
-            <img src="/global-map.jpg" alt="Bhutan Asia Location" style={{ width: '280px', display: 'block', borderRadius: '0', flexShrink: 0 }} />
+            <img
+              src="/global-map.jpg"
+              alt="Bhutan Asia Location"
+              onClick={() => setMapLightbox(true)}
+              style={{ width: '280px', display: 'block', borderRadius: '0', flexShrink: 0, cursor: 'zoom-in' }}
+            />
           </div>
 
           <img src="/route-map.jpg" alt="Tour Routes of Bhutan" style={{ width: '100%', display: 'block', borderRadius: '0' }} />
@@ -338,6 +344,25 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* MAP LIGHTBOX */}
+      {mapLightbox && (
+        <div
+          onClick={() => setMapLightbox(false)}
+          style={{
+            position: 'fixed', inset: 0, zIndex: 200,
+            background: 'rgba(0,0,0,0.85)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'zoom-out',
+          }}
+        >
+          <img
+            src="/global-map.jpg"
+            alt="Bhutan Asia Location"
+            style={{ maxWidth: '90vw', maxHeight: '90vh', display: 'block', borderRadius: '0' }}
+          />
+        </div>
+      )}
 
       {/* INQUIRY MODAL */}
       <div
