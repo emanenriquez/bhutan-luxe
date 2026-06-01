@@ -187,7 +187,7 @@ img { display:block; max-width:100%; }
 .tier-row .body .btn-line:hover { color: var(--saffron); border-color: var(--saffron); }
 
 /* ── REGIONS map ── */
-#regions { background: var(--cloud); color: var(--stone); padding: 60px 0 140px; }
+#regions { background: var(--cloud); color: var(--stone); padding: 60px 0 48px; }
 #regions .wrap { max-width: 1280px; margin: 0 auto; padding: 0 56px; }
 #regions .header { display:grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: start; }
 #regions .label { color: var(--forest); display:block; margin-bottom: 18px; }
