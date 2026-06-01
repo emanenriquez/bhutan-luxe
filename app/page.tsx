@@ -296,7 +296,6 @@ export default function Home() {
       <section id="regions">
         <div className="wrap">
           <div style={{ display: 'flex', alignItems: 'center', gap: '60px', marginBottom: '40px' }}>
-            <img src="/global-map.jpg" alt="Bhutan Asia Location" style={{ width: '25%', display: 'block', borderRadius: '0', flexShrink: 0 }} />
             <div style={{ flex: 1 }}>
               <h2 style={{ marginBottom: '16px' }}>
                 Regions and <em>Routes</em>
@@ -305,6 +304,7 @@ export default function Home() {
                 Some of Bhutan's most remarkable regions remain beyond the reach of ordinary travel. Through trusted local relationships, special permits, and meticulous advance planning, we create opportunities for experiences few visitors ever encounter.
               </p>
             </div>
+            <img src="/global-map.jpg" alt="Bhutan Asia Location" style={{ width: '25%', display: 'block', borderRadius: '0', flexShrink: 0 }} />
           </div>
 
           <img src="/route-map.jpg" alt="Tour Routes of Bhutan" style={{ width: '100%', display: 'block', borderRadius: '0' }} />
