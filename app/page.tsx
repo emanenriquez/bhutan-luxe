@@ -295,7 +295,7 @@ export default function Home() {
       {/* REGIONS */}
       <section id="regions">
         <div className="wrap">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '60px', marginBottom: '40px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '40px' }}>
             <div style={{ flex: 1 }}>
               <h2 style={{ marginBottom: '16px' }}>
                 Regions and <em>Routes</em>
