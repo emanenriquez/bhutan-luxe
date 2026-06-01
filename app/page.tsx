@@ -295,12 +295,10 @@ export default function Home() {
       {/* REGIONS */}
       <section id="regions">
         <div className="wrap">
-          <div className="header">
-            <div>
-<h2>
-                Regions and <em>Routes</em>
-              </h2>
-            </div>
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ marginBottom: '16px' }}>
+              Regions and <em>Routes</em>
+            </h2>
             <p className="intro">
               Some of Bhutan's most remarkable regions remain beyond the reach of ordinary travel. Through trusted local relationships, special permits, and meticulous advance planning, we create opportunities for experiences few visitors ever encounter.
             </p>
