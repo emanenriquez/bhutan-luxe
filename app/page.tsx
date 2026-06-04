@@ -653,7 +653,7 @@ export default function Home() {
             </div>
           </div>
           <div className="footnote">
-            <span>© 2026 Bhutan Luxury Travel · Texas</span>
+            <span>© Bhutan-Luxe Travel · Houston, Texas</span>
           </div>
         </div>
       </footer>
