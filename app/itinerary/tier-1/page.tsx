@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PrintButton from "./PrintButton";
 
 export const metadata: Metadata = {
   title: "Essential Bhutan Itinerary — Tier I | Bhutan-Luxe",
@@ -77,6 +78,20 @@ export default function TierOneItinerary() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: #3B3A36; color: #F7F5F0; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
+        @media print {
+          .no-print { display: none !important; }
+          body { background: #fff; color: #000; font-size: 9pt; line-height: 1.4; }
+          .print-section { background: #fff !important; color: #000 !important; padding: 0 !important; }
+          .print-day { margin-bottom: 8pt !important; padding-bottom: 8pt !important; }
+          .print-day-num { font-size: 14pt !important; }
+          .print-day-title { font-size: 11pt !important; margin-bottom: 2pt !important; }
+          .print-day-body { font-size: 9pt !important; line-height: 1.3 !important; color: #333 !important; }
+          .print-day-overnight { font-size: 8pt !important; margin-top: 2pt !important; color: #2D5016 !important; }
+          .print-intro { background: #fff !important; color: #000 !important; padding: 12pt 0 8pt !important; }
+          .print-intro p { font-size: 9pt !important; color: #333 !important; }
+          .print-header { padding: 0 0 8pt !important; border-bottom: 1pt solid #ccc; margin-bottom: 12pt; }
+          @page { margin: 0.6in; size: letter; }
+        }
       `}</style>
 
       {/* TOPBAR */}
@@ -116,21 +131,24 @@ export default function TierOneItinerary() {
       </div>
 
       {/* ITINERARY */}
-      <div style={{ background: "#F7F5F0", padding: "80px 56px", color: "#3B3A36" }}>
+      <div className="print-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#FF8C00", marginBottom: 40 }}>Day by Day</p>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
+            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#FF8C00" }}>Day by Day</p>
+            <div className="no-print"><PrintButton /></div>
+          </div>
 
           {days.map((d, i) => (
-            <div key={d.day} style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", marginBottom: i < days.length - 1 ? 48 : 0, paddingBottom: i < days.length - 1 ? 48 : 0, borderBottom: i < days.length - 1 ? "1px solid rgba(59,58,54,0.12)" : "none" }}>
+            <div key={d.day} className="print-day" style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", marginBottom: i < days.length - 1 ? 24 : 0, paddingBottom: i < days.length - 1 ? 24 : 0, borderBottom: i < days.length - 1 ? "1px solid rgba(59,58,54,0.12)" : "none" }}>
               <div style={{ textAlign: "right", paddingTop: 4 }}>
-                <span style={{ display: "block", fontFamily: "'Playfair Display', serif", fontSize: 32, lineHeight: 1, color: "#D4A843" }}>{String(d.day).padStart(2, "0")}</span>
+                <span className="print-day-num" style={{ display: "block", fontFamily: "'Playfair Display', serif", fontSize: 32, lineHeight: 1, color: "#D4A843" }}>{String(d.day).padStart(2, "0")}</span>
                 <span style={{ fontFamily: "Inter", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(59,58,54,0.4)" }}>Day</span>
               </div>
               <div>
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 400, color: "#3B3A36", marginBottom: 10 }}>{d.title}</h2>
-                <p style={{ fontSize: 15, color: "rgba(59,58,54,0.8)", lineHeight: 1.7 }}>{d.body}</p>
+                <h2 className="print-day-title" style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 400, color: "#3B3A36", marginBottom: 6 }}>{d.title}</h2>
+                <p className="print-day-body" style={{ fontSize: 14, color: "rgba(59,58,54,0.8)", lineHeight: 1.6 }}>{d.body}</p>
                 {d.overnight && (
-                  <p style={{ marginTop: 14, fontFamily: "Inter", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#2D5016" }}>
+                  <p className="print-day-overnight" style={{ marginTop: 8, fontFamily: "Inter", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#2D5016" }}>
                     Overnight: {d.overnight}
                   </p>
                 )}
