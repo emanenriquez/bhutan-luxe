@@ -91,7 +91,7 @@ export default function Home() {
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: '80px', width: 'auto' }} />
         </a>
         <div className="meta">
-          <span>Private Bhutan Journeys | Rare Access | Exceptional Comfort</span>
+          <span style={{ color: 'var(--saffron)', textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '12px', fontWeight: 500 }}>Private Bhutan Journeys | Authentic Bhutan | Bespoke &amp; Privately Guided</span>
         </div>
         <button className="open-form" onClick={() => openModal()}>
           Inquire Privately ↗
