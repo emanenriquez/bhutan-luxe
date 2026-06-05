@@ -111,7 +111,7 @@ export default function TierOneItinerary() {
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
           <h1>Tier I  |  Luxe  :  Essential Bhutan</h1>
-          <p>10 Days · Paro · Thimphu · Punakha · Gangtey</p>
+          <p>Paro · Thimphu · Punakha · Gangtey</p>
         </div>
       </div>
 
@@ -132,7 +132,7 @@ export default function TierOneItinerary() {
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0", marginBottom: "16px" }}>
               Tier I  |  Luxe  :  <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Essential Bhutan</em>
             </h1>
-            <p style={{ fontFamily: "Inter", fontSize: 14, color: "rgba(247,245,240,0.7)", letterSpacing: "0.08em" }}>10 Days &nbsp;·&nbsp; Paro · Thimphu · Punakha · Gangtey</p>
+            <p style={{ fontFamily: "Inter", fontSize: 14, color: "rgba(247,245,240,0.7)", letterSpacing: "0.08em" }}>Paro · Thimphu · Punakha · Gangtey</p>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@ export default function TierOneItinerary() {
             A thoughtfully curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. From monastery blessings and sacred mountain hikes to village encounters and iconic landmarks, this journey offers a meaningful first glimpse into the Kingdom's enduring way of life.
           </p>
           <div style={{ display: "flex", gap: 40, marginTop: 36, borderTop: "1px solid rgba(212,168,67,0.3)", paddingTop: 28 }}>
-            {[["Duration", "10 Days"], ["Curated Range", "$8,000 – $12,000"], ["Regions", "Paro · Thimphu · Punakha · Gangtey"]].map(([k, v]) => (
+            {[["Curated Range", "$8,000 – $12,000"], ["Regions", "Paro · Thimphu · Punakha · Gangtey"]].map(([k, v]) => (
               <div key={k}>
                 <span style={{ display: "block", fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 4 }}>{k}</span>
                 <span style={{ fontFamily: "Inter", fontSize: 14, color: "#F7F5F0" }}>{v}</span>
