@@ -194,7 +194,7 @@ export default function Home() {
               </div>
               <div>
                 <span className="k">Duration</span>
-                <span className="v">7 days</span>
+                <span className="v">10 days</span>
               </div>
               <div>
                 <span className="k">Region</span>
@@ -478,7 +478,7 @@ export default function Home() {
                         <input type="radio" name="tier" value="luxe" />
                         <span className="tp-name">Luxe</span>
                         <span className="tp-price">
-                          $8K – $12K · 7 days
+                          $8K – $12K · 10 days
                         </span>
                       </label>
                       <label>
