@@ -224,8 +224,10 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier II  |  Boutique-Luxe</span>
-            <h3 style={{ fontSize: '28px' }}>Immersive Bhutan</h3>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '14px' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '28px', fontStyle: 'normal', color: 'var(--cloud)', fontWeight: 400 }}>Tier II  |  Boutique-Luxe</span>
+              <h3 style={{ fontSize: '28px', marginBottom: 0, color: 'var(--saffron)', fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>Immersive Bhutan</h3>
+            </div>
             <div className="meta">
               <div>
                 <span className="k">Curated Journey Range</span>
@@ -261,8 +263,10 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier III  |  Ultra-Luxe</span>
-            <h3 style={{ fontSize: '28px' }}>Extraordinary Bhutan</h3>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '14px' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '28px', fontStyle: 'normal', color: 'var(--cloud)', fontWeight: 400 }}>Tier III  |  Ultra-Luxe</span>
+              <h3 style={{ fontSize: '28px', marginBottom: 0, color: 'var(--saffron)', fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>Extraordinary Bhutan</h3>
+            </div>
             <div className="meta">
               <div>
                 <span className="k">Curated Journey Range</span>
