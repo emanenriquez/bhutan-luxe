@@ -185,7 +185,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier One · Introduction to Bhutan</span>
+            <span className="tag">Tier One · Discover Bhutan</span>
             <h3>Luxe</h3>
             <div className="meta">
               <div>
