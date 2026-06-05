@@ -189,7 +189,7 @@ export default function Home() {
             <h3>Luxe</h3>
             <div className="meta">
               <div>
-                <span className="k">Investment</span>
+                <span className="k">Curated Journey Range</span>
                 <span className="v">$8,000 – $12,000</span>
               </div>
               <div>
@@ -228,7 +228,7 @@ export default function Home() {
             <h3>Boutique-Luxe</h3>
             <div className="meta">
               <div>
-                <span className="k">Investment</span>
+                <span className="k">Curated Journey Range</span>
                 <span className="v">$12,000 – $25,000</span>
               </div>
               <div>
@@ -267,7 +267,7 @@ export default function Home() {
             <h3>Ultra-Luxe</h3>
             <div className="meta">
               <div>
-                <span className="k">Investment</span>
+                <span className="k">Curated Journey Range</span>
                 <span className="v">$25,000 – $35,000+</span>
               </div>
               <div>
