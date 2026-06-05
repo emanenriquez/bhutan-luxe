@@ -101,16 +101,16 @@ export default function TierOneItinerary() {
       <div className="no-screen" style={{ display: "none" }}>
         <style>{`
           @media print {
-            .no-screen { display: flex !important; align-items: center; justify-content: space-between; background: #1C5C1C; padding: 10pt 14pt; margin-bottom: 18pt; }
+            .no-screen { display: flex !important; align-items: center; justify-content: space-between; background: #fff; border-bottom: 2pt solid #1C5C1C; padding-bottom: 10pt; margin-bottom: 18pt; }
             .no-screen img { height: 52pt; width: auto; }
             .no-screen div { text-align: right; }
             .no-screen h1 { font-size: 16pt; font-family: 'DM Sans', sans-serif; color: #B8860B; }
-            .no-screen p { font-size: 9pt; color: rgba(255,255,255,0.75); margin-top: 3pt; }
+            .no-screen p { font-size: 9pt; color: #2D5016; font-weight: 600; margin-top: 3pt; }
           }
         `}</style>
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
-          <h1>Essential Bhutan — Tier I Sample Itinerary</h1>
+          <h1>Luxe - Tier I: Essential Bhutan</h1>
           <p>10 Days · Paro · Thimphu · Punakha · Gangtey</p>
         </div>
       </div>
