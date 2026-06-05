@@ -222,7 +222,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier Two · Remote Valleys</span>
+            <span className="tag">Tier Two · Curated Discovery</span>
             <h3>Boutique-Luxe</h3>
             <div className="meta">
               <div>
