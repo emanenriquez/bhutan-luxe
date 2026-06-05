@@ -185,7 +185,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier One · Discover Bhutan</span>
+            <span className="tag">Tier One</span>
             <h3>Introduction to Bhutan</h3>
             <div className="meta">
               <div>
@@ -222,7 +222,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier Two · Curated Discovery</span>
+            <span className="tag">Tier Two</span>
             <h3>Immersive Bhutan</h3>
             <div className="meta">
               <div>
@@ -259,7 +259,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier Three · Helicopter &amp; Audience</span>
+            <span className="tag">Tier Three</span>
             <h3>Extraordinary Bhutan</h3>
             <div className="meta">
               <div>
