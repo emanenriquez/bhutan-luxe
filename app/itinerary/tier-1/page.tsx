@@ -111,7 +111,7 @@ export default function TierOneItinerary() {
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
           <h1>Tier I  |  Luxe  :  Essential Bhutan</h1>
-          <p>Bhutan-Luxe Travel</p>
+          <p>10 Days · Bhutan-Luxe Travel</p>
         </div>
       </div>
 
@@ -129,9 +129,10 @@ export default function TierOneItinerary() {
       <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
-            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0", marginBottom: "16px" }}>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0", marginBottom: "12px" }}>
               Tier I  |  Luxe  :  <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Essential Bhutan</em>
             </h1>
+            <p style={{ fontFamily: "Inter", fontSize: 14, color: "rgba(247,245,240,0.7)", letterSpacing: "0.08em" }}>10 Days</p>
           </div>
         </div>
       </div>
@@ -143,7 +144,7 @@ export default function TierOneItinerary() {
             A thoughtfully curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. From monastery blessings and sacred mountain hikes to village encounters and iconic landmarks, this journey offers a meaningful first glimpse into the Kingdom's enduring way of life.
           </p>
           <div style={{ display: "flex", gap: 40, marginTop: 36, borderTop: "1px solid rgba(212,168,67,0.3)", paddingTop: 28 }}>
-            {[["Curated Range", "$8,000 – $12,000"]].map(([k, v]) => (
+            {[["Duration", "10 Days"], ["Curated Range", "$8,000 – $12,000"]].map(([k, v]) => (
               <div key={k}>
                 <span style={{ display: "block", fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 4 }}>{k}</span>
                 <span style={{ fontFamily: "Inter", fontSize: 14, color: "#F7F5F0" }}>{v}</span>

@@ -119,7 +119,7 @@ export default function TierTwoItinerary() {
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
           <h1>Boutique-Luxe - Tier II: Deeper Discovery</h1>
-          <p>Bhutan-Luxe Travel</p>
+          <p>10 Days · Bhutan-Luxe Travel</p>
         </div>
       </div>
 
@@ -138,7 +138,8 @@ export default function TierTwoItinerary() {
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#FF8C00", marginBottom: 12 }}>Tier II · Sample Itinerary</p>
-            <h1 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "clamp(28px, 4vw, 56px)", lineHeight: 1, letterSpacing: "-0.012em", color: "#F7F5F0", marginBottom: 16 }}>Deeper Discovery</h1>
+            <h1 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "clamp(28px, 4vw, 56px)", lineHeight: 1, letterSpacing: "-0.012em", color: "#F7F5F0", marginBottom: 12 }}>Deeper Discovery</h1>
+            <p style={{ fontFamily: "Inter", fontSize: 14, color: "rgba(247,245,240,0.7)", letterSpacing: "0.08em" }}>10 Days</p>
           </div>
         </div>
       </div>
@@ -150,7 +151,7 @@ export default function TierTwoItinerary() {
             A deeper exploration of Bhutan through sacred traditions, luxury wilderness retreats, private spiritual encounters, and meaningful cultural immersion. Designed for travelers seeking a richer connection to the Kingdom, this journey reveals hidden valleys, living traditions, and experiences rarely found on conventional itineraries.
           </p>
           <div style={{ display: "flex", gap: 40, marginTop: 36, borderTop: "1px solid rgba(212,168,67,0.3)", paddingTop: 28 }}>
-            {[["Curated Range", "$13,000+"]].map(([k, v]) => (
+            {[["Duration", "10 Days"], ["Curated Range", "$13,000+"]].map(([k, v]) => (
               <div key={k}>
                 <span style={{ display: "block", fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 4 }}>{k}</span>
                 <span style={{ fontFamily: "Inter", fontSize: 14, color: "#F7F5F0" }}>{v}</span>

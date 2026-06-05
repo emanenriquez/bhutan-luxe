@@ -193,6 +193,10 @@ export default function Home() {
                 <span className="k">Curated Journey Range</span>
                 <span className="v">$8,000 – $12,000</span>
               </div>
+              <div>
+                <span className="k">Duration</span>
+                <span className="v">10 days</span>
+              </div>
             </div>
             <p>
               A curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions, thoughtfully designed for meaningful discovery and authentic connection.
@@ -223,6 +227,10 @@ export default function Home() {
                 <span className="k">Curated Journey Range</span>
                 <span className="v">$12,000 – $25,000</span>
               </div>
+              <div>
+                <span className="k">Duration</span>
+                <span className="v">10 days</span>
+              </div>
             </div>
             <p>
               Journey beyond the familiar through sacred traditions, remote valleys, luxury tented camps, and immersive experiences woven into Bhutanese life.
@@ -252,6 +260,10 @@ export default function Home() {
               <div>
                 <span className="k">Curated Journey Range</span>
                 <span className="v">$25,000 – $35,000+</span>
+              </div>
+              <div>
+                <span className="k">Duration</span>
+                <span className="v">10 days</span>
               </div>
             </div>
             <p>
