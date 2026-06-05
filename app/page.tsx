@@ -197,10 +197,6 @@ export default function Home() {
                 <span className="k">Duration</span>
                 <span className="v">10 days</span>
               </div>
-              <div>
-                <span className="k">Region</span>
-                <span className="v">Paro · Thimphu · Punakha · Gangtey</span>
-              </div>
             </div>
             <p>
               A curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions, thoughtfully designed for meaningful discovery and authentic connection.
@@ -235,10 +231,6 @@ export default function Home() {
                 <span className="k">Duration</span>
                 <span className="v">10 days</span>
               </div>
-              <div>
-                <span className="k">Region</span>
-                <span className="v">Paro · Haa · Thimphu · Punakha · Gangtey</span>
-              </div>
             </div>
             <p>
               Journey beyond the familiar through sacred traditions, remote valleys, luxury tented camps, and immersive experiences woven into Bhutanese life.
@@ -272,10 +264,6 @@ export default function Home() {
               <div>
                 <span className="k">Duration</span>
                 <span className="v">10 days</span>
-              </div>
-              <div>
-                <span className="k">Region</span>
-                <span className="v">Paro · Haa · Thimphu · Punakha · Gangtey</span>
               </div>
             </div>
             <p>
