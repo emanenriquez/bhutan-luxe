@@ -83,7 +83,7 @@ export default function TierOneItinerary() {
           body { background: #fff; color: #000; font-size: 10pt; line-height: 1.5; }
           .print-section { background: #fff !important; color: #000 !important; padding: 0 !important; }
           .print-day { margin-bottom: 14pt !important; padding-bottom: 14pt !important; }
-          .print-day-num { font-size: 18pt !important; color: #F5C200 !important; }
+          .print-day-num { font-size: 18pt !important; color: #B8860B !important; }
           .print-day-title { font-size: 12pt !important; margin-bottom: 3pt !important; color: #1C5C1C !important; }
           .print-day-body { font-size: 10pt !important; line-height: 1.45 !important; color: #333 !important; }
           .print-day-overnight { font-size: 9pt !important; margin-top: 4pt !important; color: #E85000 !important; font-weight: 600; }
@@ -104,7 +104,7 @@ export default function TierOneItinerary() {
             .no-screen { display: flex !important; align-items: center; justify-content: space-between; background: #1C5C1C; padding: 10pt 14pt; margin-bottom: 18pt; }
             .no-screen img { height: 52pt; width: auto; }
             .no-screen div { text-align: right; }
-            .no-screen h1 { font-size: 16pt; font-family: 'DM Sans', sans-serif; color: #F5C200; }
+            .no-screen h1 { font-size: 16pt; font-family: 'DM Sans', sans-serif; color: #B8860B; }
             .no-screen p { font-size: 9pt; color: rgba(255,255,255,0.75); margin-top: 3pt; }
           }
         `}</style>
