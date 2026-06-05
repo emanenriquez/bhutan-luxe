@@ -202,9 +202,7 @@ export default function Home() {
               </div>
             </div>
             <p>
-              Cultural immersion across the Paro and Thimphu valleys. Monastery
-              visits, private lodge stays, and a quiet introduction to Bhutan
-              as it presents itself to its few invited guests.
+              A curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions, thoughtfully designed for meaningful discovery and authentic connection.
             </p>
             <div className="actions">
               <a href="#" className="btn-line">
