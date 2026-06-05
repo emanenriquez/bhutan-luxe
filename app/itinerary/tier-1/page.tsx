@@ -83,15 +83,15 @@ export default function TierOneItinerary() {
           body { background: #fff; color: #000; font-size: 10pt; line-height: 1.5; }
           .print-section { background: #fff !important; color: #000 !important; padding: 0 !important; }
           .print-day { margin-bottom: 14pt !important; padding-bottom: 14pt !important; }
-          .print-day-num { font-size: 18pt !important; color: #B8860B !important; }
-          .print-day-title { font-size: 12pt !important; margin-bottom: 3pt !important; color: #000 !important; }
+          .print-day-num { font-size: 18pt !important; color: #F5C200 !important; }
+          .print-day-title { font-size: 12pt !important; margin-bottom: 3pt !important; color: #1C5C1C !important; }
           .print-day-body { font-size: 10pt !important; line-height: 1.45 !important; color: #333 !important; }
-          .print-day-overnight { font-size: 9pt !important; margin-top: 4pt !important; color: #2D5016 !important; }
-          .print-intro { background: #fff !important; color: #000 !important; padding: 0 0 14pt !important; border-bottom: 1pt solid #ccc; margin-bottom: 16pt; }
+          .print-day-overnight { font-size: 9pt !important; margin-top: 4pt !important; color: #E85000 !important; font-weight: 600; }
+          .print-intro { background: #fff !important; color: #000 !important; padding: 0 0 14pt !important; border-bottom: 2pt solid #1C5C1C; margin-bottom: 16pt; }
           .print-intro p { font-size: 10pt !important; color: #333 !important; font-style: italic; }
           .print-intro-meta { display: flex !important; gap: 32pt !important; margin-top: 10pt !important; }
           .print-intro-meta span { font-size: 9pt !important; color: #555 !important; }
-          .print-intro-meta strong { font-size: 8pt !important; text-transform: uppercase !important; letter-spacing: 0.1em !important; color: #B8860B !important; display: block !important; margin-bottom: 2pt !important; }
+          .print-intro-meta strong { font-size: 8pt !important; text-transform: uppercase !important; letter-spacing: 0.1em !important; color: #1C5C1C !important; display: block !important; margin-bottom: 2pt !important; }
           @page { margin: 0; size: letter; }
           body { padding: 0.65in; }
         }
@@ -101,11 +101,11 @@ export default function TierOneItinerary() {
       <div className="no-screen" style={{ display: "none" }}>
         <style>{`
           @media print {
-            .no-screen { display: flex !important; align-items: center; justify-content: space-between; border-bottom: 2pt solid #B8860B; padding-bottom: 10pt; margin-bottom: 16pt; }
-            .no-screen img { height: 48pt; width: auto; }
+            .no-screen { display: flex !important; align-items: center; justify-content: space-between; background: #1C5C1C; padding: 10pt 14pt; margin-bottom: 18pt; }
+            .no-screen img { height: 52pt; width: auto; }
             .no-screen div { text-align: right; }
-            .no-screen h1 { font-size: 16pt; font-family: 'DM Sans', sans-serif; color: #000; }
-            .no-screen p { font-size: 9pt; color: #666; margin-top: 3pt; }
+            .no-screen h1 { font-size: 16pt; font-family: 'DM Sans', sans-serif; color: #F5C200; }
+            .no-screen p { font-size: 9pt; color: rgba(255,255,255,0.75); margin-top: 3pt; }
           }
         `}</style>
         <img src="/logo.png" alt="Bhutan-Luxe" />
