@@ -259,7 +259,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Ultra-Luxe</span>
+            <span className="tag">Tier III  |  Ultra-Luxe</span>
             <h3 style={{ fontSize: '28px' }}>Extraordinary Bhutan</h3>
             <div className="meta">
               <div>
