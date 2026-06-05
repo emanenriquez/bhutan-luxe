@@ -235,7 +235,7 @@ export default function Home() {
               </div>
               <div>
                 <span className="k">Region</span>
-                <span className="v">Bumthang · Gangtey</span>
+                <span className="v">Paro · Haa · Thimphu · Punakha · Gangtey</span>
               </div>
             </div>
             <p>
