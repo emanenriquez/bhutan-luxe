@@ -80,22 +80,31 @@ export default function TierOneItinerary() {
         a { color: inherit; text-decoration: none; }
         @media print {
           .no-print { display: none !important; }
-          body { background: #fff; color: #000; font-size: 9pt; line-height: 1.4; }
+          body { background: #fff; color: #000; font-size: 10pt; line-height: 1.5; }
           .print-section { background: #fff !important; color: #000 !important; padding: 0 !important; }
-          .print-day { margin-bottom: 8pt !important; padding-bottom: 8pt !important; }
-          .print-day-num { font-size: 14pt !important; }
-          .print-day-title { font-size: 11pt !important; margin-bottom: 2pt !important; }
-          .print-day-body { font-size: 9pt !important; line-height: 1.3 !important; color: #333 !important; }
-          .print-day-overnight { font-size: 8pt !important; margin-top: 2pt !important; color: #2D5016 !important; }
-          .print-intro { background: #fff !important; color: #000 !important; padding: 12pt 0 8pt !important; }
-          .print-intro p { font-size: 9pt !important; color: #333 !important; }
-          .print-header { padding: 0 0 8pt !important; border-bottom: 1pt solid #ccc; margin-bottom: 12pt; }
-          @page { margin: 0.6in; size: letter; }
+          .print-day { margin-bottom: 14pt !important; padding-bottom: 14pt !important; }
+          .print-day-num { font-size: 18pt !important; color: #B8860B !important; }
+          .print-day-title { font-size: 12pt !important; margin-bottom: 3pt !important; color: #000 !important; }
+          .print-day-body { font-size: 10pt !important; line-height: 1.45 !important; color: #333 !important; }
+          .print-day-overnight { font-size: 9pt !important; margin-top: 4pt !important; color: #2D5016 !important; }
+          .print-intro { background: #fff !important; color: #000 !important; padding: 0 0 14pt !important; border-bottom: 1pt solid #ccc; margin-bottom: 16pt; }
+          .print-intro p { font-size: 10pt !important; color: #333 !important; font-style: italic; }
+          .print-intro-meta { display: flex !important; gap: 32pt !important; margin-top: 10pt !important; }
+          .print-intro-meta span { font-size: 9pt !important; color: #555 !important; }
+          .print-intro-meta strong { font-size: 8pt !important; text-transform: uppercase !important; letter-spacing: 0.1em !important; color: #B8860B !important; display: block !important; margin-bottom: 2pt !important; }
+          @page { margin: 0.65in; size: letter; }
         }
       `}</style>
 
+      {/* PRINT-ONLY HEADER */}
+      <div className="no-screen" style={{ display: "none" }}>
+        <style>{`@media print { .no-screen { display: block !important; border-bottom: 2pt solid #B8860B; padding-bottom: 10pt; margin-bottom: 16pt; } .no-screen h1 { font-size: 20pt; font-family: 'DM Sans', sans-serif; } .no-screen p { font-size: 9pt; color: #666; margin-top: 4pt; } }`}</style>
+        <h1>Essential Bhutan — Tier I Sample Itinerary</h1>
+        <p>10 Days · Paro · Thimphu · Punakha · Gangtey · Bhutan-Luxe Travel · bhutan-luxe.com</p>
+      </div>
+
       {/* TOPBAR */}
-      <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
+      <div className="no-print" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
@@ -105,7 +114,7 @@ export default function TierOneItinerary() {
       </div>
 
       {/* HERO */}
-      <div style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
+      <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left" }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#FF8C00", marginBottom: 12 }}>Tier One · Sample Itinerary</p>
@@ -116,7 +125,7 @@ export default function TierOneItinerary() {
       </div>
 
       {/* INTRO */}
-      <div style={{ background: "#2D5016", padding: "56px 56px 48px" }}>
+      <div className="no-print" style={{ background: "#2D5016", padding: "56px 56px 48px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, lineHeight: 1.6, color: "#F7F5F0", fontStyle: "italic" }}>
             A thoughtfully curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. From monastery blessings and sacred mountain hikes to village encounters and iconic landmarks, this journey offers a meaningful first glimpse into the Kingdom's enduring way of life.
@@ -161,7 +170,7 @@ export default function TierOneItinerary() {
       </div>
 
       {/* CTA */}
-      <div style={{ background: "#3B3A36", padding: "80px 56px", textAlign: "center" }}>
+      <div className="no-print" style={{ background: "#3B3A36", padding: "80px 56px", textAlign: "center" }}>
         <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 16 }}>Ready to Begin</p>
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 400, color: "#F7F5F0", marginBottom: 24 }}>Inquire About This Journey</h2>
         <p style={{ color: "rgba(247,245,240,0.65)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>
@@ -173,7 +182,7 @@ export default function TierOneItinerary() {
       </div>
 
       {/* FOOTER */}
-      <div style={{ background: "#2D5016", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div className="no-print" style={{ background: "#2D5016", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <Link href="/" style={{ fontFamily: "Inter", fontSize: 12, color: "rgba(247,245,240,0.5)", letterSpacing: "0.1em" }}>← Back to Bhutan-Luxe</Link>
         <span style={{ fontFamily: "Inter", fontSize: 11, color: "rgba(247,245,240,0.35)", letterSpacing: "0.1em" }}>© Bhutan-Luxe Travel · Houston, Texas</span>
       </div>
