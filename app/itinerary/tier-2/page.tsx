@@ -119,7 +119,7 @@ export default function TierTwoItinerary() {
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
           <h1>Boutique-Luxe - Tier II: Deeper Discovery</h1>
-          <p>10 Days · Bhutan-Luxe Travel</p>
+          <p>10 Days · Bhutan-Luxe</p>
         </div>
       </div>
 

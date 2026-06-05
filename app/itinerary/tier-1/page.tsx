@@ -111,7 +111,7 @@ export default function TierOneItinerary() {
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
           <h1>Tier I  |  Luxe  :  Essential Bhutan</h1>
-          <p>10 Days · Bhutan-Luxe Travel</p>
+          <p>10 Days · Bhutan-Luxe</p>
         </div>
       </div>
 
