@@ -185,7 +185,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier One</span>
+            <span className="tag">Luxe</span>
             <h3>Introduction to Bhutan</h3>
             <div className="meta">
               <div>
@@ -222,7 +222,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier Two</span>
+            <span className="tag">Bhutan-Luxe</span>
             <h3>Immersive Bhutan</h3>
             <div className="meta">
               <div>
@@ -259,7 +259,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Tier Three</span>
+            <span className="tag">Ultra-Luxe</span>
             <h3>Extraordinary Bhutan</h3>
             <div className="meta">
               <div>

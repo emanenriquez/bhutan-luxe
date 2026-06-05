@@ -166,7 +166,7 @@ img { display:block; max-width:100%; }
 .tier-row .img-col {
   aspect-ratio: 4/3; background-size: cover; background-position: center;
 }
-.tier-row .body .tag { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color: var(--saffron); display:block; margin-bottom: 14px; }
+.tier-row .body .tag { font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color: var(--saffron); display:block; margin-bottom: 14px; }
 .tier-row .body h3 { font-size: 44px; color: var(--cloud); margin-bottom: 14px; line-height: 1.05; letter-spacing: -0.005em; }
 .tier-row .body .meta {
   display:flex; gap: 32px; padding: 14px 0;
