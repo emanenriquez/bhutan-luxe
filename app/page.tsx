@@ -222,7 +222,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Bhutan-Luxe</span>
+            <span className="tag">Tier II  |  Boutique-Luxe</span>
             <h3>Immersive Bhutan</h3>
             <div className="meta">
               <div>
