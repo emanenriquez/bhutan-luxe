@@ -129,8 +129,10 @@ export default function TierOneItinerary() {
       <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
-            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#FF8C00", marginBottom: 12 }}>Tier One · Sample Itinerary</p>
-            <h1 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "clamp(28px, 4vw, 56px)", lineHeight: 1, letterSpacing: "-0.012em", color: "#F7F5F0", marginBottom: 16 }}>Essential Bhutan</h1>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "16px", marginBottom: "16px" }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", color: "#F7F5F0", fontWeight: 400 }}>Tier I  |  Luxe</span>
+              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontStyle: "italic", color: "#FF8C00", fontWeight: 400, margin: 0 }}>Essential Bhutan</h1>
+            </div>
             <p style={{ fontFamily: "Inter", fontSize: 14, color: "rgba(247,245,240,0.7)", letterSpacing: "0.08em" }}>10 Days &nbsp;·&nbsp; Paro · Thimphu · Punakha · Gangtey</p>
           </div>
         </div>
