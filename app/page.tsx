@@ -186,7 +186,7 @@ export default function Home() {
           />
           <div className="body">
             <span className="tag">Tier One · Discover Bhutan</span>
-            <h3>Luxe</h3>
+            <h3>Introduction to Bhutan</h3>
             <div className="meta">
               <div>
                 <span className="k">Curated Journey Range</span>
@@ -223,7 +223,7 @@ export default function Home() {
           />
           <div className="body">
             <span className="tag">Tier Two · Curated Discovery</span>
-            <h3>Boutique-Luxe</h3>
+            <h3>Immersive Bhutan</h3>
             <div className="meta">
               <div>
                 <span className="k">Curated Journey Range</span>
@@ -239,9 +239,7 @@ export default function Home() {
               </div>
             </div>
             <p>
-              Gateway access to the country&apos;s remote eastern valleys.
-              Private ceremonies, wild glamping in locations unavailable
-              through any other operator, and a journey between two worlds.
+              Journey beyond the familiar through sacred traditions, remote valleys, luxury tented camps, and immersive experiences woven into Bhutanese life.
             </p>
             <div className="actions">
               <a href="#" className="btn-line">
@@ -262,7 +260,7 @@ export default function Home() {
           />
           <div className="body">
             <span className="tag">Tier Three · Helicopter &amp; Audience</span>
-            <h3>Ultra-Luxe</h3>
+            <h3>Extraordinary Bhutan</h3>
             <div className="meta">
               <div>
                 <span className="k">Curated Journey Range</span>
@@ -278,9 +276,7 @@ export default function Home() {
               </div>
             </div>
             <p>
-              Helicopter access to trailless regions of eastern Bhutan. Private
-              audiences arranged through relationships built over a decade.
-              Designed for those for whom access itself is the luxury.
+              Our most exclusive journey, combining private spiritual access, extraordinary events, luxury wilderness retreats, and Bhutan's finest hospitality.
             </p>
             <div className="actions">
               <a href="#" className="btn-line">
