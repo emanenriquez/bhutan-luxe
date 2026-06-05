@@ -223,7 +223,7 @@ export default function Home() {
           />
           <div className="body">
             <span className="tag">Tier II  |  Boutique-Luxe</span>
-            <h3>Immersive Bhutan</h3>
+            <h3 style={{ fontSize: '28px' }}>Immersive Bhutan</h3>
             <div className="meta">
               <div>
                 <span className="k">Curated Journey Range</span>
@@ -260,7 +260,7 @@ export default function Home() {
           />
           <div className="body">
             <span className="tag">Ultra-Luxe</span>
-            <h3>Extraordinary Bhutan</h3>
+            <h3 style={{ fontSize: '28px' }}>Extraordinary Bhutan</h3>
             <div className="meta">
               <div>
                 <span className="k">Curated Journey Range</span>
