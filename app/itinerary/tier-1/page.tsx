@@ -104,15 +104,13 @@ export default function TierOneItinerary() {
             .no-screen { display: flex !important; align-items: center; justify-content: space-between; background: #fff; border-bottom: 2pt solid #1C5C1C; padding-bottom: 10pt; margin-bottom: 18pt; }
             .no-screen img { height: 52pt; width: auto; }
             .no-screen div { text-align: right; }
-            .no-screen h1 { font-size: 14pt; font-family: 'Playfair Display', serif; color: #000; margin-bottom: 2pt; }
-            .no-screen h2 { font-size: 16pt; font-family: 'Playfair Display', serif; font-style: italic; color: #B8860B; }
+            .no-screen h1 { font-size: 16pt; font-family: 'Playfair Display', serif; color: #B8860B; }
             .no-screen p { font-size: 9pt; color: #2D5016; font-weight: 600; margin-top: 4pt; }
           }
         `}</style>
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
-          <h1>Tier I  |  Luxe</h1>
-          <h2>Essential Bhutan</h2>
+          <h1>Tier I  |  Luxe  :  Essential Bhutan</h1>
           <p>10 Days · Paro · Thimphu · Punakha · Gangtey</p>
         </div>
       </div>
@@ -131,10 +129,9 @@ export default function TierOneItinerary() {
       <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "16px", marginBottom: "16px" }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", color: "#F7F5F0", fontWeight: 400 }}>Tier I  |  Luxe</span>
-              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontStyle: "italic", color: "#FF8C00", fontWeight: 400, margin: 0 }}>Essential Bhutan</h1>
-            </div>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0", marginBottom: "16px" }}>
+              Tier I  |  Luxe  :  <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Essential Bhutan</em>
+            </h1>
             <p style={{ fontFamily: "Inter", fontSize: 14, color: "rgba(247,245,240,0.7)", letterSpacing: "0.08em" }}>10 Days &nbsp;·&nbsp; Paro · Thimphu · Punakha · Gangtey</p>
           </div>
         </div>
