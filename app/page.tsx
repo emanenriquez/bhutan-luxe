@@ -242,7 +242,7 @@ export default function Home() {
               Journey beyond the familiar through sacred traditions, remote valleys, luxury tented camps, and immersive experiences woven into Bhutanese life.
             </p>
             <div className="actions">
-              <a href="#" className="btn-line">
+              <a href="/itinerary/tier-2" className="btn-line">
                 Sample Itinerary →
               </a>
             </div>
