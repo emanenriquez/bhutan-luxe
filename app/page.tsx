@@ -205,7 +205,7 @@ export default function Home() {
               A curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions, thoughtfully designed for meaningful discovery and authentic connection.
             </p>
             <div className="actions">
-              <a href="#" className="btn-line">
+              <a href="/itinerary/tier-1" className="btn-line">
                 Sample Itinerary →
               </a>
             </div>
