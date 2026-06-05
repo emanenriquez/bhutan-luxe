@@ -92,15 +92,27 @@ export default function TierOneItinerary() {
           .print-intro-meta { display: flex !important; gap: 32pt !important; margin-top: 10pt !important; }
           .print-intro-meta span { font-size: 9pt !important; color: #555 !important; }
           .print-intro-meta strong { font-size: 8pt !important; text-transform: uppercase !important; letter-spacing: 0.1em !important; color: #B8860B !important; display: block !important; margin-bottom: 2pt !important; }
-          @page { margin: 0.65in; size: letter; }
+          @page { margin: 0; size: letter; }
+          body { padding: 0.65in; }
         }
       `}</style>
 
       {/* PRINT-ONLY HEADER */}
       <div className="no-screen" style={{ display: "none" }}>
-        <style>{`@media print { .no-screen { display: block !important; border-bottom: 2pt solid #B8860B; padding-bottom: 10pt; margin-bottom: 16pt; } .no-screen h1 { font-size: 20pt; font-family: 'DM Sans', sans-serif; } .no-screen p { font-size: 9pt; color: #666; margin-top: 4pt; } }`}</style>
-        <h1>Essential Bhutan — Tier I Sample Itinerary</h1>
-        <p>10 Days · Paro · Thimphu · Punakha · Gangtey · Bhutan-Luxe Travel · bhutan-luxe.com</p>
+        <style>{`
+          @media print {
+            .no-screen { display: flex !important; align-items: center; justify-content: space-between; border-bottom: 2pt solid #B8860B; padding-bottom: 10pt; margin-bottom: 16pt; }
+            .no-screen img { height: 48pt; width: auto; }
+            .no-screen div { text-align: right; }
+            .no-screen h1 { font-size: 16pt; font-family: 'DM Sans', sans-serif; color: #000; }
+            .no-screen p { font-size: 9pt; color: #666; margin-top: 3pt; }
+          }
+        `}</style>
+        <img src="/logo.png" alt="Bhutan-Luxe" />
+        <div>
+          <h1>Essential Bhutan — Tier I Sample Itinerary</h1>
+          <p>10 Days · Paro · Thimphu · Punakha · Gangtey</p>
+        </div>
       </div>
 
       {/* TOPBAR */}
