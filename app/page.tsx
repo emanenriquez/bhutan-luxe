@@ -185,7 +185,7 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <span className="tag">Luxe - Tier 1</span>
+            <span className="tag">Tier I  |  Luxe</span>
             <h3 style={{ fontSize: '28px' }}>Introduction to Bhutan</h3>
             <div className="meta">
               <div>
