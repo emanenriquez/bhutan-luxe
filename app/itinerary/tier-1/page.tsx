@@ -99,7 +99,7 @@ export default function TierOneItinerary() {
       {/* PRINT-ONLY HEADER */}
       <div className="no-screen" style={{ display: "none" }}>
         <style>{`@media print { .no-screen { display: block !important; border-bottom: 2pt solid #B8860B; padding-bottom: 10pt; margin-bottom: 16pt; } .no-screen h1 { font-size: 20pt; font-family: 'DM Sans', sans-serif; } .no-screen p { font-size: 9pt; color: #666; margin-top: 4pt; } }`}</style>
-        <h1>Essential Bhutan — Tier I Sample Itinerary — $8,000/person</h1>
+        <h1>Essential Bhutan — Tier I Sample Itinerary</h1>
         <p>10 Days · Paro · Thimphu · Punakha · Gangtey · Bhutan-Luxe Travel · bhutan-luxe.com</p>
       </div>
 
