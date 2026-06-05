@@ -198,7 +198,7 @@ export default function Home() {
               </div>
               <div>
                 <span className="k">Region</span>
-                <span className="v">Paro · Thimphu</span>
+                <span className="v">Paro · Thimphu · Punakha · Gangtey</span>
               </div>
             </div>
             <p>
@@ -272,7 +272,7 @@ export default function Home() {
               </div>
               <div>
                 <span className="k">Region</span>
-                <span className="v">Lhuentse · Trashiyangtse</span>
+                <span className="v">Paro · Haa · Thimphu · Punakha · Gangtey</span>
               </div>
             </div>
             <p>
