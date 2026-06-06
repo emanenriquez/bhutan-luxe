@@ -165,9 +165,9 @@ export default function Home() {
           <div>
             <span className="label">Curated Bhutan Experiences</span>
             <h2>
-              Journeys of Discovery
+              Paths to Discover
               <br />
-              and <em>Serenity</em>
+              <em>Authentic Bhutan</em>
             </h2>
           </div>
           <p className="intro">
