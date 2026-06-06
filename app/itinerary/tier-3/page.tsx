@@ -117,7 +117,7 @@ export default function TierThreeItinerary() {
         `}</style>
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
-          <h1>The Extraordinary Path — Tier III</h1>
+          <h1>The Extraordinary Path</h1>
           <p>10 Days · Bhutan-Luxe</p>
         </div>
       </div>
