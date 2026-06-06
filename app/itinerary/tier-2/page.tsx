@@ -151,7 +151,7 @@ export default function TierTwoItinerary() {
             A deeper exploration of Bhutan through sacred traditions, luxury wilderness retreats, private spiritual encounters, and meaningful cultural immersion. Designed for travelers seeking a richer connection to the Kingdom, this journey reveals hidden valleys, living traditions, and experiences rarely found on conventional itineraries.
           </p>
           <div style={{ display: "flex", gap: 40, marginTop: 36, borderTop: "1px solid rgba(212,168,67,0.3)", paddingTop: 28 }}>
-            {[["Duration", "10 Days"], ["Curated Range", "$13,000+"]].map(([k, v]) => (
+            {[["Recommended Stay", "10 Days"], ["Experience Investment Range", "$13,000+"]].map(([k, v]) => (
               <div key={k}>
                 <span style={{ display: "block", fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 4 }}>{k}</span>
                 <span style={{ fontFamily: "Inter", fontSize: 14, color: "#F7F5F0" }}>{v}</span>

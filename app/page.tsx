@@ -190,11 +190,11 @@ export default function Home() {
             </h3>
             <div className="meta">
               <div>
-                <span className="k">Curated Journey Range</span>
+                <span className="k">Experience Investment Range</span>
                 <span className="v">$8,000 – $12,000</span>
               </div>
               <div>
-                <span className="k">Duration</span>
+                <span className="k">Recommended Stay</span>
                 <span className="v">10 days</span>
               </div>
             </div>
@@ -224,11 +224,11 @@ export default function Home() {
             </h3>
             <div className="meta">
               <div>
-                <span className="k">Curated Journey Range</span>
+                <span className="k">Experience Investment Range</span>
                 <span className="v">$12,000 – $25,000</span>
               </div>
               <div>
-                <span className="k">Duration</span>
+                <span className="k">Recommended Stay</span>
                 <span className="v">10 days</span>
               </div>
             </div>
@@ -258,11 +258,11 @@ export default function Home() {
             </h3>
             <div className="meta">
               <div>
-                <span className="k">Curated Journey Range</span>
+                <span className="k">Experience Investment Range</span>
                 <span className="v">$25,000 – $35,000+</span>
               </div>
               <div>
-                <span className="k">Duration</span>
+                <span className="k">Recommended Stay</span>
                 <span className="v">10 days</span>
               </div>
             </div>
