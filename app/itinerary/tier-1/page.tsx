@@ -143,7 +143,7 @@ export default function TierOneItinerary() {
             A thoughtfully curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. From monastery blessings and sacred mountain hikes to village encounters and iconic landmarks, this journey offers a meaningful first glimpse into the Kingdom's enduring way of life.
           </p>
           <div style={{ display: "flex", gap: 40, marginTop: 36, borderTop: "1px solid rgba(212,168,67,0.3)", paddingTop: 28 }}>
-            {[["Recommended Stay", "10 Days"], ["Experience Investment Range", "$8,000 – $12,000"]].map(([k, v]) => (
+            {[["Recommended Stay", "10 Days"], ["Experience Investment Range", "$10,000 – $12,000"]].map(([k, v]) => (
               <div key={k}>
                 <span style={{ display: "block", fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 4 }}>{k}</span>
                 <span style={{ fontFamily: "Inter", fontSize: 14, color: "#F7F5F0" }}>{v}</span>
@@ -157,7 +157,7 @@ export default function TierOneItinerary() {
       <div className="print-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
-            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $8,000/person Estimate</p>
+            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $10,000/person Estimate</p>
             <div className="no-print"><PrintButton /></div>
           </div>
 
