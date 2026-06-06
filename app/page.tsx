@@ -260,7 +260,7 @@ export default function Home() {
               Our most exclusive journey, combining private spiritual access, extraordinary events, luxury wilderness retreats, and Bhutan's finest hospitality.
             </p>
             <div className="actions">
-              <a href="#" className="btn-line">
+              <a href="/itinerary/tier-3" className="btn-line">
                 Sample Itinerary →
               </a>
             </div>

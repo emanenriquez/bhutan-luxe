@@ -1,0 +1,214 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import PrintButton from "./PrintButton";
+
+export const metadata: Metadata = {
+  title: "The Extraordinary Path — Tier III | Bhutan-Luxe",
+  description:
+    "Our most exclusive Bhutan journey — 10 days combining the Kingdom's finest lodges, private spiritual encounters, luxury wilderness retreats, and extraordinary experiences.",
+};
+
+const days = [
+  {
+    day: 1,
+    title: "Arrival & Renewal",
+    body: "Arrive in Paro and begin your journey with a traditional blessing and spiritual cleansing ceremony conducted by a respected Lama. Retreat to Bhutan's premier wellness sanctuary, where restorative treatments and exceptional hospitality provide a tranquil introduction to the Kingdom.",
+    overnight: "Bhutan Spirit Sanctuary, Paro",
+  },
+  {
+    day: 2,
+    title: "The Hidden World of Haa Valley",
+    body: "Cross the dramatic Chelela Pass into the remote Haa Valley, one of Bhutan's least-visited regions. Along the way, encounter local traditions and flavors unique to the valley before arriving at an extraordinary luxury wilderness retreat. The evening unfolds with wellness rituals, astrology readings, cultural performances, forest experiences, and a candlelit dinner beneath Himalayan skies.",
+    overnight: "Sangwa Camp, Haa Valley",
+  },
+  {
+    day: 3,
+    title: "Wilderness, Wellness & Living Traditions",
+    body: "Begin with yoga and forest bathing before discovering the hidden culture of Haa Valley through authentic encounters with local communities. Learn traditional crafts, explore pristine landscapes, and experience a side of Bhutan rarely seen by visitors. Continue to Thimphu and settle into one of Bhutan's most acclaimed luxury lodges.",
+    overnight: "Six Senses Thimphu",
+  },
+  {
+    day: 4,
+    title: "Spiritual Access & Cultural Heritage",
+    body: "Explore Bhutan's living artistic traditions through private cultural experiences, scenic walks, and encounters with master artisans. As evening descends, enjoy an extraordinary private meditation experience within the sacred inner chambers of Buddha Point, accompanied by a revered lama in a setting closed to the public.",
+    overnight: "Six Senses Thimphu",
+  },
+  {
+    day: 5,
+    title: "Into the Punakha Valley",
+    body: "Journey through the high Himalayas and descend into Bhutan's historic heartland. Visit sacred temples, hidden meditation sites, and traditional villages while discovering the profound connection between nature, spirituality, and everyday life.",
+    overnight: "andBeyond Punakha River Lodge",
+  },
+  {
+    day: 6,
+    title: "A Night Beyond the Ordinary",
+    body: "Explore Punakha's remarkable landscapes through scenic hikes, cultural encounters, and traditional culinary experiences. As darkness falls, experience one of the journey's signature moments: a private riverside celebration featuring a candlelit dinner, live traditional music, an exclusive evening river journey, and a bonfire gathering beneath the stars.",
+    overnight: "andBeyond Punakha River Lodge",
+  },
+  {
+    day: 7,
+    title: "The Serenity of Gangtey",
+    body: "Travel to the magnificent Phobjikha Valley, where vast open landscapes and ancient spiritual traditions coexist in remarkable harmony. Receive blessings at Gangtey Monastery and experience one of Bhutan's most beautiful and tranquil regions.",
+    overnight: "Gangtey Lodge",
+  },
+  {
+    day: 8,
+    title: "The Rhythm of Valley Life",
+    body: "Explore the renowned Gangtey Nature Trail through forests, meadows, and traditional settlements. Share a meal with a local family, enjoy breathtaking valley vistas, and embrace the slower pace that defines rural Bhutan. Return to Paro and settle into one of the Kingdom's most celebrated luxury lodges.",
+    overnight: "Six Senses Paro",
+  },
+  {
+    day: 9,
+    title: "Tiger's Nest & Private Reflection",
+    body: "Undertake the iconic pilgrimage to Tiger's Nest Monastery, dramatically perched above the Paro Valley. Explore sacred caves, enjoy a luxury picnic in an extraordinary setting, and conclude your Bhutanese journey with a private meditation experience guided by a respected spiritual master.",
+    overnight: "Six Senses Paro",
+  },
+  {
+    day: 10,
+    title: "Departure",
+    body: "Depart Bhutan with memories of extraordinary landscapes, meaningful connections, and experiences that few travelers have the privilege to encounter.",
+    overnight: null,
+  },
+];
+
+const highlights = [
+  "Luxury stays at Bhutan Spirit Sanctuary, Six Senses, Gangtey Lodge & andBeyond Punakha River Lodge",
+  "Exclusive Haa Valley wilderness retreat",
+  "Private meditation inside Buddha Point's inner sanctuary",
+  "Traditional wellness and healing experiences",
+  "Encounters with remote Himalayan communities",
+  "Private riverside evening experience in Punakha",
+  "Luxury wilderness and cultural immersion",
+  "Guided spiritual encounters with revered Bhutanese masters",
+  "Tiger's Nest pilgrimage and private meditation session",
+  "Carefully curated access to Bhutan's most meaningful experiences",
+];
+
+export default function TierThreeItinerary() {
+  return (
+    <>
+      <style>{`
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #3B3A36; color: #F7F5F0; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        @media print {
+          .no-print { display: none !important; }
+          body { background: #fff; color: #000; font-size: 10pt; line-height: 1.5; padding: 0.65in; }
+          .print-section { background: #fff !important; color: #000 !important; padding: 0 !important; }
+          .print-day { margin-bottom: 13pt !important; padding-bottom: 13pt !important; }
+          .print-day-num { font-size: 18pt !important; color: #B8860B !important; }
+          .print-day-title { font-size: 12pt !important; margin-bottom: 3pt !important; color: #1C5C1C !important; }
+          .print-day-body { font-size: 10pt !important; line-height: 1.45 !important; color: #333 !important; }
+          .print-day-overnight { font-size: 9pt !important; margin-top: 4pt !important; color: #E85000 !important; font-weight: 600; }
+          @page { margin: 0; size: letter; }
+        }
+      `}</style>
+
+      {/* PRINT-ONLY HEADER */}
+      <div className="no-screen" style={{ display: "none" }}>
+        <style>{`
+          @media print {
+            .no-screen { display: flex !important; align-items: center; justify-content: space-between; background: #fff; border-bottom: 2pt solid #1C5C1C; padding-bottom: 10pt; margin-bottom: 16pt; }
+            .no-screen img { height: 52pt; width: auto; }
+            .no-screen div { text-align: right; }
+            .no-screen h1 { font-size: 16pt; font-family: 'Playfair Display', serif; color: #B8860B; }
+            .no-screen p { font-size: 9pt; color: #2D5016; font-weight: 600; margin-top: 3pt; }
+          }
+        `}</style>
+        <img src="/logo.png" alt="Bhutan-Luxe" />
+        <div>
+          <h1>The Extraordinary Path — Tier III</h1>
+          <p>10 Days · Bhutan-Luxe</p>
+        </div>
+      </div>
+
+      {/* TOPBAR */}
+      <div className="no-print" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
+        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
+        </Link>
+        <Link href="/#tiers" style={{ fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", border: "none", cursor: "pointer", padding: "9px 18px", borderRadius: 8 }}>
+          Inquire Privately ↗
+        </Link>
+      </div>
+
+      {/* HERO */}
+      <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
+        <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
+          <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "16px" }}>
+              The Extraordinary Path
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* INTRO */}
+      <div className="no-print" style={{ background: "#2D5016", padding: "56px 56px 48px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, lineHeight: 1.6, color: "#F7F5F0", fontStyle: "italic" }}>
+            Our most exclusive Bhutan journey, combining the Kingdom's finest lodges, private spiritual encounters, luxury wilderness retreats, and extraordinary experiences unavailable through conventional travel. Thoughtfully curated for those seeking deeper access, authentic connection, and Bhutan at its most remarkable.
+          </p>
+        </div>
+      </div>
+
+      {/* ITINERARY */}
+      <div className="print-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
+            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $27,000/person</p>
+            <div className="no-print"><PrintButton /></div>
+          </div>
+
+          {days.map((d, i) => (
+            <div key={d.day} className="print-day" style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", marginBottom: i < days.length - 1 ? 24 : 0, paddingBottom: i < days.length - 1 ? 24 : 0, borderBottom: i < days.length - 1 ? "1px solid rgba(59,58,54,0.12)" : "none" }}>
+              <div style={{ textAlign: "right", paddingTop: 4 }}>
+                <span className="print-day-num" style={{ display: "block", fontFamily: "'Playfair Display', serif", fontSize: 32, lineHeight: 1, color: "#D4A843" }}>{String(d.day).padStart(2, "0")}</span>
+                <span style={{ fontFamily: "Inter", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(59,58,54,0.4)" }}>Day</span>
+              </div>
+              <div>
+                <h2 className="print-day-title" style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 400, color: "#3B3A36", marginBottom: 6 }}>{d.title}</h2>
+                <p className="print-day-body" style={{ fontSize: 14, color: "rgba(59,58,54,0.8)", lineHeight: 1.6 }}>{d.body}</p>
+                {d.overnight && (
+                  <p className="print-day-overnight" style={{ marginTop: 8, fontFamily: "Inter", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#2D5016" }}>
+                    Overnight: {d.overnight}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* HIGHLIGHTS */}
+      <div className="no-print" style={{ background: "#3B3A36", padding: "64px 56px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 28 }}>Signature Experiences</p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
+            {highlights.map((h, i) => (
+              <p key={i} style={{ fontSize: 14, color: "rgba(247,245,240,0.8)", paddingLeft: 16, borderLeft: "2px solid #FF8C00" }}>{h}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="no-print" style={{ background: "#2D5016", padding: "80px 56px", textAlign: "center" }}>
+        <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 16 }}>Ready to Begin</p>
+        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 400, color: "#F7F5F0", marginBottom: 24 }}>Inquire About This Journey</h2>
+        <p style={{ color: "rgba(247,245,240,0.65)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>
+          This itinerary is a starting point. Every detail is tailored around your interests, pace, and travel dates.
+        </p>
+        <Link href="/#tiers" style={{ display: "inline-block", background: "#FF8C00", color: "#000", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 32px", borderRadius: 8 }}>
+          Inquire Privately ↗
+        </Link>
+      </div>
+
+      {/* FOOTER */}
+      <div className="no-print" style={{ background: "#3B3A36", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <Link href="/" style={{ fontFamily: "Inter", fontSize: 12, color: "rgba(247,245,240,0.5)", letterSpacing: "0.1em" }}>← Back to Bhutan-Luxe</Link>
+        <span style={{ fontFamily: "Inter", fontSize: 11, color: "rgba(247,245,240,0.35)", letterSpacing: "0.1em" }}>© Bhutan-Luxe Travel · Houston, Texas</span>
+      </div>
+    </>
+  );
+}
