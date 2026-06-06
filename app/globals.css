@@ -153,7 +153,7 @@ img { display:block; max-width:100%; }
 #tiers .header .label { color: var(--gold); display:block; margin-bottom: 18px; }
 #tiers .header h2 { font-size: clamp(40px, 4.4vw, 64px); line-height: 1.04; color: var(--cloud); letter-spacing: -0.005em; }
 #tiers .header h2 em { font-style: italic; color: var(--saffron); }
-#tiers .header .intro { color: rgba(247,245,240,0.7); font-size: 15px; max-width: 480px; }
+#tiers .header .intro { color: rgba(247,245,240,0.7); font-size: 15px; max-width: 480px; padding-top: 37px; }
 
 .tier-row {
   max-width: 1280px; margin: 0 auto;
