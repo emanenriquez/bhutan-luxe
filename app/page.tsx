@@ -259,9 +259,6 @@ export default function Home() {
             <p>
               Our most exclusive journey, combining private spiritual access, extraordinary events, luxury wilderness retreats, and Bhutan's finest hospitality.
             </p>
-            <p style={{ marginTop: '12px', fontSize: '13px', color: 'rgba(247,245,240,0.6)', fontStyle: 'italic' }}>
-              *Same regions as Tier 2, but higher level of accommodations, private events, spiritual access, exclusivity and possible helicopter transportation.
-            </p>
             <div className="actions">
               <a href="#" className="btn-line">
                 Sample Itinerary →
