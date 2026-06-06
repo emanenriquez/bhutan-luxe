@@ -147,13 +147,13 @@ img { display:block; max-width:100%; }
 }
 #tiers .header {
   max-width: 1280px; margin: 0 auto 96px; padding: 0 56px;
-  display: flex; flex-direction: column; gap: 24px;
+  display: flex; flex-direction: row; gap: 80px; align-items: flex-start;
 }
 #tiers .header .num { font-family:'Playfair Display', serif; font-size: 88px; color: var(--gold); line-height: 0.85; }
 #tiers .header .label { color: var(--gold); display:block; margin-bottom: 18px; }
 #tiers .header h2 { font-size: clamp(40px, 4.4vw, 64px); line-height: 1.04; color: var(--cloud); letter-spacing: -0.005em; }
 #tiers .header h2 em { font-style: italic; color: var(--saffron); }
-#tiers .header .intro { color: rgba(247,245,240,0.7); font-size: 15px; max-width: 480px; margin-left: auto; }
+#tiers .header .intro { color: rgba(247,245,240,0.7); font-size: 15px; max-width: 480px; }
 
 .tier-row {
   max-width: 1280px; margin: 0 auto;
