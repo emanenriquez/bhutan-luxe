@@ -159,7 +159,7 @@ img { display:block; max-width:100%; }
   max-width: 1280px; margin: 0 auto;
   padding: 64px 56px;
   border-top: 1px solid rgba(212,168,67,0.5);
-  display:grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start;
+  display:grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center;
 }
 .tier-row:last-of-type { border-bottom: 1px solid rgba(212,168,67,0.5); }
 .tier-row .idx { font-family:'Playfair Display', serif; font-size: 40px; color: var(--gold); line-height: 1; padding-top: 8px; }
