@@ -169,9 +169,15 @@ export default function Home() {
               <em>Authentic Bhutan</em>
             </h2>
           </div>
-          <p className="intro">
-            Choose from three carefully curated journey experiences, each tailored and refined around your personal interests, pace, more or less days and desired level of discovery. Every journey is accompanied by your own private Bhutanese guide from arrival to departure.
-          </p>
+          <div className="intro">
+            <p>Select from three distinct Bhutan-Luxe experiences, each individually refined around your interests, pace, and preferred level of exploration. Accompanied by a dedicated private Bhutanese guide throughout your journey, you are free to travel at a rhythm that feels entirely your own. While 10 days offers an ideal balance of exploration and relaxation, every journey can be tailored to your preferences and schedule, whether shorter or longer in duration.</p>
+            <p style={{ marginTop: '20px' }}><strong>Best Dates to Travel</strong></p>
+            <ul style={{ marginTop: '8px', paddingLeft: '16px', listStyle: 'disc', color: 'rgba(247,245,240,0.7)' }}>
+              <li>Late September to Early November</li>
+              <li>Late May</li>
+              <li>Early December</li>
+            </ul>
+          </div>
         </div>
 
         <article className="tier-row">
