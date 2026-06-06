@@ -171,12 +171,7 @@ export default function Home() {
           </div>
           <div className="intro">
             <p>Choose from three carefully curated Bhutan-Luxe experiences, each designed around your interests, pace, and preferred level of exploration. Accompanied by a private Bhutanese guide throughout, every journey is tailored to your schedule, with 10 days offering the ideal balance of discovery and relaxation.</p>
-            <p style={{ marginTop: '20px' }}><strong>Best Dates to Travel</strong></p>
-            <ul style={{ marginTop: '8px', paddingLeft: '16px', listStyle: 'disc', color: 'rgba(247,245,240,0.7)' }}>
-              <li>Late September to Early November</li>
-              <li>Late May</li>
-              <li>Early December</li>
-            </ul>
+            <a href="/weather-guide" style={{ display: 'inline-block', marginTop: '20px', fontFamily: 'Inter', fontWeight: 500, fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--cloud)', background: 'transparent', border: '1px solid var(--gold)', padding: '10px 22px', borderRadius: 8, textDecoration: 'none' }}>Weather Guide →</a>
           </div>
         </div>
 
