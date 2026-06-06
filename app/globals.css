@@ -72,7 +72,7 @@ img { display:block; max-width:100%; }
 #hero .frame {
   position: relative;
   min-height: 100vh;
-  padding: 140px 56px 220px;
+  padding: 140px 56px 120px;
   display: grid; grid-template-rows: 1fr auto;
   gap: 8px;
   z-index: 1;
