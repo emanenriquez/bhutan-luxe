@@ -186,7 +186,7 @@ export default function Home() {
           />
           <div className="body">
             <h3 style={{ fontSize: '28px', marginBottom: '14px', fontFamily: "'Playfair Display', serif", fontWeight: 400 }}>
-              <span style={{ color: 'var(--cloud)' }}>Tier I  |  Luxe  :  </span><em style={{ color: 'var(--saffron)' }}>The Discovery Path</em>
+              <em style={{ color: 'var(--saffron)' }}>The Discovery Path</em>
             </h3>
             <div className="meta">
               <div>
@@ -220,7 +220,7 @@ export default function Home() {
           />
           <div className="body">
             <h3 style={{ fontSize: '28px', marginBottom: '14px', fontFamily: "'Playfair Display', serif", fontWeight: 400 }}>
-              <span style={{ color: 'var(--cloud)' }}>Tier II  |  Boutique-Luxe  :  </span><em style={{ color: 'var(--saffron)' }}>The Immersion Path</em>
+              <em style={{ color: 'var(--saffron)' }}>The Immersion Path</em>
             </h3>
             <div className="meta">
               <div>
@@ -254,7 +254,7 @@ export default function Home() {
           />
           <div className="body">
             <h3 style={{ fontSize: '28px', marginBottom: '14px', fontFamily: "'Playfair Display', serif", fontWeight: 400 }}>
-              <span style={{ color: 'var(--cloud)' }}>Tier III  |  Ultra-Luxe  :  </span><em style={{ color: 'var(--saffron)' }}>The Extraordinary Path</em>
+              <em style={{ color: 'var(--saffron)' }}>The Extraordinary Path</em>
             </h3>
             <div className="meta">
               <div>
