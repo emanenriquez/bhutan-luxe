@@ -140,7 +140,6 @@ export default function TierTwoItinerary() {
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0", marginBottom: "12px" }}>
               Tier II  |  Boutique-Luxe  :  <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Immersive Bhutan</em>
             </h1>
-            <p style={{ fontFamily: "Inter", fontSize: 14, color: "rgba(247,245,240,0.7)", letterSpacing: "0.08em" }}>10 Days</p>
           </div>
         </div>
       </div>
