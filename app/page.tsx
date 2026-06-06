@@ -161,11 +161,10 @@ export default function Home() {
       {/* TIERS */}
       <section id="tiers">
         <div className="header">
-          <div className="num">03</div>
           <div>
             <span className="label">Curated Bhutan Experiences</span>
             <h2>
-              Paths to Discover
+              Three Paths to Discover
               <br />
               <em>Authentic Bhutan</em>
             </h2>
