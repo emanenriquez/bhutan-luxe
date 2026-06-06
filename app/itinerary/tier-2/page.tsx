@@ -118,7 +118,7 @@ export default function TierTwoItinerary() {
         `}</style>
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
-          <h1>Tier II  |  Boutique-Luxe  :  Immersive Bhutan</h1>
+          <h1>Immersive Bhutan</h1>
           <p>10 Days · Bhutan-Luxe</p>
         </div>
       </div>
@@ -138,7 +138,7 @@ export default function TierTwoItinerary() {
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0", marginBottom: "12px" }}>
-              Tier II  |  Boutique-Luxe  :  <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Immersive Bhutan</em>
+              <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Immersive Bhutan</em>
             </h1>
           </div>
         </div>
