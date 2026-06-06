@@ -55,10 +55,11 @@ export default function WeatherGuide() {
       {/* HERO */}
       <div style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 340, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
-          <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#FF8C00", marginBottom: 12 }}>Bhutan-Luxe</p>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
-            Best Travel <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Windows</em>
-          </h1>
+          <div style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
+              Best Travel <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Windows</em>
+            </h1>
+          </div>
         </div>
       </div>
 
