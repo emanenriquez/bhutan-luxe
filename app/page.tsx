@@ -175,7 +175,6 @@ export default function Home() {
         </div>
 
         <article className="tier-row">
-          <div className="idx">I.</div>
           <div
             className="img-col"
             style={{
@@ -209,7 +208,6 @@ export default function Home() {
         </article>
 
         <article className="tier-row">
-          <div className="idx">II.</div>
           <div
             className="img-col"
             style={{
@@ -243,7 +241,6 @@ export default function Home() {
         </article>
 
         <article className="tier-row">
-          <div className="idx">III.</div>
           <div
             className="img-col"
             style={{
