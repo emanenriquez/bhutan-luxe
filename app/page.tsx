@@ -191,7 +191,7 @@ export default function Home() {
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$10,000</span>
               </span>
             </h3>
-            <p style={{ marginBottom: 0 }}>Discover Bhutan through its sacred monasteries, mountain valleys, and enduring traditions that continue to shape life across the kingdom.</p>
+            <p style={{ marginBottom: 0, maxWidth: 'none' }}>Discover Bhutan through its sacred monasteries, mountain valleys, and enduring traditions that continue to shape life across the kingdom.</p>
             <ul style={{ marginTop: '4px', marginBottom: '20px', paddingLeft: '28px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '3px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
               <li>Visit sacred monasteries and receive blessings from revered spiritual leaders.</li>
               <li>Discover breathtaking mountain landscapes, tranquil valleys, and ancient pilgrimage sites.</li>
@@ -223,7 +223,7 @@ export default function Home() {
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$18,000</span>
               </span>
             </h3>
-            <p style={{ marginBottom: 0 }}>An immersive journey combining Bhutan's spiritual heritage, stunning landscapes, and rare cultural experiences.</p>
+            <p style={{ marginBottom: 0, maxWidth: 'none' }}>An immersive journey combining Bhutan's spiritual heritage, stunning landscapes, and rare cultural experiences.</p>
             <ul style={{ marginTop: '4px', marginBottom: '20px', paddingLeft: '28px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '3px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
               <li>Stay in a luxury tented camp and experience the traditions of Bhutan&apos;s remote Haa Valley.</li>
               <li>Connect with local communities through cultural exchanges, family visits, and artisan traditions.</li>
@@ -255,7 +255,7 @@ export default function Home() {
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$35,000</span>
               </span>
             </h3>
-            <p style={{ marginBottom: 0 }}>Extraordinary experiences reveal Bhutan at its most inspiring, combining rare spiritual access, remarkable settings, exceptional hospitality, and moments that few travelers will ever encounter.</p>
+            <p style={{ marginBottom: 0, maxWidth: 'none' }}>Extraordinary experiences reveal Bhutan at its most inspiring, combining rare spiritual access, remarkable settings, exceptional hospitality, and moments that few travelers will ever encounter.</p>
             <ul style={{ marginTop: '4px', marginBottom: '20px', paddingLeft: '28px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '3px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
               <li>Stay at Bhutan&apos;s most celebrated lodges and luxury camps, including Six Senses, &ldquo;andBeyond&rdquo;, and Haa Sangwa Camp.</li>
               <li>Experience signature events created in extraordinary settings, from candlelit riverside evenings to private ceremonies and cultural performances.</li>
