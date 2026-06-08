@@ -83,7 +83,7 @@ img { display:block; max-width:100%; }
   margin-left: auto;
   padding-bottom: 0;
 }
-#hero .eyebrow { color: #ffffff; display:block; margin-top: 8px; margin-bottom: 8px; font-family: 'Playfair Display', serif; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.12em; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
+#hero .eyebrow { color: #ffffff; display:block; margin-top: 8px; margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 0.85rem; letter-spacing: 0.12em; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
 #hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(18px, 3vw, 48px);
