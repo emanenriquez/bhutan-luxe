@@ -191,7 +191,7 @@ export default function Home() {
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$10,000</span>
               </span>
             </h3>
-            <p>Discover Bhutan through its sacred monasteries, mountain valleys, and enduring traditions that continue to shape life across the kingdom.</p>
+            <p style={{ marginBottom: 0 }}>Discover Bhutan through its sacred monasteries, mountain valleys, and enduring traditions that continue to shape life across the kingdom.</p>
             <ul style={{ marginTop: '0', marginBottom: '20px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
               <li>Visit sacred monasteries and receive blessings from revered spiritual leaders.</li>
               <li>Discover breathtaking mountain landscapes, tranquil valleys, and ancient pilgrimage sites.</li>
