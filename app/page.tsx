@@ -192,7 +192,7 @@ export default function Home() {
               </span>
             </h3>
             <p>Discover Bhutan through its sacred monasteries, mountain valleys, and enduring traditions that continue to shape life across the kingdom.</p>
-            <ul style={{ marginTop: '4px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
+            <ul style={{ marginTop: '0', marginBottom: '20px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
               <li>Visit sacred monasteries and receive blessings from revered spiritual leaders.</li>
               <li>Discover breathtaking mountain landscapes, tranquil valleys, and ancient pilgrimage sites.</li>
               <li>Participate in cultural experiences that reveal Bhutan&apos;s unique way of life and enduring values.</li>
