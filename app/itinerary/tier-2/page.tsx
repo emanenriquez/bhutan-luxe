@@ -144,16 +144,7 @@ export default function TierTwoItinerary() {
         </div>
       </div>
 
-      {/* INTRO */}
-      <div className="no-print" style={{ background: "#2D5016", padding: "56px 56px 48px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, lineHeight: 1.6, color: "#F7F5F0", fontStyle: "italic" }}>
-            A deeper exploration of Bhutan through sacred traditions, luxury wilderness retreats, private spiritual encounters, and meaningful cultural immersion. Designed for travelers seeking a richer connection to the Kingdom, this journey reveals hidden valleys, living traditions, and experiences rarely found on conventional itineraries.
-          </p>
-        </div>
-      </div>
-
-      {/* ITINERARY */}
+      {/* ITINERARY + HIGHLIGHTS */}
       <div className="print-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
@@ -178,17 +169,15 @@ export default function TierTwoItinerary() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
 
-      {/* HIGHLIGHTS */}
-      <div className="print-highlights no-print" style={{ background: "#3B3A36", padding: "64px 56px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 28 }}>Journey Highlights</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
-            {highlights.map((h, i) => (
-              <p key={i} style={{ fontSize: 14, color: "rgba(247,245,240,0.8)", paddingLeft: 16, borderLeft: "2px solid #FF8C00" }}>{h}</p>
-            ))}
+          {/* HIGHLIGHTS — inside white section, visible on screen and print */}
+          <div style={{ marginTop: 48, paddingTop: 40, borderTop: "1px solid rgba(59,58,54,0.12)" }}>
+            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016", marginBottom: 24 }}>Journey Highlights</p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
+              {highlights.map((h, i) => (
+                <p key={i} style={{ fontSize: 14, color: "rgba(59,58,54,0.8)", paddingLeft: 16, borderLeft: "2px solid #FF8C00" }}>{h}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
