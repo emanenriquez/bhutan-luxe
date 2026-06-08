@@ -136,15 +136,6 @@ export default function TierOneItinerary() {
         </div>
       </div>
 
-      {/* INTRO */}
-      <div className="no-print" style={{ background: "#2D5016", padding: "56px 56px 48px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, lineHeight: 1.6, color: "#F7F5F0", fontStyle: "italic" }}>
-            A thoughtfully curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. From monastery blessings and sacred mountain hikes to village encounters and iconic landmarks, this journey offers a meaningful first glimpse into the Kingdom's enduring way of life.
-          </p>
-        </div>
-      </div>
-
       {/* ITINERARY */}
       <div className="print-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
