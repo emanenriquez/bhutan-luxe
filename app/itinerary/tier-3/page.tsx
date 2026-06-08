@@ -136,19 +136,10 @@ export default function TierThreeItinerary() {
       <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
-            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "16px" }}>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "16px" }}>
               The Extraordinary Path
             </h1>
           </div>
-        </div>
-      </div>
-
-      {/* INTRO */}
-      <div className="no-print" style={{ background: "#2D5016", padding: "56px 56px 48px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, lineHeight: 1.6, color: "#F7F5F0", fontStyle: "italic" }}>
-            Our most exclusive Bhutan journey, combining the Kingdom's finest lodges, private spiritual encounters, luxury wilderness retreats, and extraordinary experiences unavailable through conventional travel. Thoughtfully curated for those seeking deeper access, authentic connection, and Bhutan at its most remarkable.
-          </p>
         </div>
       </div>
 
@@ -156,7 +147,7 @@ export default function TierThreeItinerary() {
       <div className="print-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
-            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $27,000/person</p>
+            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $45,000/person</p>
             <div className="no-print"><PrintButton /></div>
           </div>
 
@@ -177,17 +168,15 @@ export default function TierThreeItinerary() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
 
-      {/* HIGHLIGHTS */}
-      <div className="no-print" style={{ background: "#3B3A36", padding: "64px 56px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 28 }}>Signature Experiences</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
-            {highlights.map((h, i) => (
-              <p key={i} style={{ fontSize: 14, color: "rgba(247,245,240,0.8)", paddingLeft: 16, borderLeft: "2px solid #FF8C00" }}>{h}</p>
-            ))}
+          {/* HIGHLIGHTS — inside white section, visible on screen and print */}
+          <div style={{ marginTop: 48, paddingTop: 40, borderTop: "1px solid rgba(59,58,54,0.12)" }}>
+            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016", marginBottom: 24 }}>Signature Experiences</p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
+              {highlights.map((h, i) => (
+                <p key={i} style={{ fontSize: 14, color: "rgba(59,58,54,0.8)", paddingLeft: 16, borderLeft: "2px solid #FF8C00" }}>{h}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
