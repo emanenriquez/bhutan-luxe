@@ -186,7 +186,7 @@ export default function Home() {
           <div className="body">
             <h3 style={{ fontSize: '28px', marginBottom: '14px', fontFamily: "'Playfair Display', serif", fontWeight: 400, display: 'flex', alignItems: 'baseline', gap: '16px' }}>
               <em style={{ color: 'var(--saffron)' }}>Discovery Path</em>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(247,245,240,0.55)', fontStyle: 'normal' }}>Plans Start At $10,000</span>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)', fontStyle: 'normal' }}>Plans Start At $10,000</span>
             </h3>
             <p>
               A curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions, thoughtfully designed for meaningful discovery and authentic connection.
