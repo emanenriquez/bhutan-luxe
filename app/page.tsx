@@ -191,15 +191,17 @@ export default function Home() {
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$10,000</span>
               </span>
             </h3>
-            <p>Discover Bhutan through its sacred monasteries, pristine mountain valleys, and enduring traditions that continue to shape daily life across the kingdom.</p>
-            <ul style={{ marginTop: '12px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
-              <li>Receive blessings from respected lamas and participate in meaningful monastery experiences.</li>
-              <li>Share moments with monks, nuns, artisans, and local families, gaining insight into Bhutan&apos;s living culture.</li>
-              <li>Explore scenic Himalayan valleys, traditional villages, and some of the country&apos;s most revered spiritual landmarks.</li>
-              <li>Experience Bhutan&apos;s unique balance of cultural preservation, spiritual practice, and connection to nature.</li>
-              <li>Enjoy a thoughtfully paced journey designed to encourage discovery, reflection, and authentic human connection.</li>
-              <li>Return home with a deeper understanding of a kingdom where tradition remains a guiding force in modern life.</li>
-            </ul>
+            <p>
+              Journey beyond Bhutan's iconic landmarks to experience the country's spiritual heritage, cultural traditions, and extraordinary natural beauty.
+              <ul style={{ marginTop: '12px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>Visit sacred monasteries and receive blessings from revered spiritual leaders.</li>
+                <li>Walk through traditional villages and engage with local communities in meaningful and respectful ways.</li>
+                <li>Discover breathtaking mountain landscapes, tranquil valleys, and ancient pilgrimage sites.</li>
+                <li>Participate in cultural experiences that reveal Bhutan's unique way of life and enduring values.</li>
+                <li>Balance exploration with moments of serenity, reflection, and personal renewal.</li>
+                <li>Experience a side of Bhutan rarely encountered by most visitors, thoughtfully curated for deeper connection and understanding.</li>
+              </ul>
+            </p>
             <div className="actions">
               <a href="/itinerary/tier-1" className="btn-line">
                 Sample Itinerary →
