@@ -66,6 +66,9 @@ export default function WeatherGuide() {
       {/* WINDOWS */}
       <div style={{ background: "#2D5016", padding: "80px 56px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 48 }}>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)" }}>
+            Navigating Bhutan's luxury ecosystem anchored by Amankora, Six Senses, and COMO demands solid planning around the best dates. Travel windows are defined by spectacular mountain views and vibrant cultural festivals, mild weather and low rainfall for comfortable luxury journeys. It also ensures exclusive access to premium lodges, private guides, and bespoke experiences.
+          </p>
           {windows.map((w, i) => (
             <div key={i} style={{ borderLeft: `4px solid ${w.color}`, paddingLeft: 36 }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: 20, marginBottom: 12 }}>
