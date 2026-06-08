@@ -255,9 +255,14 @@ export default function Home() {
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$35,000</span>
               </span>
             </h3>
-            <p>
-              Our most exclusive journey, combining private spiritual access, extraordinary events, luxury wilderness retreats, and Bhutan's finest hospitality.
-            </p>
+            <p style={{ marginBottom: 0 }}>Extraordinary experiences reveal Bhutan at its most inspiring, combining rare spiritual access, remarkable settings, exceptional hospitality, and moments that few travelers will ever encounter.</p>
+            <ul style={{ marginTop: '0', marginBottom: '20px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
+              <li>Stay at Bhutan&apos;s most celebrated lodges and luxury camps, including Six Senses, &ldquo;andBeyond&rdquo;, and Haa Sangwa Camp.</li>
+              <li>Experience signature events created in extraordinary settings, from candlelit riverside evenings to private ceremonies and cultural performances.</li>
+              <li>Explore the kingdom&apos;s most spectacular valleys, monasteries, and landscapes with time to appreciate them fully.</li>
+              <li>Rejuvenate through wellness experiences inspired by Bhutanese traditions, including yoga, herbal therapies, forest immersion, and meditation.</li>
+              <li>Travel through Bhutan with exceptional comfort, personal attention, and a pace that encourages both discovery and reflection.</li>
+            </ul>
             <div className="actions">
               <a href="/itinerary/tier-3" className="btn-line">
                 Sample Itinerary →
