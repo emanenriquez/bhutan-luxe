@@ -192,7 +192,7 @@ export default function Home() {
               </span>
             </h3>
             <p>
-              Discover Bhutan through its monasteries, mountain valleys, and enduring traditions. From blessings with respected lamas and shared moments with monks to village walks, cultural encounters, and breathtaking landscapes, every experience is designed to foster genuine connection and lasting perspective.
+              Discover Bhutan through its monasteries, mountain valleys, and enduring traditions that have remained largely unchanged for generations. From blessings with respected lamas and shared moments with monks to village walks, cultural encounters, and breathtaking landscapes, each experience offers a rare opportunity to engage with Bhutan on a deeper level. Explore sacred sites, connect with local communities, and experience the rhythms of daily life in a kingdom where spiritual values and cultural preservation continue to guide the modern world. Thoughtfully curated to balance discovery, reflection, and comfort, this journey is designed to foster genuine connection, broaden perspective, and create memories that remain long after the journey ends.
             </p>
             <div className="actions">
               <a href="/itinerary/tier-1" className="btn-line">
