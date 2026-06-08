@@ -248,7 +248,7 @@ export default function Home() {
             <div className="meta">
               <div>
                 <span className="k">Experience Investment Range</span>
-                <span className="v">$25,000 – $35,000+</span>
+                <span className="v">$26,000 – $35,000+</span>
               </div>
             </div>
             <p>
