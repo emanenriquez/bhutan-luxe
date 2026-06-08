@@ -223,9 +223,14 @@ export default function Home() {
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$14,000</span>
               </span>
             </h3>
-            <p>
-              Journey beyond the familiar through sacred traditions, remote valleys, luxury tented camps, and immersive experiences woven into Bhutanese life.
-            </p>
+            <p style={{ marginBottom: 0 }}>An immersive journey combining Bhutan's spiritual heritage, stunning landscapes, and rare cultural experiences.</p>
+            <ul style={{ marginTop: '0', marginBottom: '20px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px', color: 'rgba(247,245,240,0.78)', fontSize: '15.5px' }}>
+              <li>Stay in a luxury tented camp and experience the traditions of Bhutan&apos;s remote Haa Valley.</li>
+              <li>Connect with local communities through cultural exchanges, family visits, and artisan traditions.</li>
+              <li>Explore monasteries, river valleys, mountain passes, and Bhutan&apos;s most iconic sacred sites.</li>
+              <li>Enjoy wellness experiences including yoga, meditation, herbal therapies, and forest immersion.</li>
+              <li>Travel through Bhutan at a thoughtful pace designed to inspire discovery, reflection, and authentic connection.</li>
+            </ul>
             <div className="actions">
               <a href="/itinerary/tier-2" className="btn-line">
                 Sample Itinerary →
