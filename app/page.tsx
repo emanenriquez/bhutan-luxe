@@ -176,13 +176,6 @@ export default function Home() {
         </div>
 
         <article className="tier-row">
-          <h3 style={{ fontSize: '28px', marginBottom: '0', fontFamily: "'Playfair Display', serif", fontWeight: 400, display: 'flex', alignItems: 'baseline', gap: '16px', gridColumn: '1 / -1' }}>
-            <em style={{ color: 'var(--saffron)' }}>Discovery Path</em>
-            <span style={{ fontStyle: 'normal', display: 'inline-flex', alignItems: 'baseline', gap: '6px' }}>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9.5px', fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(247,245,240,0.5)' }}>Plans Start At</span>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$10,000</span>
-            </span>
-          </h3>
           <div
             className="img-col"
             style={{
@@ -191,6 +184,13 @@ export default function Home() {
             }}
           />
           <div className="body">
+            <h3 style={{ fontSize: '28px', marginBottom: '14px', fontFamily: "'Playfair Display', serif", fontWeight: 400, display: 'flex', alignItems: 'baseline', gap: '16px' }}>
+              <em style={{ color: 'var(--saffron)' }}>Discovery Path</em>
+              <span style={{ fontStyle: 'normal', display: 'inline-flex', alignItems: 'baseline', gap: '6px' }}>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9.5px', fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(247,245,240,0.5)' }}>Plans Start At</span>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$10,000</span>
+              </span>
+            </h3>
             <p>
               Journey beyond Bhutan's iconic landmarks to experience the country's spiritual heritage, cultural traditions, and extraordinary natural beauty.
               <ul style={{ marginTop: '12px', paddingLeft: '18px', listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: '6px' }}>
