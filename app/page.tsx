@@ -211,15 +211,13 @@ export default function Home() {
             }}
           />
           <div className="body">
-            <h3 style={{ fontSize: '28px', marginBottom: '14px', fontFamily: "'Playfair Display', serif", fontWeight: 400 }}>
+            <h3 style={{ fontSize: '28px', marginBottom: '14px', fontFamily: "'Playfair Display', serif", fontWeight: 400, display: 'flex', alignItems: 'baseline', gap: '16px' }}>
               <em style={{ color: 'var(--saffron)' }}>Immersion Path</em>
+              <span style={{ fontStyle: 'normal', display: 'inline-flex', alignItems: 'baseline', gap: '6px' }}>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9.5px', fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(247,245,240,0.5)' }}>Plans Start At</span>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$14,000</span>
+              </span>
             </h3>
-            <div className="meta">
-              <div>
-                <span className="k">Journey Rates Start At:</span>
-                <span className="v">$14,000 – $25,000</span>
-              </div>
-            </div>
             <p>
               Journey beyond the familiar through sacred traditions, remote valleys, luxury tented camps, and immersive experiences woven into Bhutanese life.
             </p>
