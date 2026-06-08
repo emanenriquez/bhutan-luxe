@@ -189,7 +189,7 @@ export default function Home() {
             </h3>
             <div className="meta">
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                <span className="k">Journey Rates Start At:</span>
+                <span className="k">Plans Start At</span>
                 <span className="v">$10,000</span>
               </div>
             </div>
