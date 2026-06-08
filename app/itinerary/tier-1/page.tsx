@@ -129,8 +129,8 @@ export default function TierOneItinerary() {
       <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
-            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(22px, 3vw, 40px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0", marginBottom: "12px" }}>
-              <em style={{ fontStyle: "italic", color: "#FF8C00" }}>The Discovery Path</em>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "12px" }}>
+              The Discovery Path
             </h1>
           </div>
         </div>
