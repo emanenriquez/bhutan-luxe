@@ -93,13 +93,15 @@ export default function TierThreeItinerary() {
         a { color: inherit; text-decoration: none; }
         @media print {
           .no-print { display: none !important; }
-          body { background: #fff; color: #000; font-size: 10pt; line-height: 1.5; padding: 0.65in; }
+          body { background: #fff; color: #000; font-size: 9pt; line-height: 1.4; padding: 0.55in; }
           .print-section { background: #fff !important; color: #000 !important; padding: 0 !important; }
-          .print-day { margin-bottom: 13pt !important; padding-bottom: 13pt !important; }
-          .print-day-num { font-size: 18pt !important; color: #B8860B !important; }
-          .print-day-title { font-size: 12pt !important; margin-bottom: 3pt !important; color: #1C5C1C !important; }
-          .print-day-body { font-size: 10pt !important; line-height: 1.45 !important; color: #333 !important; }
-          .print-day-overnight { font-size: 9pt !important; margin-top: 4pt !important; color: #E85000 !important; font-weight: 600; }
+          .print-day { margin-bottom: 10pt !important; padding-bottom: 10pt !important; }
+          .print-day-num { font-size: 15pt !important; color: #B8860B !important; }
+          .print-day-title { font-size: 10.5pt !important; margin-bottom: 2pt !important; color: #1C5C1C !important; }
+          .print-day-body { font-size: 9pt !important; line-height: 1.35 !important; color: #333 !important; }
+          .print-day-overnight { font-size: 8pt !important; margin-top: 3pt !important; color: #E85000 !important; font-weight: 600; }
+          .print-highlights { margin-top: 20pt !important; padding-top: 16pt !important; }
+          .print-highlights p { font-size: 8pt !important; color: #444 !important; }
           @page { margin: 0; size: letter; }
         }
       `}</style>
@@ -170,7 +172,7 @@ export default function TierThreeItinerary() {
           ))}
 
           {/* HIGHLIGHTS — inside white section, visible on screen and print */}
-          <div style={{ marginTop: 48, paddingTop: 40, borderTop: "1px solid rgba(59,58,54,0.12)" }}>
+          <div className="print-highlights" style={{ marginTop: 48, paddingTop: 40, borderTop: "1px solid rgba(59,58,54,0.12)" }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016", marginBottom: 24 }}>Signature Experiences</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
               {highlights.map((h, i) => (
