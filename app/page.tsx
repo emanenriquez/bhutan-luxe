@@ -188,9 +188,9 @@ export default function Home() {
               <em style={{ color: 'var(--saffron)' }}>Discovery Path</em>
             </h3>
             <div className="meta">
-              <div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
                 <span className="k">Journey Rates Start At:</span>
-                <span className="v">$10,000 – $13,000</span>
+                <span className="v">$10,000</span>
               </div>
             </div>
             <p>
