@@ -192,7 +192,7 @@ export default function Home() {
               </span>
             </h3>
             <p>
-              A curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions, thoughtfully designed for meaningful discovery and authentic connection.
+              Discover Bhutan through its monasteries, mountain valleys, and enduring traditions. From blessings with respected lamas and shared moments with monks to village walks, cultural encounters, and breathtaking landscapes, every experience is designed to foster genuine connection and lasting perspective.
             </p>
             <div className="actions">
               <a href="/itinerary/tier-1" className="btn-line">
