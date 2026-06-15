@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Do you offer travel insurance and medical support?",
     answer:
-      "We strongly recommend comprehensive travel insurance that includes trip cancellation, medical coverage, and emergency evacuation benefits. While Bhutan has modern healthcare facilities in major towns, medical services in remote areas may be limited. Should assistance be required during your journey, our local team can coordinate medical support and emergency arrangements.",
+      "We strongly recommend your own comprehensive travel insurance that includes trip cancellation, medical coverage, and emergency evacuation benefits. While Bhutan has modern healthcare facilities in major towns, medical services in remote areas may be limited. Should assistance be required during your journey, our local team can coordinate medical support and emergency arrangements.",
   },
   {
     question: "Is Bhutan suitable for first-time visitors to Asia?",
