@@ -98,7 +98,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* WINDOWS */}
-      <div style={{ background: "#2D5016", padding: "80px 56px" }}>
+      <div style={{ background: "#2D5016", padding: "48px 56px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 48 }}>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)" }}>
             From flowering spring valleys to the crystal-clear skies of autumn, Bhutan's beauty is shaped by the changing seasons. Each travel period reveals a different facet of the Kingdom—vibrant festivals, tranquil monasteries, pristine mountain landscapes, and enduring traditions that continue to shape daily life. The travel windows below offer the most rewarding opportunities to experience Bhutan's authenticity, serenity, and timeless allure.
@@ -110,7 +110,7 @@ export default function WeatherGuide() {
                 <span style={{ fontFamily: "Inter", fontSize: 13, fontWeight: 600, letterSpacing: "0.12em", color: "rgba(247,245,240,0.6)", textTransform: "uppercase" }}>{w.dates}</span>
               </div>
               <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7, maxWidth: 640, marginBottom: 16 }}>{w.description}</p>
-              <ul style={{ paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
+              <ul style={{ paddingLeft: 28, listStyle: "none", display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
                 {w.bullets.map((b, j) => (
                   <li key={j} style={{ fontSize: 14, color: "rgba(247,245,240,0.75)", display: "flex", gap: 10 }}>
                     <span style={{ color: w.color, flexShrink: 0 }}>✦</span>
