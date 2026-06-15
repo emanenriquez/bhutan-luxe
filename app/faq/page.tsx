@@ -93,7 +93,7 @@ export default function FAQ() {
           {faqs.map((faq, i) => (
             <div key={i} style={{ borderLeft: "4px solid #D4A843", paddingLeft: 36, marginBottom: i < faqs.length - 1 ? 48 : 0, paddingBottom: i < faqs.length - 1 ? 48 : 0, borderBottom: i < faqs.length - 1 ? "1px solid rgba(212,168,67,0.15)" : "none" }}>
               <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 400, color: "#D4A843", fontStyle: "italic", marginBottom: 12 }}>{faq.question}</h2>
-              <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7, maxWidth: 680 }}>{faq.answer}</p>
+              <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7 }}>{faq.answer}</p>
             </div>
           ))}
         </div>
