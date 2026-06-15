@@ -317,7 +317,7 @@ export default function Home() {
                 <li>Access to regions few visitors ever reach</li>
                 <li>You have Bhutan&apos;s most respected and experienced guides</li>
               </ul>
-              <a href="/faq" style={{ display: 'inline-block', marginTop: '24px', fontFamily: 'Inter', fontWeight: 500, fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--cloud)', background: 'transparent', border: '1px solid var(--gold)', padding: '10px 22px', borderRadius: 8, textDecoration: 'none' }}>Frequently Asked Questions →</a>
+              <a href="/faq" style={{ display: 'inline-block', marginTop: '24px', fontFamily: 'Inter', fontWeight: 500, fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--cloud)', background: 'transparent', border: '1px solid var(--gold)', padding: '10px 22px', borderRadius: 8, textDecoration: 'none' }}>Discovery Path Questions →</a>
             </div>
           </div>
 
