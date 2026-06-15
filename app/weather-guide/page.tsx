@@ -100,9 +100,22 @@ export default function WeatherGuide() {
       {/* WINDOWS */}
       <div style={{ background: "#2D5016", padding: "80px 56px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 48 }}>
-          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)" }}>
-            Bhutan reveals itself differently with each season. The periods below offer the finest balance of weather, cultural experiences, mountain scenery, and the serenity sought by discerning travelers.
-          </p>
+          <div style={{ paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)" }}>
+            <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", marginBottom: 16 }}>
+              From flowering spring valleys to the crystal-clear skies of autumn, Bhutan's beauty is shaped by the changing seasons. Each travel period reveals a different facet of the Kingdom:
+            </p>
+            <ul style={{ paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 }}>
+              {["Vibrant festivals", "Tranquil monasteries", "Pristine mountain landscapes", "Enduring traditions that continue to shape daily life"].map((item, i) => (
+                <li key={i} style={{ display: "flex", alignItems: "baseline", gap: 12, fontFamily: "'Playfair Display', serif", fontSize: 17, fontStyle: "italic", color: "rgba(247,245,240,0.85)" }}>
+                  <span style={{ color: "#D4A843", fontSize: 10, flexShrink: 0, letterSpacing: "0.05em" }}>◆</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic" }}>
+              The travel windows below offer the most rewarding opportunities to experience Bhutan's authenticity, serenity, and timeless allure.
+            </p>
+          </div>
           {windows.map((w, i) => (
             <div key={i} style={{ borderLeft: `4px solid ${w.color}`, paddingLeft: 36 }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: 20, marginBottom: 12 }}>
