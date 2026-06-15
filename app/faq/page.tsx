@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Will I have internet and mobile connectivity?",
     answer:
-      "Most luxury lodges and hotels offer Wi-Fi, and mobile connectivity is available in many areas of the country. However, some remote valleys and mountain regions may have limited or intermittent service. We believe it is an opportunity for many guests to disconnect and fully immerse themselves in Bhutan's unique sense of serenity.",
+      "Most luxury lodges and hotels offer Wi-Fi, and mobile connectivity is available in many areas of the country. However, some remote valleys and mountain regions may have limited or intermittent service. Many guests are pleasantly surprised detaching and fully immerse themselves in Bhutan's unique sense of serenity.",
   },
   {
     question: "What makes Bhutan different from other luxury destinations?",
