@@ -101,7 +101,7 @@ export default function WeatherGuide() {
       <div style={{ background: "#2D5016", padding: "48px 56px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 48 }}>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)" }}>
-            From flowering spring valleys to the crystal-clear skies of autumn, Bhutan's beauty is shaped by the changing seasons. Each travel period reveals a different facet of the Kingdom—vibrant festivals, tranquil monasteries, pristine mountain landscapes, and enduring traditions that continue to shape daily life. The travel windows below offer the most rewarding opportunities to experience Bhutan's authenticity, serenity, and timeless allure.
+            From flowering spring valleys to the crystal-clear skies of autumn, Bhutan's beauty is shaped by the changing seasons. Each travel period reveals a different facet of the Kingdom including vibrant festivals, tranquil monasteries, pristine mountain landscapes, and enduring traditions that continue to shape daily life. The dates of discovery below offer the most rewarding opportunities to experience Bhutan's authenticity, serenity, and timeless allure.
           </p>
           {windows.map((w, i) => (
             <div key={i} style={{ borderLeft: `4px solid ${w.color}`, paddingLeft: 36 }}>
