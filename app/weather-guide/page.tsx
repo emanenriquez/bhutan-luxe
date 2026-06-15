@@ -113,7 +113,7 @@ export default function WeatherGuide() {
               <ul style={{ paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
                 {w.bullets.map((b, j) => (
                   <li key={j} style={{ fontSize: 14, color: "rgba(247,245,240,0.75)", display: "flex", gap: 10 }}>
-                    <span style={{ color: w.color, flexShrink: 0 }}>—</span>
+                    <span style={{ color: w.color, flexShrink: 0 }}>✦</span>
                     <span>{b}</span>
                   </li>
                 ))}
