@@ -43,11 +43,6 @@ const faqs = [
       "Most luxury lodges and hotels offer Wi-Fi, and mobile connectivity is available in many areas of the country. However, some remote valleys and mountain regions may have limited or intermittent service. Many guests are pleasantly surprised detaching and fully immerse themselves in Bhutan's unique sense of serenity.",
   },
   {
-    question: "What makes Bhutan different from other luxury destinations?",
-    answer:
-      "Bhutan offers a rare combination of authenticity, natural beauty, spiritual heritage, and intentional preservation. Rather than mass tourism, the Kingdom prioritizes cultural integrity and sustainability, creating experiences that feel deeply personal, meaningful, and unlike anywhere else in the world.",
-  },
-  {
     question: "Is Bhutan safe for travelers?",
     answer:
       "Bhutan is widely regarded as one of the safest destinations in the world, with low crime rates and a strong sense of community. Guests consistently remark on the warmth and hospitality of the Bhutanese people.",
