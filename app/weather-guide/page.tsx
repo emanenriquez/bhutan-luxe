@@ -8,28 +8,62 @@ export const metadata: Metadata = {
 
 const windows = [
   {
-    name: "Autumn Gold",
-    dates: "Oct 10 – Nov 15",
+    name: "The Signature Season",
+    dates: "Late October – Mid November",
     description:
-      "Bhutan's most celebrated season. Crisp mountain air, vivid foliage, and exceptional visibility to the high peaks. Festival season brings traditional ceremonies and cultural events to life across the Kingdom.",
-    ideal: "First-time visitors, trekkers, festival-seekers",
+      "Crisp mountain air, golden valleys, and some of the clearest Himalayan vistas of the year.",
+    bullets: [
+      "Exceptional Himalayan views",
+      "Dry and comfortable weather",
+      "Autumn colors across the valleys",
+      "Jambay Lhakhang Drup and Prakhar Duchhoed festivals in Bumthang",
+      "Black-Necked Crane Festival in Gangtey (November)",
+    ],
+    consideration: "Premium lodges should be reserved well in advance.",
     color: "#D4A843",
   },
   {
-    name: "Spring Bloom",
-    dates: "Mar 20 – Apr 25",
+    name: "The Season of Renewal",
+    dates: "Mid March – Late April",
     description:
-      "Rhododendrons blanket the hillsides in colour as the valleys warm and the landscape renews. A quieter, more intimate season with comfortable temperatures and fewer visitors.",
-    ideal: "Nature lovers, photographers, those seeking tranquility",
+      "Spring brings flowering valleys, vibrant monasteries, and Bhutan at its most colorful.",
+    bullets: [
+      "Blooming rhododendrons and wildflowers",
+      "Pleasant temperatures",
+      "Excellent hiking conditions",
+      "Paro Tshechu, Bhutan's most celebrated festival",
+      "Lush landscapes emerge across the valleys",
+    ],
+    consideration: "Popular travel period, especially during festivals.",
     color: "#FF8C00",
   },
   {
-    name: "\"Insulated Insider\"",
-    dates: "Jan 15 – Feb 15",
+    name: "Quiet Luxury",
+    dates: "Early December",
     description:
-      "Bhutan's best-kept secret. Cold, crisp, and extraordinarily quiet. The Kingdom belongs almost entirely to you. Monasteries, valleys, and sacred sites without the crowds — an insider's Bhutan.",
-    ideal: "Repeat visitors, those seeking exclusivity and solitude",
+      "A quieter Bhutan, where peaceful valleys and crisp mountain air create an atmosphere of rare serenity.",
+    bullets: [
+      "Fewer visitors",
+      "Clear mountain visibility",
+      "Tranquil lodges and trails",
+      "Comfortable daytime temperatures",
+    ],
+    consideration: "Evenings can be cool in higher elevations.",
     color: "#F7F5F0",
+  },
+  {
+    name: "Serenity Before Spring",
+    dates: "Late February – Early March",
+    description:
+      "Experience Bhutan before the crowds, when clear skies return and the first signs of spring begin to appear.",
+    bullets: [
+      "Lower visitor numbers",
+      "Punakha Drubchen and Punakha Tshechu celebrations",
+      "Emerging spring landscapes",
+      "Often excellent visibility",
+    ],
+    consideration: "Some regions remain chilly.",
+    color: "#A8C5A0",
   },
 ];
 
@@ -67,7 +101,7 @@ export default function WeatherGuide() {
       <div style={{ background: "#2D5016", padding: "80px 56px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 48 }}>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)" }}>
-            Navigating Bhutan's luxury ecosystem anchored by Amankora, Six Senses, and COMO demands solid planning around the best dates. Travel windows are defined by spectacular mountain views and vibrant cultural festivals, mild weather and low rainfall for comfortable luxury journeys. It also ensures exclusive access to premium lodges, private guides, and bespoke experiences.
+            Bhutan reveals itself differently with each season. The periods below offer the finest balance of weather, cultural experiences, mountain scenery, and the serenity sought by discerning travelers.
           </p>
           {windows.map((w, i) => (
             <div key={i} style={{ borderLeft: `4px solid ${w.color}`, paddingLeft: 36 }}>
@@ -75,10 +109,23 @@ export default function WeatherGuide() {
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 400, color: w.color, fontStyle: "italic" }}>{w.name}</h2>
                 <span style={{ fontFamily: "Inter", fontSize: 13, fontWeight: 600, letterSpacing: "0.12em", color: "rgba(247,245,240,0.6)", textTransform: "uppercase" }}>{w.dates}</span>
               </div>
-              <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7, maxWidth: 640, marginBottom: 12 }}>{w.description}</p>
-              <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(247,245,240,0.45)" }}>Ideal for: {w.ideal}</p>
+              <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7, maxWidth: 640, marginBottom: 16 }}>{w.description}</p>
+              <ul style={{ paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
+                {w.bullets.map((b, j) => (
+                  <li key={j} style={{ fontSize: 14, color: "rgba(247,245,240,0.75)", display: "flex", gap: 10 }}>
+                    <span style={{ color: w.color, flexShrink: 0 }}>—</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(247,245,240,0.4)" }}>
+                Consideration: <span style={{ fontWeight: 400, letterSpacing: 0, textTransform: "none" }}>{w.consideration}</span>
+              </p>
             </div>
           ))}
+          <p style={{ fontFamily: "Inter", fontSize: 11, color: "rgba(247,245,240,0.35)", fontStyle: "italic", paddingTop: 8 }}>
+            * Festival dates vary annually according to the Bhutanese lunar calendar.
+          </p>
         </div>
       </div>
 
