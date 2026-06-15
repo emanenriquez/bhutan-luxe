@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Travel Windows — Bhutan-Luxe",
+  title: "Preferred Travel Dates — Bhutan-Luxe",
   description: "The ideal seasons to experience Bhutan with Bhutan-Luxe.",
 };
 
@@ -57,7 +57,7 @@ export default function WeatherGuide() {
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
           <div style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
-              Best Travel <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Windows</em>
+              Preferred Travel <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Dates</em>
             </h1>
           </div>
         </div>
