@@ -88,7 +88,7 @@ export default function FAQ() {
       <div style={{ background: "#2D5016", padding: "48px 56px 80px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 0 }}>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)", marginBottom: 48 }}>
-            Everything you need to know before embarking on a journey with Bhutan-Luxe. If your question isn't answered here, we welcome a private conversation.
+            Every Bhutan-Luxe journey is individually crafted, yet many guests share similar questions before they travel. Here you will find practical guidance and insights to help you prepare for an experience defined by authenticity,
           </p>
           {faqs.map((faq, i) => (
             <div key={i} style={{ borderLeft: "4px solid #D4A843", paddingLeft: 36, marginBottom: i < faqs.length - 1 ? 48 : 0, paddingBottom: i < faqs.length - 1 ? 48 : 0, borderBottom: i < faqs.length - 1 ? "1px solid rgba(212,168,67,0.15)" : "none" }}>
