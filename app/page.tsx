@@ -281,7 +281,7 @@ export default function Home() {
                 Areas of <em>Discovery</em>
               </h2>
               <p className="intro">
-                Some of Bhutan's most remarkable regions remain beyond the reach of ordinary travel. Through trusted local relationships, special permits, and meticulous advance planning, we create opportunities for experiences few visitors ever encounter.
+                At Bhutan-Luxe, we believe authenticity is the ultimate luxury. Our journeys are thoughtfully designed to connect travelers with Bhutan's living traditions, remarkable landscapes, and enduring culture through experiences that feel genuine, personal, and deeply meaningful.
               </p>
             </div>
             <img
