@@ -630,7 +630,7 @@ export default function Home() {
             </div>
           </div>
           <div className="footnote">
-            <span>© Bhutan-Luxe.com · Houston, Texas</span>
+            <span style={{ fontSize: '13px' }}>© Bhutan-Luxe.com · Houston, Texas</span>
           </div>
         </div>
       </footer>
