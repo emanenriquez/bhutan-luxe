@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Preferred Discovery Dates — Bhutan-Luxe",
+  title: "Preferred Journey Dates — Bhutan-Luxe",
   description: "The ideal seasons to experience Bhutan with Bhutan-Luxe.",
 };
 
