@@ -456,7 +456,7 @@ export default function Home() {
                     <div className="tier-pick">
                       <label>
                         <input type="radio" name="tier" value="luxe" />
-                        <span className="tp-name">Luxe</span>
+                        <span className="tp-name">Discovery</span>
                         <span className="tp-price">
                           $8K – $12K                        </span>
                       </label>
@@ -466,13 +466,13 @@ export default function Home() {
                           name="tier"
                           value="boutique-luxe"
                         />
-                        <span className="tp-name">Boutique-Luxe</span>
+                        <span className="tp-name">Immersion</span>
                         <span className="tp-price">
                           $12K – $25K                        </span>
                       </label>
                       <label>
                         <input type="radio" name="tier" value="ultra-luxe" />
-                        <span className="tp-name">Ultra-Luxe</span>
+                        <span className="tp-name">Extraordinary</span>
                         <span className="tp-price">
                           $25K – $35K+                        </span>
                       </label>
@@ -616,10 +616,10 @@ export default function Home() {
               </span>
             </div>
             <div className="col">
-              <h5>Tiers</h5>
-              <a href="#tiers">Luxe</a>
-              <a href="#tiers">Boutique-Luxe</a>
-              <a href="#tiers">Ultra-Luxe</a>
+              <h5>Discovery Paths</h5>
+              <a href="#tiers">Discovery</a>
+              <a href="#tiers">Immersion</a>
+              <a href="#tiers">Extraordinary</a>
             </div>
             <div className="col">
               <h5>Discretion</h5>
