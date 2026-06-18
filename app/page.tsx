@@ -292,7 +292,7 @@ export default function Home() {
             />
           </div>
 
-          <img src="/route-map.jpg" alt="Tour Routes of Bhutan" style={{ width: '100%', display: 'block', borderRadius: '0' }} />
+          <img src="/regional-map.jpg" alt="Regional and Cultural Map of Bhutan" style={{ width: '100%', display: 'block', borderRadius: '0' }} />
         </div>
       </section>
 
