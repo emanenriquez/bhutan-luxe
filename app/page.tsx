@@ -278,7 +278,7 @@ export default function Home() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '32px', marginBottom: '40px' }}>
             <div style={{ maxWidth: '520px' }}>
               <h2 style={{ marginBottom: '16px' }}>
-                Regions and <em>Routes</em>
+                Areas of <em>Discovery</em>
               </h2>
               <p className="intro">
                 Some of Bhutan's most remarkable regions remain beyond the reach of ordinary travel. Through trusted local relationships, special permits, and meticulous advance planning, we create opportunities for experiences few visitors ever encounter.
