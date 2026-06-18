@@ -596,7 +596,7 @@ export default function Home() {
         <div className="wrap">
           <div className="row">
             <div className="brand">
-              <span className="word">Bhutan-Luxe</span>
+              <span className="word">Bhutan-Luxe.com</span>
               <span className="tag">The Bhutan Few Will Ever See</span>
             </div>
             <div className="col">
