@@ -188,7 +188,7 @@ export default function Home() {
               <em style={{ color: 'var(--saffron)' }}>Discovery Path</em>
               <span style={{ fontStyle: 'normal', display: 'inline-flex', alignItems: 'baseline', gap: '6px' }}>
                 <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9.5px', fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(247,245,240,0.5)' }}>Plans Start At</span>
-                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$10,000</span>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '16px', fontWeight: 400, color: 'var(--cloud)' }}>$11,500</span>
               </span>
             </h3>
             <p style={{ marginBottom: 0, maxWidth: 'none' }}>Discover Bhutan through its sacred monasteries, mountain valleys, and enduring traditions that continue to shape life across the kingdom.</p>
