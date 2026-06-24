@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PrintButton from "./PrintButton";
 
 export const metadata: Metadata = {
   title: "Preferred Journey Dates — Bhutan-Luxe",
@@ -74,10 +75,14 @@ export default function WeatherGuide() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: #3B3A36; color: #F7F5F0; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
+        @media print {
+          .no-print { display: none !important; }
+          body { background: #fff; color: #000; }
+        }
       `}</style>
 
       {/* TOPBAR */}
-      <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
+      <div className="no-print" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
@@ -87,7 +92,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* HERO */}
-      <div style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 340, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
+      <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 340, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
           <div style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
@@ -100,6 +105,9 @@ export default function WeatherGuide() {
       {/* WINDOWS */}
       <div style={{ background: "#2D5016", padding: "48px 56px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 48 }}>
+          <div style={{ display: "flex", justifyContent: "flex-end" }} className="no-print">
+            <PrintButton />
+          </div>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)" }}>
             From flowering spring valleys to the crystal-clear skies of autumn, Bhutan's beauty is shaped by the changing seasons. Each travel period reveals a different facet of the Kingdom including vibrant festivals, tranquil monasteries, pristine mountain landscapes, and enduring traditions that continue to shape daily life. The dates of discovery below offer the most rewarding opportunities to experience Bhutan's authenticity, serenity, and timeless allure.
           </p>
@@ -130,7 +138,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* CTA */}
-      <div style={{ background: "#3B3A36", padding: "72px 56px", textAlign: "center" }}>
+      <div className="no-print" style={{ background: "#3B3A36", padding: "72px 56px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 400, color: "#F7F5F0", marginBottom: 20 }}>Ready to plan your journey?</h2>
         <Link href="/#tiers" style={{ display: "inline-block", background: "#FF8C00", color: "#000", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 32px", borderRadius: 8 }}>
           Inquire Privately ↗
@@ -138,7 +146,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* FOOTER */}
-      <div style={{ background: "#2D5016", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div className="no-print" style={{ background: "#2D5016", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <Link href="/" style={{ fontFamily: "Inter", fontSize: 12, color: "rgba(247,245,240,0.5)", letterSpacing: "0.1em" }}>← Back to Bhutan-Luxe</Link>
         <span style={{ fontFamily: "Inter", fontSize: 11, color: "rgba(247,245,240,0.35)", letterSpacing: "0.1em" }}>© Bhutan-Luxe Travel · Houston, Texas</span>
       </div>
