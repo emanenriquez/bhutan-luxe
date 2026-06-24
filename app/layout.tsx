@@ -4,7 +4,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Bhutan-Luxe — The Bhutan Few Will Ever See",
   description:
-    "Bespoke luxury group journeys to Bhutan. By private inquiry. Three tiers of access, eight guests per departure.",
+    "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.",
+  openGraph: {
+    title: "Bhutan-Luxe — The Bhutan Few Will Ever See",
+    description:
+      "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.",
+    url: "https://bhutan-luxe.com",
+    siteName: "Bhutan-Luxe",
+  },
 };
 
 export default function RootLayout({
