@@ -99,6 +99,7 @@ export default function TierOneItinerary() {
           .itin-topbar { padding: 14px 20px !important; }
           .itin-topbar img { height: 36px !important; }
           .itin-topbar a:last-child { font-size: 9px !important; padding: 7px 12px !important; }
+          .itin-hero-bg { background-position: 20% center !important; }
           .itin-hero-pad { padding: 56px 20px 32px !important; }
           .itin-hero h1 { font-size: 32px !important; }
           .itin-section { padding: 32px 20px 36px !important; }
@@ -138,7 +139,7 @@ export default function TierOneItinerary() {
       </div>
 
       {/* HERO */}
-      <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
+      <div className="no-print itin-hero-bg" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div className="itin-hero" style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "12px" }}>

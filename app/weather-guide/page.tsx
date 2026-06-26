@@ -83,6 +83,7 @@ export default function WeatherGuide() {
           .wg-topbar { padding: 14px 20px !important; }
           .wg-topbar img { height: 36px !important; }
           .wg-topbar a:last-child { font-size: 9px !important; padding: 7px 12px !important; }
+          .wg-hero-bg { background-position: 20% center !important; }
           .wg-hero-pad { padding: 48px 20px 28px !important; }
           .wg-hero h1 { font-size: 30px !important; }
           .wg-windows { padding: 32px 20px !important; }
@@ -104,7 +105,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* HERO */}
-      <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 340, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
+      <div className="no-print wg-hero-bg" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 340, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
         <div className="wg-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
           <div className="wg-hero" style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>

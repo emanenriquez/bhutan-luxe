@@ -386,6 +386,7 @@ footer .footnote {
   .topbar .mark img { height: 48px !important; }
   .topbar .meta { display: none; }
   .topbar .open-form { font-size: 9px; padding: 8px 14px; }
+  #hero { background-position: 20% center; }
   #hero .frame { padding: 100px 24px 32px; }
   #hero h1 { font-size: 22px; }
   #hero .center .lede br.lede-break { display: none; }
