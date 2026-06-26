@@ -79,10 +79,22 @@ export default function WeatherGuide() {
           .no-print { display: none !important; }
           body { background: #fff; color: #000; }
         }
+        @media (max-width: 600px) {
+          .wg-topbar { padding: 14px 20px !important; }
+          .wg-topbar img { height: 36px !important; }
+          .wg-topbar a:last-child { font-size: 9px !important; padding: 7px 12px !important; }
+          .wg-hero-pad { padding: 48px 20px 28px !important; }
+          .wg-hero h1 { font-size: 30px !important; }
+          .wg-windows { padding: 32px 20px !important; }
+          .wg-season-head { flex-wrap: wrap !important; gap: 8px !important; }
+          .wg-season-head h2 { font-size: 24px !important; }
+          .wg-cta { padding: 48px 20px !important; }
+          .wg-footer { padding: 20px !important; flex-direction: column !important; gap: 8px !important; text-align: center !important; }
+        }
       `}</style>
 
       {/* TOPBAR */}
-      <div className="no-print" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
+      <div className="no-print wg-topbar" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
@@ -93,8 +105,8 @@ export default function WeatherGuide() {
 
       {/* HERO */}
       <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 340, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
-        <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
-          <div style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
+        <div className="wg-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
+          <div className="wg-hero" style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
               Preferred Discovery <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Dates</em>
             </h1>
@@ -103,7 +115,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* WINDOWS */}
-      <div style={{ background: "#2D5016", padding: "48px 56px" }}>
+      <div className="wg-windows" style={{ background: "#2D5016", padding: "48px 56px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 48 }}>
           <div style={{ display: "flex", justifyContent: "flex-end" }} className="no-print">
             <PrintButton />
@@ -113,7 +125,7 @@ export default function WeatherGuide() {
           </p>
           {windows.map((w, i) => (
             <div key={i} style={{ borderLeft: `4px solid ${w.color}`, paddingLeft: 36 }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 20, marginBottom: 12 }}>
+              <div className="wg-season-head" style={{ display: "flex", alignItems: "baseline", gap: 20, marginBottom: 12 }}>
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 400, color: w.color, fontStyle: "italic" }}>{w.name}</h2>
                 <span style={{ fontFamily: "Inter", fontSize: 13, fontWeight: 600, letterSpacing: "0.12em", color: "rgba(247,245,240,0.6)", textTransform: "uppercase" }}>{w.dates}</span>
               </div>
@@ -138,7 +150,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* CTA */}
-      <div className="no-print" style={{ background: "#3B3A36", padding: "72px 56px", textAlign: "center" }}>
+      <div className="no-print wg-cta" style={{ background: "#3B3A36", padding: "72px 56px", textAlign: "center" }}>
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 400, color: "#F7F5F0", marginBottom: 20 }}>Ready to plan your journey?</h2>
         <Link href="/#tiers" style={{ display: "inline-block", background: "#FF8C00", color: "#000", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 32px", borderRadius: 8 }}>
           Inquire Privately ↗
@@ -146,7 +158,7 @@ export default function WeatherGuide() {
       </div>
 
       {/* FOOTER */}
-      <div className="no-print" style={{ background: "#2D5016", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div className="no-print wg-footer" style={{ background: "#2D5016", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <Link href="/" style={{ fontFamily: "Inter", fontSize: 12, color: "rgba(247,245,240,0.5)", letterSpacing: "0.1em" }}>← Back to Bhutan-Luxe</Link>
         <span style={{ fontFamily: "Inter", fontSize: 11, color: "rgba(247,245,240,0.35)", letterSpacing: "0.1em" }}>© Bhutan-Luxe Travel · Houston, Texas</span>
       </div>

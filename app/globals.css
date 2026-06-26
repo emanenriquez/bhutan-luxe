@@ -377,28 +377,44 @@ footer .footnote {
   font-size: 11px; color: rgba(247,245,240,0.35); letter-spacing: 0.06em;
 }
 
+/* ── REGIONS top intro row (map thumbnail beside text) ── */
+.regions-top { display:flex; align-items:center; gap:32px; margin-bottom:40px; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .topbar { padding: 16px 24px; }
+  .topbar .mark img { height: 48px !important; }
   .topbar .meta { display: none; }
+  .topbar .open-form { font-size: 9px; padding: 8px 14px; }
   #hero .frame { padding: 100px 24px 32px; }
   #hero h1 { font-size: 22px; }
+  #hero .center .lede br.lede-break { display: none; }
   #hero .bottom { grid-template-columns: 1fr; gap: 24px; }
   #hero .bottom .stat { text-align: left; }
   #hero .bottom .stat .num { font-size: 40px; }
   #desire { grid-template-columns: 1fr; }
   #desire .img { min-height: 320px; }
   #desire .text { padding: 64px 24px; }
+  #desire .text h2 { font-size: 36px; }
   #desire .text .stats { grid-template-columns: repeat(3, auto); gap: 24px; }
   #tiers, #regions, #trust { padding: 80px 0; }
   #tiers .header { grid-template-columns: 1fr; gap: 24px; padding: 0 24px; margin-bottom: 48px; }
+  #tiers .header h2 { font-size: 36px; }
+  #tiers .header .intro { padding-top: 0; max-width: none; }
   .tier-row { grid-template-columns: 1fr; gap: 24px; padding: 40px 24px; }
   .tier-row .body h3 { font-size: 32px; }
+  .tier-row .body .meta { flex-wrap: wrap; gap: 20px; }
   #regions .wrap, #trust .wrap, footer .wrap { padding: 0 24px; }
   #regions .header, #trust .header { grid-template-columns: 1fr; gap: 24px; }
+  #regions h2, #trust h2 { font-size: 30px; }
+  .regions-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .regions-top-map { width: 100% !important; max-width: 320px; }
   .map { aspect-ratio: 4/5; }
   .legend { grid-template-columns: 1fr; gap: 20px; }
   .quotes { grid-template-columns: 1fr; }
+  .quote { padding: 40px 24px; }
+  .quote .qm { font-size: 64px; margin-bottom: 20px; }
+  .quote blockquote { font-size: 19px; }
   .partner-row { grid-template-columns: 1fr; gap: 32px; }
   .modal { grid-template-columns: 1fr; max-height: 100vh; }
   .modal .side { padding: 28px 24px; }
@@ -407,4 +423,33 @@ footer .footnote {
   .modal-backdrop { padding: 0; }
   footer .row { grid-template-columns: 1fr 1fr; gap: 32px; }
   footer .footnote { flex-direction: column; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .topbar .mark img { height: 38px !important; }
+  .topbar .open-form { font-size: 8.5px; padding: 7px 12px; letter-spacing: 0.12em; }
+  #hero .frame { padding: 88px 18px 28px; }
+  #hero h1 { font-size: 19px; }
+  #hero .center .lede { font-size: 14px; }
+  #hero .bottom .stat .num { font-size: 32px; }
+  #desire .text { padding: 48px 18px; }
+  #desire .text h2 { font-size: 28px; }
+  #desire .text .stats { grid-template-columns: 1fr 1fr; gap: 18px; }
+  #tiers .header { padding: 0 18px; }
+  #tiers .header h2 { font-size: 28px; }
+  .tier-row { padding: 32px 18px; }
+  .tier-row .body h3 { font-size: 26px; }
+  .tier-row .body .meta { gap: 16px; }
+  .tier-row .body .actions { flex-wrap: wrap; gap: 12px; }
+  #regions .wrap, #trust .wrap, footer .wrap { padding: 0 18px; }
+  #regions h2, #trust h2 { font-size: 24px; }
+  .quote { padding: 32px 18px; }
+  .quote blockquote { font-size: 17px; }
+  footer .row { grid-template-columns: 1fr; gap: 28px; }
+  .modal-backdrop { padding: 0; }
+  .modal .side { padding: 22px 18px; }
+  .modal .form-pane { padding: 22px 18px; }
+  .modal .form-pane h2 { font-size: 24px; }
+  .tier-pick label { padding: 12px 14px; grid-template-columns: 20px 1fr auto; gap: 10px; }
+  .tier-pick .tp-name { font-size: 15px; }
 }

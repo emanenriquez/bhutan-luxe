@@ -107,8 +107,8 @@ export default function Home() {
             </h1>
             <span className="label eyebrow">A JOURNEY IMMERSED IN AUTHENTIC CULTURE</span>
             <p className="lede">
-              Bhutan-Luxe is dedicated to crafting refined journeys<br />
-              rooted in peace, tranquility, and immersive exploration<br />
+              Bhutan-Luxe is dedicated to crafting refined journeys<br className="lede-break" />
+              rooted in peace, tranquility, and immersive exploration<br className="lede-break" />
               of the Kingdom's timeless spirit.
             </p>
             <div className="actions" style={{ marginTop: '28px' }}>
@@ -275,7 +275,7 @@ export default function Home() {
       {/* REGIONS */}
       <section id="regions">
         <div className="wrap">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '32px', marginBottom: '40px' }}>
+          <div className="regions-top">
             <div style={{ maxWidth: '520px' }}>
               <h2 style={{ marginBottom: '16px' }}>
                 Areas of <em>Discovery</em>
@@ -288,6 +288,7 @@ export default function Home() {
               src="/global-map.jpg"
               alt="Bhutan Asia Location"
               onClick={() => setMapLightbox(true)}
+              className="regions-top-map"
               style={{ width: '280px', display: 'block', borderRadius: '0', flexShrink: 0, cursor: 'zoom-in' }}
             />
           </div>

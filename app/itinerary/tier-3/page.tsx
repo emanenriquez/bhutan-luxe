@@ -104,6 +104,19 @@ export default function TierThreeItinerary() {
           .print-highlights p { font-size: 8pt !important; color: #444 !important; }
           @page { margin: 0; size: letter; }
         }
+        @media (max-width: 600px) {
+          .itin-topbar { padding: 14px 20px !important; }
+          .itin-topbar img { height: 36px !important; }
+          .itin-topbar a:last-child { font-size: 9px !important; padding: 7px 12px !important; }
+          .itin-hero-pad { padding: 56px 20px 32px !important; }
+          .itin-hero h1 { font-size: 32px !important; }
+          .itin-section { padding: 32px 20px 36px !important; }
+          .itin-head-row { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+          .itin-day { grid-template-columns: 48px 1fr !important; gap: 0 16px !important; }
+          .itin-highlights-grid { grid-template-columns: 1fr !important; }
+          .itin-cta { padding: 48px 20px !important; }
+          .itin-footer { padding: 20px !important; flex-direction: column !important; gap: 8px !important; text-align: center !important; }
+        }
       `}</style>
 
       {/* PRINT-ONLY HEADER */}
@@ -125,7 +138,7 @@ export default function TierThreeItinerary() {
       </div>
 
       {/* TOPBAR */}
-      <div className="no-print" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
+      <div className="no-print itin-topbar" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
@@ -136,8 +149,8 @@ export default function TierThreeItinerary() {
 
       {/* HERO */}
       <div className="no-print" style={{ background: "url('/hero-cover.jpg') center/cover no-repeat", minHeight: 420, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
-        <div style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
-          <div style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
+        <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
+          <div className="itin-hero" style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "16px" }}>
               The Extraordinary Path
             </h1>
@@ -146,15 +159,15 @@ export default function TierThreeItinerary() {
       </div>
 
       {/* ITINERARY */}
-      <div className="print-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
+      <div className="print-section itin-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
+          <div className="itin-head-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $45,000/person</p>
             <div className="no-print"><PrintButton /></div>
           </div>
 
           {days.map((d, i) => (
-            <div key={d.day} className="print-day" style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", marginBottom: i < days.length - 1 ? 24 : 0, paddingBottom: i < days.length - 1 ? 24 : 0, borderBottom: i < days.length - 1 ? "1px solid rgba(59,58,54,0.12)" : "none" }}>
+            <div key={d.day} className="print-day itin-day" style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", marginBottom: i < days.length - 1 ? 24 : 0, paddingBottom: i < days.length - 1 ? 24 : 0, borderBottom: i < days.length - 1 ? "1px solid rgba(59,58,54,0.12)" : "none" }}>
               <div style={{ textAlign: "right", paddingTop: 4 }}>
                 <span className="print-day-num" style={{ display: "block", fontFamily: "'Playfair Display', serif", fontSize: 32, lineHeight: 1, color: "#D4A843" }}>{String(d.day).padStart(2, "0")}</span>
                 <span style={{ fontFamily: "Inter", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(59,58,54,0.4)" }}>Day</span>
@@ -174,7 +187,7 @@ export default function TierThreeItinerary() {
           {/* HIGHLIGHTS — inside white section, visible on screen and print */}
           <div className="print-highlights" style={{ marginTop: 48, paddingTop: 40, borderTop: "1px solid rgba(59,58,54,0.12)" }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016", marginBottom: 24 }}>Signature Experiences</p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
+            <div className="itin-highlights-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 40px" }}>
               {highlights.map((h, i) => (
                 <p key={i} style={{ fontSize: 14, color: "rgba(59,58,54,0.8)", paddingLeft: 16, borderLeft: "2px solid #FF8C00" }}>{h}</p>
               ))}
@@ -184,7 +197,7 @@ export default function TierThreeItinerary() {
       </div>
 
       {/* CTA */}
-      <div className="no-print" style={{ background: "#2D5016", padding: "80px 56px", textAlign: "center" }}>
+      <div className="no-print itin-cta" style={{ background: "#2D5016", padding: "80px 56px", textAlign: "center" }}>
         <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 16 }}>Ready to Begin</p>
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 400, color: "#F7F5F0", marginBottom: 24 }}>Inquire About This Journey</h2>
         <p style={{ color: "rgba(247,245,240,0.65)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>
@@ -196,7 +209,7 @@ export default function TierThreeItinerary() {
       </div>
 
       {/* FOOTER */}
-      <div className="no-print" style={{ background: "#3B3A36", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div className="no-print itin-footer" style={{ background: "#3B3A36", padding: "24px 56px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <Link href="/" style={{ fontFamily: "Inter", fontSize: 12, color: "rgba(247,245,240,0.5)", letterSpacing: "0.1em" }}>← Back to Bhutan-Luxe</Link>
         <span style={{ fontFamily: "Inter", fontSize: 11, color: "rgba(247,245,240,0.35)", letterSpacing: "0.1em" }}>© Bhutan-Luxe Travel · Houston, Texas</span>
       </div>
