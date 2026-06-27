@@ -5,7 +5,7 @@ import { submitInquiry } from "./actions/inquiry";
 
 type Tier = "luxe" | "boutique-luxe" | "ultra-luxe" | "bespoke" | "";
 
-const TOTAL_STEPS = 3;
+const TOTAL_STEPS = 1;
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -77,10 +77,6 @@ export default function Home() {
         setError(result.error ?? "Something went wrong. Please try again.");
       }
     });
-  }
-
-  function back() {
-    if (step > 1) setStep(step - 1);
   }
 
   return (
@@ -428,81 +424,6 @@ export default function Home() {
                         placeholder="Optional, for a personal reply"
                       />
                     </div>
-                  </div>
-
-                  <div
-                    className={`modal-step${step === 2 ? " on" : ""}`}
-                    data-step={2}
-                  >
-                    <h2>
-                      Choose your <em>tier</em>
-                    </h2>
-                    <div className="tier-pick">
-                      <label>
-                        <input type="radio" name="tier" value="luxe" />
-                        <span className="tp-name">Discovery</span>
-                        <span className="tp-price">
-                          $8K – $12K                        </span>
-                      </label>
-                      <label>
-                        <input
-                          type="radio"
-                          name="tier"
-                          value="boutique-luxe"
-                        />
-                        <span className="tp-name">Immersion</span>
-                        <span className="tp-price">
-                          $12K – $25K                        </span>
-                      </label>
-                      <label>
-                        <input type="radio" name="tier" value="ultra-luxe" />
-                        <span className="tp-name">Extraordinary</span>
-                        <span className="tp-price">
-                          $25K – $35K+                        </span>
-                      </label>
-                    </div>
-                    <div className="form-group" style={{ marginTop: 16 }}>
-                      <label htmlFor="m_window">
-                        Preferred Journey Dates
-                      </label>
-                      <input
-                        type="text"
-                        id="m_window"
-                        name="window"
-                        placeholder="e.g. Spring 2026, flexible"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="m_group">Group Size</label>
-                      <input
-                        type="number"
-                        id="m_group"
-                        name="group"
-                        min={1}
-                        max={8}
-                        placeholder="1 – 8 guests"
-                      />
-                    </div>
-                  </div>
-
-                  <div
-                    className={`modal-step${step === 3 ? " on" : ""}`}
-                    data-step={3}
-                  >
-                    <h2>
-                      Anything else we<br />
-                      should <em>know</em>
-                    </h2>
-                    <div className="form-group">
-                      <label htmlFor="m_notes">
-                        Interests, requirements, questions
-                      </label>
-                      <textarea
-                        id="m_notes"
-                        name="notes"
-                        placeholder="Optional — spiritual, outdoor, photographic, dietary, anything at all"
-                      />
-                    </div>
                     <p
                       style={{
                         fontSize: 12,
@@ -530,23 +451,11 @@ export default function Home() {
                   <div className="controls">
                     <button
                       type="button"
-                      className="back"
-                      onClick={back}
-                      style={{ visibility: step === 1 ? "hidden" : "visible" }}
-                    >
-                      ← Back
-                    </button>
-                    <button
-                      type="button"
                       className="next"
                       onClick={nextOrSubmit}
                       disabled={pending}
                     >
-                      {pending
-                        ? "Submitting…"
-                        : step === TOTAL_STEPS
-                          ? "Submit Inquiry"
-                          : "SEND"}
+                      {pending ? "Submitting…" : "Submit Inquiry"}
                     </button>
                   </div>
                 </>
