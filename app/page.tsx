@@ -367,7 +367,7 @@ export default function Home() {
                     done || step > n ? "done" : step === n ? "active" : "";
                   const labels = [
                     "Contact Information",
-                    "Planning Process",
+                    "Process & Lead Times",
                     "Planning Insight",
                   ];
                   return (
