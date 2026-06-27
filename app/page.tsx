@@ -411,6 +411,9 @@ export default function Home() {
                     className={`modal-step${step === 1 ? " on" : ""}`}
                     data-step={1}
                   >
+                    <h2>
+                      Let&apos;s have a friendly chat over email, WhatsApp or a call when it would work for you.
+                    </h2>
                     <div className="form-group">
                       <label htmlFor="m_name">Full Name</label>
                       <input
