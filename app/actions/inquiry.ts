@@ -87,13 +87,6 @@ export async function submitInquiry(
   return { ok: true, refCode };
 }
 
-const TIER_LABELS: Record<string, string> = {
-  luxe: "Discovery",
-  "boutique-luxe": "Immersion",
-  "ultra-luxe": "Extraordinary",
-  bespoke: "Bespoke",
-};
-
 async function notifyConcierge(payload: InquiryPayload, refCode?: string) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -103,17 +96,12 @@ async function notifyConcierge(payload: InquiryPayload, refCode?: string) {
 
   const waDigits = payload.phone.replace(/[^\d]/g, "");
   const waLink = waDigits ? `https://wa.me/${waDigits}` : null;
-  const tierLabel = TIER_LABELS[payload.tier] ?? (payload.tier || "—");
 
   const html = `
     <h2>New Inquiry${refCode ? ` — ${refCode}` : ""}</h2>
     <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
-    <p><strong>Phone:</strong> ${escapeHtml(payload.phone) || "—"}</p>
-    <p><strong>Discovery Path:</strong> ${escapeHtml(tierLabel)}</p>
-    <p><strong>Preferred Travel Window:</strong> ${escapeHtml(payload.travelWindow) || "—"}</p>
-    <p><strong>Group Size:</strong> ${escapeHtml(payload.groupSize) || "—"}</p>
-    <p><strong>Notes:</strong> ${escapeHtml(payload.notes) || "—"}</p>
+    ${payload.phone ? `<p><strong>Phone:</strong> ${escapeHtml(payload.phone)}</p>` : ""}
     ${waLink ? `<p><a href="${waLink}">Message ${escapeHtml(payload.name)} on WhatsApp →</a></p>` : ""}
   `;
 
