@@ -82,6 +82,7 @@ export async function submitInquiry(
   });
 
   await notifyConcierge(payload, refCode);
+  await sendAutoReply(payload);
 
   return { ok: true, refCode };
 }
@@ -127,6 +128,26 @@ async function notifyConcierge(payload: InquiryPayload, refCode?: string) {
     });
   } catch (err) {
     console.error("[inquiry-email-failed]", err);
+  }
+}
+
+async function sendAutoReply(payload: InquiryPayload) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error("[auto-reply-skipped] RESEND_API_KEY not set");
+    return;
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+    await resend.emails.send({
+      from: "Bhutan-Luxe Concierge <concierge@bhutan-luxe.com>",
+      to: payload.email,
+      subject: "We've received your inquiry — Bhutan-Luxe.com",
+      html: `<p>Thanks for getting in touch with Bhutan-Luxe.com! We are confirming that your email was received and we will revert soon!</p>`,
+    });
+  } catch (err) {
+    console.error("[auto-reply-failed]", err);
   }
 }
 
