@@ -372,7 +372,6 @@ export default function Home() {
                   ];
                   return (
                     <div key={n} className={`row ${cls}`} data-i={n}>
-                      <span className="n">{String(n).padStart(2, "0")}</span>
                       <span className="l">{labels[n - 1]}</span>
                     </div>
                   );
@@ -394,7 +393,7 @@ export default function Home() {
           <div className="form-pane">
             <div className="head">
               <span className="label">
-                {done ? "Confirmation" : `Step ${step} of ${TOTAL_STEPS}`}
+                {done ? "Confirmation" : "Concierge Inquiry"}
               </span>
               <button
                 className="close"
@@ -412,9 +411,6 @@ export default function Home() {
                     className={`modal-step${step === 1 ? " on" : ""}`}
                     data-step={1}
                   >
-                    <h2>
-                      Let&apos;s begin with <em>you</em>
-                    </h2>
                     <div className="form-group">
                       <label htmlFor="m_name">Full Name</label>
                       <input
