@@ -366,8 +366,8 @@ export default function Home() {
                   const cls =
                     done || step > n ? "done" : step === n ? "active" : "";
                   const labels = [
-                    "About you",
-                    "Tier & window",
+                    "Contact Information",
+                    "Planning Process",
                     "Anything else",
                   ];
                   return (
