@@ -368,7 +368,7 @@ export default function Home() {
                   const labels = [
                     "Contact Information",
                     "Planning Process",
-                    "Anything else",
+                    "Planning Insight",
                   ];
                   return (
                     <div key={n} className={`row ${cls}`} data-i={n}>
