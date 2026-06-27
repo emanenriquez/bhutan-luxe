@@ -553,9 +553,6 @@ export default function Home() {
                     >
                       ← Back
                     </button>
-                    <span className="progress">
-                      {String(step).padStart(2, "0")} / 0{TOTAL_STEPS}
-                    </span>
                     <button
                       type="button"
                       className="next"
@@ -566,7 +563,7 @@ export default function Home() {
                         ? "Submitting…"
                         : step === TOTAL_STEPS
                           ? "Submit Inquiry"
-                          : "Continue →"}
+                          : "SEND"}
                     </button>
                   </div>
                 </>
