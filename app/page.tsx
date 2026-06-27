@@ -361,22 +361,6 @@ export default function Home() {
                 We respond within 48 hours by phone or by email — whichever you
                 prefer.
               </p>
-              <div className="steps">
-                {[1, 2, 3].map((n) => {
-                  const cls =
-                    done || step > n ? "done" : step === n ? "active" : "";
-                  const labels = [
-                    "Contact Information",
-                    "Process & Lead Times",
-                    "Planning Insight",
-                  ];
-                  return (
-                    <div key={n} className={`row ${cls}`} data-i={n}>
-                      <span className="l">{labels[n - 1]}</span>
-                    </div>
-                  );
-                })}
-              </div>
             </div>
             <div
               style={{
