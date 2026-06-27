@@ -1,5 +1,6 @@
 "use server";
 
+import { Resend } from "resend";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export interface InquiryPayload {
@@ -80,9 +81,59 @@ export async function submitInquiry(
     email: payload.email,
   });
 
-  // TODO(post-MVP): notify Eric via Resend at concierge@bhutan-luxe.com
-  // (forwards to eric@bhutan-luxe.com) with a wa.me/<buyer-phone> click-to-chat
-  // link in the body.
+  await notifyConcierge(payload, refCode);
 
   return { ok: true, refCode };
+}
+
+const TIER_LABELS: Record<string, string> = {
+  luxe: "Discovery",
+  "boutique-luxe": "Immersion",
+  "ultra-luxe": "Extraordinary",
+  bespoke: "Bespoke",
+};
+
+async function notifyConcierge(payload: InquiryPayload, refCode?: string) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error("[inquiry-email-skipped] RESEND_API_KEY not set");
+    return;
+  }
+
+  const waDigits = payload.phone.replace(/[^\d]/g, "");
+  const waLink = waDigits ? `https://wa.me/${waDigits}` : null;
+  const tierLabel = TIER_LABELS[payload.tier] ?? (payload.tier || "—");
+
+  const html = `
+    <h2>New Inquiry${refCode ? ` — ${refCode}` : ""}</h2>
+    <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
+    <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
+    <p><strong>Phone:</strong> ${escapeHtml(payload.phone) || "—"}</p>
+    <p><strong>Discovery Path:</strong> ${escapeHtml(tierLabel)}</p>
+    <p><strong>Preferred Travel Window:</strong> ${escapeHtml(payload.travelWindow) || "—"}</p>
+    <p><strong>Group Size:</strong> ${escapeHtml(payload.groupSize) || "—"}</p>
+    <p><strong>Notes:</strong> ${escapeHtml(payload.notes) || "—"}</p>
+    ${waLink ? `<p><a href="${waLink}">Message ${escapeHtml(payload.name)} on WhatsApp →</a></p>` : ""}
+  `;
+
+  try {
+    const resend = new Resend(apiKey);
+    await resend.emails.send({
+      from: "Bhutan-Luxe Inquiries <concierge@bhutan-luxe.com>",
+      to: "concierge@bhutan-luxe.com",
+      replyTo: payload.email,
+      subject: `New Inquiry: ${payload.name}${refCode ? ` (${refCode})` : ""}`,
+      html,
+    });
+  } catch (err) {
+    console.error("[inquiry-email-failed]", err);
+  }
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
