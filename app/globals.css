@@ -272,7 +272,7 @@ img { display:block; max-width:100%; }
   display:flex; flex-direction: column; justify-content: space-between;
 }
 .modal .side .label { color: var(--gold); display:block; margin-bottom: 10px; }
-.modal .side h3 { font-size: 18px; line-height: 1.2; margin-bottom: 8px; }
+.modal .side h3 { font-size: 18px; line-height: 1.2; margin-bottom: 22px; }
 .modal .side p { font-size: 12px; color: rgba(247,245,240,0.7); line-height: 1.4; }
 .modal .side .steps { margin-top: 32px; }
 .modal .side .steps .row {
