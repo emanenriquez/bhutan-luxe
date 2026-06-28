@@ -426,9 +426,9 @@ export default function Home() {
                     </div>
                     <p
                       style={{
-                        fontSize: 12,
+                        fontSize: 11,
                         color: "rgba(59,58,54,0.5)",
-                        lineHeight: 1.6,
+                        lineHeight: 1.4,
                       }}
                     >
                       Your information is held in strict confidence and is
