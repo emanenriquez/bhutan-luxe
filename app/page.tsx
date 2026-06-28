@@ -427,13 +427,13 @@ export default function Home() {
                       />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="m_phone">Phone Number</label>
+                      <label htmlFor="m_phone">Phone/WhatsApp Number</label>
                       <input
                         type="tel"
                         id="m_phone"
                         name="phone"
                         autoComplete="tel"
-                        placeholder="Optional, for a personal reply"
+                        placeholder="We never call before initial email/WhatsApp contact"
                       />
                     </div>
                     <p
