@@ -455,7 +455,7 @@ export default function Home() {
                       onClick={nextOrSubmit}
                       disabled={pending}
                     >
-                      {pending ? "Submitting…" : "Submit Inquiry"}
+                      {pending ? "Submitting…" : "SEND INQUIRY"}
                     </button>
                   </div>
                 </>
