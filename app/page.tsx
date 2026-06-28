@@ -384,16 +384,6 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div
-              style={{
-                fontSize: 10,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "rgba(247,245,240,0.4)",
-              }}
-            >
-              Held in strict confidence
-            </div>
           </aside>
 
           <div className="form-pane">
