@@ -351,8 +351,7 @@ export default function Home() {
         <div className="modal">
           <aside className="side">
             <div>
-              <span className="label">Concierge Inquiry</span>
-              <h3>A short, private conversation</h3>
+              <h3>Let&apos;s have a short, private conversation!</h3>
               <ul
                 style={{
                   listStyle: "none",
