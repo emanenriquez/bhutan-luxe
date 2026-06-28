@@ -353,10 +353,36 @@ export default function Home() {
             <div>
               <span className="label">Concierge Inquiry</span>
               <h3>A short, private conversation</h3>
-              <p>
-                We respond within 48 hours by phone or by email — whichever you
-                prefer.
-              </p>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                }}
+              >
+                {[
+                  "We will revert in 24-28 hours",
+                  "Initially we respond by email or WhatsApp",
+                  "All information and travel plans remain confidential",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    style={{
+                      fontSize: 13,
+                      color: "rgba(247,245,240,0.7)",
+                      lineHeight: 1.4,
+                      display: "flex",
+                      gap: 8,
+                    }}
+                  >
+                    <span style={{ color: "var(--gold)", flexShrink: 0 }}>◆</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div
               style={{
