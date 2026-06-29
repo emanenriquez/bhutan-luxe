@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+// cache-bust marker: force recompilation of this file on each diagnostic pass
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const check = (name: string) => {
     const v = process.env[name];
