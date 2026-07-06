@@ -169,7 +169,7 @@ export default function TierTwoItinerary() {
             />
           </div>
           <div className="itin-head-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
-            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $19,000/person Estimate</p>
+            <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $18,000/person Estimate</p>
             <div className="no-print"><PrintButton /></div>
           </div>
 
