@@ -152,11 +152,11 @@ export default function TierOneItinerary() {
       {/* ITINERARY */}
       <div className="print-section itin-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div style={{ marginBottom: 32, width: "85%", margin: "0 auto 32px" }}>
+          <div style={{ marginBottom: 32 }}>
             <img
               src="/discovery-path-map.jpg"
               alt="Discovery Path route map — Paro, Thimphu, Punakha, Gangtey"
-              style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: 4, display: "block" }}
+              style={{ width: "100%", borderRadius: 4, display: "block" }}
             />
           </div>
           <div className="itin-head-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
