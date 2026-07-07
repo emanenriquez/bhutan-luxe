@@ -162,13 +162,19 @@ export default function TierThreeItinerary() {
       {/* ITINERARY */}
       <div className="print-section itin-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div className="no-print" style={{ marginBottom: 32 }}>
+          <p className="no-print" style={{ fontFamily: "Inter", fontSize: 13, color: "rgba(59,58,54,0.75)", fontStyle: "italic", marginBottom: 20, lineHeight: 1.6 }}>
+            *The Extraordinary Path follows the same route as the Immersion Path, but it is distinguished by more culturally intimate experiences, elevated accommodations, and the option to cover more of Bhutan when helicopter transfers are selected between certain locations.
+          </p>
+          <div className="no-print" style={{ marginBottom: 16 }}>
             <img
               src="/immersion-extraordinary-map.jpg"
               alt="Immersion and Extraordinary Path route map — Paro, Haa Valley, Thimphu, Punakha, Gangtey"
               style={{ width: "100%", borderRadius: 4, display: "block" }}
             />
           </div>
+          <p className="no-print" style={{ fontFamily: "Inter", fontSize: 13, color: "rgba(59,58,54,0.75)", fontStyle: "italic", marginBottom: 32, lineHeight: 1.6 }}>
+            *The Extraordinary Path follows the same route as the Immersion Path, but it is distinguished by more culturally intimate experiences, elevated accommodations, and the option to cover more of Bhutan when helicopter transfers are selected between certain locations.
+          </p>
           <div className="itin-head-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $35,000/person</p>
             <div className="no-print"><PrintButton /></div>
