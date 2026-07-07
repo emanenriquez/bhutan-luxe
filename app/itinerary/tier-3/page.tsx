@@ -163,7 +163,7 @@ export default function TierThreeItinerary() {
       <div className="print-section itin-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p className="no-print" style={{ fontFamily: "Inter", fontSize: 13, color: "rgba(59,58,54,0.75)", fontStyle: "italic", marginBottom: 16, lineHeight: 1.6 }}>
-            *The Extraordinary Path follows the same route as the Immersion Path, but it is distinguished by more culturally intimate experiences, elevated accommodations, and the option to cover more of Bhutan in the same number of days when helicopter transfer(s) are selected between certain locations.
+            The Extraordinary Path follows the same route as the Immersion Path, but offers a deeper level of cultural intimacy, more refined accommodations, and the possibility of experiencing more of Bhutan when helicopter transfers are incorporated between select locations.
           </p>
           <div className="no-print" style={{ marginBottom: 16 }}>
             <img
