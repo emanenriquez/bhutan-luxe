@@ -37,13 +37,13 @@ const days = [
     day: 5,
     title: "The Punakha Valley",
     body: "Cross the spectacular Dochula Pass before descending into the fertile Punakha Valley. Visit sacred temples, walk through traditional villages, and gain deeper insight into Bhutan's enduring connection between nature, spirituality, and daily life.",
-    overnight: "Dhumra Farm Resort, Punakha",
+    overnight: "Dhurma Farm Resort Resort, Punakha",
   },
   {
     day: 6,
     title: "Heritage & Hospitality",
     body: "Experience the beauty of Punakha through scenic hikes, a gentle river journey, traditional Bhutanese cooking experiences, and visits to some of the Kingdom's most important cultural landmarks. Enjoy the relaxed pace and hospitality of Bhutan's former royal capital.",
-    overnight: "Dhumra Farm Resort, Punakha",
+    overnight: "Dhurma Farm Resort Resort, Punakha",
   },
   {
     day: 7,
@@ -175,7 +175,7 @@ export default function TierTwoItinerary() {
               {[
                 { name: "Bhutan Spirit Sanctuary", url: "https://bhutanspiritsanctuary.com/" },
                 { name: "Sangwa Camp", url: "https://www.sangwacamp.com/" },
-                { name: "Dhumra Farm", url: "https://dhumrafarm.com/" },
+                { name: "Dhurma Farm Resort", url: "https://dhumrafarm.com/" },
               ].map(({ name, url }) => (
                 <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, color: "#3B3A36", textDecoration: "none", borderBottom: "1px solid rgba(212,168,67,0.4)", padding: "10px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   {name}

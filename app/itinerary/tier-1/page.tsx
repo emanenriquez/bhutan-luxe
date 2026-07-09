@@ -164,7 +164,7 @@ export default function TierOneItinerary() {
             <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 40 }}>
               {[
                 { name: "Zhiwaling Heritage", url: "https://www.zhiwalingheritage.com/" },
-                { name: "Dhumra Farm", url: "https://dhumrafarm.com/" },
+                { name: "Dhurma Farm Resort", url: "https://dhumrafarm.com/" },
                 { name: "Gangtey Pinewood Resort", url: "https://hhlbhutan.bt/hotels-lodges/gangtey-pinewood-resort/" },
                 { name: "Naksel", url: "https://www.naksel.com/" },
               ].map(({ name, url }) => (
