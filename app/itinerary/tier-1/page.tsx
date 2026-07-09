@@ -139,7 +139,7 @@ export default function TierOneItinerary() {
       </div>
 
       {/* HERO */}
-      <div className="no-print itin-hero-bg" style={{ background: "url('/discovery-hero.jpg') center/cover no-repeat", minHeight: 520, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
+      <div className="no-print itin-hero-bg" style={{ background: "url('/discovery-hero.jpg') center/cover no-repeat", minHeight: 520, display: "flex", alignItems: "flex-end", paddingTop: 80, position: "relative" }}>
         <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div className="itin-hero" style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "12px" }}>
@@ -147,6 +147,7 @@ export default function TierOneItinerary() {
             </h1>
           </div>
         </div>
+        <p style={{ position: "absolute", bottom: 14, left: 20, fontFamily: "Inter", fontSize: 10, letterSpacing: "0.12em", color: "rgba(255,255,255,0.45)", margin: 0 }}>Dhensa Boutique Resort</p>
       </div>
 
       {/* ITINERARY */}
