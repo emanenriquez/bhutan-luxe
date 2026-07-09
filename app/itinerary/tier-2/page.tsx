@@ -188,7 +188,7 @@ export default function TierTwoItinerary() {
               {[
                 { name: "Zhiwaling Heritage", url: "https://www.zhiwalingheritage.com/" },
                 { name: "Gangtey Pinewood Resort", url: "https://hhlbhutan.bt/hotels-lodges/gangtey-pinewood-resort/" },
-                { name: "Naksel", url: "https://www.naksel.com/" },
+                { name: "Naksel Boutique Hotel Spa", url: "https://www.naksel.com/" },
               ].map(({ name, url }) => (
                 <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, color: "#3B3A36", textDecoration: "none", borderBottom: "1px solid rgba(212,168,67,0.4)", padding: "10px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   {name}
