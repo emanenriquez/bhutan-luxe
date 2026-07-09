@@ -196,6 +196,9 @@ export default function TierTwoItinerary() {
                 </a>
               ))}
             </div>
+            <p style={{ fontFamily: "Inter", fontSize: 12, color: "rgba(59,58,54,0.6)", fontStyle: "italic", marginTop: 20, lineHeight: 1.6 }}>
+              *The best lodging typically fills up 6+ months in advance. If full on your desired booking dates we will find similar or the next best accommodations.
+            </p>
           </div>
           <div className="itin-head-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $18,000/person Estimate</p>
