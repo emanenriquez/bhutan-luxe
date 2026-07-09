@@ -161,12 +161,40 @@ export default function TierTwoItinerary() {
       {/* ITINERARY + HIGHLIGHTS */}
       <div className="print-section itin-section" style={{ background: "#F7F5F0", padding: "56px 56px 48px", color: "#3B3A36" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div className="no-print" style={{ marginBottom: 32 }}>
+          <div className="no-print" style={{ marginBottom: 16 }}>
             <img
               src="/immersion-extraordinary-map.jpg"
               alt="Immersion and Extraordinary Path route map — Paro, Haa Valley, Thimphu, Punakha, Gangtey"
               style={{ width: "100%", borderRadius: 4, display: "block" }}
             />
+          </div>
+          <div className="no-print" style={{ marginBottom: 36, paddingBottom: 32, borderBottom: "1px solid rgba(59,58,54,0.12)" }}>
+            <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 14 }}>Explore Elevated Immersion Lodging</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 40 }}>
+              {[
+                { name: "Bhutan Spirit Sanctuary", url: "https://bhutanspiritsanctuary.com/" },
+                { name: "Sangwa Camp", url: "https://www.sangwacamp.com/" },
+                { name: "Dhumra Farm", url: "https://dhumrafarm.com/" },
+              ].map(({ name, url }) => (
+                <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, color: "#3B3A36", textDecoration: "none", borderBottom: "1px solid rgba(212,168,67,0.4)", padding: "10px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  {name}
+                  <span style={{ fontSize: 11, fontFamily: "Inter", letterSpacing: "0.1em", color: "#D4A843" }}>↗</span>
+                </a>
+              ))}
+            </div>
+            <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 14, marginTop: 28 }}>Lodging Also Featured in the Discovery Path</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 40 }}>
+              {[
+                { name: "Zhiwa Ling Heritage", url: "https://www.zhiwalingheritage.com/accommodation" },
+                { name: "Gangtey Pinewood Resort", url: "https://hhlbhutan.bt/hotels-lodges/gangtey-pinewood-resort/" },
+                { name: "Naksel", url: "https://www.naksel.com/" },
+              ].map(({ name, url }) => (
+                <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, color: "#3B3A36", textDecoration: "none", borderBottom: "1px solid rgba(212,168,67,0.4)", padding: "10px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  {name}
+                  <span style={{ fontSize: 11, fontFamily: "Inter", letterSpacing: "0.1em", color: "#D4A843" }}>↗</span>
+                </a>
+              ))}
+            </div>
           </div>
           <div className="itin-head-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
             <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D5016" }}>Sample Itinerary — $18,000/person Estimate</p>
