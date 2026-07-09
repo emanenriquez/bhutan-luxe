@@ -185,7 +185,7 @@ export default function TierTwoItinerary() {
             <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 14, marginTop: 28 }}>Lodging Also Featured in the Discovery Path</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 40 }}>
               {[
-                { name: "Zhiwa Ling Heritage", url: "https://www.zhiwalingheritage.com/accommodation" },
+                { name: "Zhiwaling Heritage", url: "https://www.zhiwalingheritage.com/" },
                 { name: "Gangtey Pinewood Resort", url: "https://hhlbhutan.bt/hotels-lodges/gangtey-pinewood-resort/" },
                 { name: "Naksel", url: "https://www.naksel.com/" },
               ].map(({ name, url }) => (
