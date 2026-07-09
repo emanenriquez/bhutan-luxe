@@ -149,11 +149,11 @@ export default function TierThreeItinerary() {
       </div>
 
       {/* HERO */}
-      <div className="no-print itin-hero-bg" style={{ background: "url('/extraordinary-hero.jpg') center 50%/cover no-repeat", minHeight: 640, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
-        <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
+      <div className="no-print itin-hero-bg" style={{ background: "url('/extraordinary-hero.jpg') center 50%/cover no-repeat", minHeight: 640, display: "flex", alignItems: "flex-start", paddingTop: 80 }}>
+        <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to bottom, rgba(59,58,54,0.75) 0%, rgba(59,58,54,0.2) 50%, transparent 100%)", padding: "48px 56px 80px" }}>
           <div className="itin-hero" style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "16px" }}>
-              The Extraordinary Path
+              Extraordinary Path
             </h1>
           </div>
         </div>
