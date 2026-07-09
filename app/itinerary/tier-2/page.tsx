@@ -150,8 +150,8 @@ export default function TierTwoItinerary() {
       {/* HERO */}
       <div className="no-print itin-hero-bg" style={{ position: "relative", paddingTop: 80 }}>
         <img src="/immersion-hero.jpg" alt="Immersion Path — Bhutan" style={{ width: "100%", display: "block" }} />
-        <div className="itin-hero-pad" style={{ position: "absolute", bottom: 0, left: 0, right: 0, width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
-          <div className="itin-hero" style={{ maxWidth: 400, textAlign: "left", marginLeft: "auto", marginRight: "5%" }}>
+        <div className="itin-hero-pad" style={{ position: "absolute", top: "25%", left: 0, right: 0, width: "100%", background: "transparent", padding: "0 56px" }}>
+          <div className="itin-hero" style={{ maxWidth: 340, textAlign: "left", marginLeft: "auto", marginRight: "8%" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "12px" }}>
               Immersion Path
             </h1>
