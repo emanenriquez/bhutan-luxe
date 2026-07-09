@@ -174,15 +174,27 @@ export default function TierThreeItinerary() {
           </div>
           <div className="no-print" style={{ marginBottom: 36, paddingBottom: 32, borderBottom: "1px solid rgba(59,58,54,0.12)" }}>
             <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 14 }}>Explore Elevated Lodging</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 20 }}>
               {[
                 { name: "Six Senses Bhutan", url: "https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/bhutan/bhutan/" },
                 { name: "&Beyond Punakha River Lodge", url: "https://www.andbeyond.com/our-lodges/asia/bhutan/punakha/andbeyond-punakha-river-lodge/" },
                 { name: "Gangtey Lodge", url: "https://gangteylodge.com/" },
               ].map(({ name, url }) => (
-                <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, color: "#3B3A36", textDecoration: "none", borderBottom: "1px solid rgba(212,168,67,0.4)", paddingBottom: 8, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, color: "#3B3A36", textDecoration: "none", borderBottom: "1px solid rgba(212,168,67,0.4)", padding: "10px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   {name}
                   <span style={{ fontSize: 11, fontFamily: "Inter", letterSpacing: "0.1em", color: "#D4A843" }}>↗</span>
+                </a>
+              ))}
+            </div>
+            <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(59,58,54,0.5)", marginBottom: 14, marginTop: 28 }}>Lodging also featured in the Immersion Path</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 20 }}>
+              {[
+                { name: "Bhutan Spirit Sanctuary", url: "https://bhutanspiritsanctuary.com/" },
+                { name: "Sangwa Camp", url: "https://www.sangwacamp.com/" },
+              ].map(({ name, url }) => (
+                <a key={name} href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, color: "#3B3A36", textDecoration: "none", borderBottom: "1px solid rgba(59,58,54,0.15)", padding: "10px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  {name}
+                  <span style={{ fontSize: 11, fontFamily: "Inter", letterSpacing: "0.1em", color: "rgba(59,58,54,0.4)" }}>↗</span>
                 </a>
               ))}
             </div>
