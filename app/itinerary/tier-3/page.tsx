@@ -199,7 +199,7 @@ export default function TierThreeItinerary() {
               ))}
             </div>
             <p style={{ fontFamily: "Inter", fontSize: 12, color: "rgba(59,58,54,0.6)", fontStyle: "italic", marginTop: 20, lineHeight: 1.6 }}>
-              *The best lodging typically fills up 6+ months in advance. If full on your desired booking dates we will find similar or the next best accommodations.
+              Bhutan's finest lodges typically fill 6+ months in advance. If your preferred accommodations are unavailable for your travel dates, we will arrange comparable properties or the best available alternatives.
             </p>
           </div>
           <div className="itin-head-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
