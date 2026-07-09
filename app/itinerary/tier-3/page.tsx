@@ -174,7 +174,7 @@ export default function TierThreeItinerary() {
           </div>
           <div className="no-print" style={{ marginBottom: 36, paddingBottom: 32, borderBottom: "1px solid rgba(59,58,54,0.12)" }}>
             <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 14 }}>Explore Extraordinary Path Lodging</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 20 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 40 }}>
               {[
                 { name: "Six Senses Bhutan", url: "https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/bhutan/bhutan/" },
                 { name: "&Beyond Punakha River Lodge", url: "https://www.andbeyond.com/our-lodges/asia/bhutan/punakha/andbeyond-punakha-river-lodge/" },
@@ -187,7 +187,7 @@ export default function TierThreeItinerary() {
               ))}
             </div>
             <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(59,58,54,0.5)", marginBottom: 14, marginTop: 28 }}>Lodging also featured in the Immersion Path</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 20 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 40 }}>
               {[
                 { name: "Bhutan Spirit Sanctuary", url: "https://bhutanspiritsanctuary.com/" },
                 { name: "Sangwa Camp", url: "https://www.sangwacamp.com/" },
