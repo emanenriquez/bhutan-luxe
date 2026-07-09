@@ -157,6 +157,7 @@ export default function TierTwoItinerary() {
             </h1>
           </div>
         </div>
+        <p style={{ position: "absolute", bottom: 14, left: 20, fontFamily: "Inter", fontSize: 13, letterSpacing: "0.12em", color: "rgba(255,255,255,0.45)", margin: 0 }}>Dhurma Farm Resort</p>
       </div>
 
       {/* ITINERARY + HIGHLIGHTS */}

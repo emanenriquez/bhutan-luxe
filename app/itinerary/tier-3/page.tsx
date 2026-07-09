@@ -149,7 +149,7 @@ export default function TierThreeItinerary() {
       </div>
 
       {/* HERO */}
-      <div className="no-print itin-hero-bg" style={{ background: "url('/extraordinary-hero.jpg') center 50%/cover no-repeat", minHeight: 640, display: "flex", alignItems: "flex-start", paddingTop: 80 }}>
+      <div className="no-print itin-hero-bg" style={{ background: "url('/extraordinary-hero.jpg') center 50%/cover no-repeat", minHeight: 640, display: "flex", alignItems: "flex-start", paddingTop: 80, position: "relative" }}>
         <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to bottom, transparent 0%, rgba(59,58,54,0.6) 35%, rgba(59,58,54,0.75) 55%, transparent 100%)", padding: "180px 56px 80px" }}>
           <div className="itin-hero" style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "16px" }}>
@@ -157,6 +157,7 @@ export default function TierThreeItinerary() {
             </h1>
           </div>
         </div>
+        <p style={{ position: "absolute", bottom: 14, left: 20, fontFamily: "Inter", fontSize: 13, letterSpacing: "0.12em", color: "rgba(255,255,255,0.45)", margin: 0 }}>Six Senses — Thimphu, Bhutan</p>
       </div>
 
       {/* ITINERARY */}
