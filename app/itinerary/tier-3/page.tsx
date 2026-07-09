@@ -186,7 +186,7 @@ export default function TierThreeItinerary() {
                 </a>
               ))}
             </div>
-            <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(59,58,54,0.5)", marginBottom: 14, marginTop: 28 }}>Lodging also featured in the Immersion Path</p>
+            <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 14, marginTop: 28 }}>Lodging also featured in the Immersion Path</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 0, paddingLeft: 40 }}>
               {[
                 { name: "Bhutan Spirit Sanctuary", url: "https://bhutanspiritsanctuary.com/" },
