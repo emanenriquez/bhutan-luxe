@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Discovery Path Questions — Bhutan-Luxe",
-  description: "Answers to common questions about planning a luxury journey to Bhutan with Bhutan-Luxe.",
-};
+import Link from "next/link";
+import { useState } from "react";
 
 const faqs = [
   {
@@ -50,12 +47,26 @@ const faqs = [
 ];
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
+
   return (
     <>
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: #3B3A36; color: #F7F5F0; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
+        .faq-item { border-left: 4px solid #D4A843; padding-left: 36px; border-bottom: 1px solid rgba(212,168,67,0.15); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-trigger { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; text-align: left; }
+        .faq-trigger:hover .faq-q { color: #F7F5F0; }
+        .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: #D4A843; transition: transform 0.3s ease; }
+        .faq-chevron.open { transform: rotate(180deg); }
+        .faq-answer { overflow: hidden; transition: max-height 0.35s ease, opacity 0.3s ease; }
+        .faq-answer.closed { max-height: 0; opacity: 0; }
+        .faq-answer.open { max-height: 600px; opacity: 1; }
+        .faq-answer-inner { padding-bottom: 28px; }
         @media (max-width: 600px) {
           .faq-topbar { padding: 14px 20px !important; }
           .faq-topbar img { height: 36px !important; }
@@ -64,6 +75,7 @@ export default function FAQ() {
           .faq-hero-pad { padding: 48px 20px 28px !important; }
           .faq-hero h1 { font-size: 30px !important; }
           .faq-list { padding: 32px 20px 56px !important; }
+          .faq-item { padding-left: 20px !important; }
           .faq-q { font-size: 19px !important; }
           .faq-cta { padding: 48px 20px !important; }
           .faq-footer { padding: 20px !important; flex-direction: column !important; gap: 8px !important; text-align: center !important; }
@@ -93,16 +105,32 @@ export default function FAQ() {
 
       {/* FAQ LIST */}
       <div className="faq-list" style={{ background: "#2D5016", padding: "48px 56px 80px" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", gap: 0 }}>
+        <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, lineHeight: 1.7, color: "rgba(247,245,240,0.85)", fontStyle: "italic", paddingBottom: 36, borderBottom: "1px solid rgba(212,168,67,0.3)", marginBottom: 48 }}>
             Every Bhutan-Luxe journey is individually crafted, yet many guests share similar questions before they travel. Here you will find practical guidance and insights to help you prepare for an experience defined by authenticity,
           </p>
-          {faqs.map((faq, i) => (
-            <div key={i} style={{ borderLeft: "4px solid #D4A843", paddingLeft: 36, marginBottom: i < faqs.length - 1 ? 48 : 0, paddingBottom: i < faqs.length - 1 ? 48 : 0, borderBottom: i < faqs.length - 1 ? "1px solid rgba(212,168,67,0.15)" : "none" }}>
-              <h2 className="faq-q" style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 400, color: "#D4A843", fontStyle: "italic", marginBottom: 12 }}>{faq.question}</h2>
-              <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7 }}>{faq.answer}</p>
-            </div>
-          ))}
+
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {faqs.map((faq, i) => (
+              <div key={i} className="faq-item">
+                <button className="faq-trigger" onClick={() => toggle(i)} aria-expanded={openIndex === i}>
+                  <h2 className="faq-q" style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 400, color: openIndex === i ? "#F7F5F0" : "#D4A843", fontStyle: "italic", transition: "color 0.2s ease" }}>
+                    {faq.question}
+                  </h2>
+                  <span className={`faq-chevron${openIndex === i ? " open" : ""}`}>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="#D4A843" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                </button>
+                <div className={`faq-answer${openIndex === i ? " open" : " closed"}`}>
+                  <div className="faq-answer-inner">
+                    <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7 }}>{faq.answer}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
