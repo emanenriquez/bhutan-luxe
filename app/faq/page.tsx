@@ -97,7 +97,7 @@ export default function FAQ() {
         <div className="faq-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
           <div className="faq-hero" style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
-              Discovery Path <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Questions</em>
+              Frequent <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Questions</em>
             </h1>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function FAQ() {
               <div key={i} className="faq-item">
                 <button className="faq-trigger" onClick={() => toggle(i)} aria-expanded={openIndex === i}>
                   <h2 className="faq-q" style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 400, color: openIndex === i ? "#F7F5F0" : "#D4A843", fontStyle: "italic", transition: "color 0.2s ease" }}>
-                    {faq.question}
+                    <span style={{ fontFamily: "Inter", fontSize: 13, fontWeight: 600, fontStyle: "normal", color: "#D4A843", opacity: 0.6, marginRight: 14 }}>{String(i + 1).padStart(2, "0")}</span>{faq.question}
                   </h2>
                   <span className={`faq-chevron${openIndex === i ? " open" : ""}`}>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
