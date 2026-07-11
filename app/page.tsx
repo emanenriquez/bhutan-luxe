@@ -559,7 +559,7 @@ export default function Home() {
               </span>
             </div>
             <div className="col">
-              <h5>Discovery Paths</h5>
+              <h5>Three Paths</h5>
               <a href="#tiers">Discovery</a>
               <a href="#tiers">Immersion</a>
               <a href="#tiers">Extraordinary</a>
