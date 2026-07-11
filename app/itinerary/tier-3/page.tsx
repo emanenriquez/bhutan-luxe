@@ -138,18 +138,14 @@ export default function TierThreeItinerary() {
         </div>
       </div>
 
-      {/* TOPBAR */}
-      <div className="no-print itin-topbar" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+      {/* HERO */}
+      <div className="no-print itin-hero-bg" style={{ background: "url('/extraordinary-hero.jpg') center 50%/cover no-repeat", minHeight: 640, display: "flex", alignItems: "flex-start", position: "relative" }}>
+        <Link href="/" className="no-print" style={{ position: "absolute", top: 20, left: 40, display: "flex", alignItems: "center", zIndex: 80 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
-        <Link href="/#tiers" style={{ fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", border: "none", cursor: "pointer", padding: "9px 18px", borderRadius: 8 }}>
+        <Link href="/#tiers" className="no-print" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
           Inquire Privately ↗
         </Link>
-      </div>
-
-      {/* HERO */}
-      <div className="no-print itin-hero-bg" style={{ background: "url('/extraordinary-hero.jpg') center 50%/cover no-repeat", minHeight: 640, display: "flex", alignItems: "flex-start", paddingTop: 80, position: "relative" }}>
         <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to bottom, transparent 0%, rgba(59,58,54,0.6) 35%, rgba(59,58,54,0.75) 55%, transparent 100%)", padding: "180px 56px 80px" }}>
           <div className="itin-hero" style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "16px" }}>
