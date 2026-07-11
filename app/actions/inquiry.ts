@@ -10,6 +10,7 @@ export interface InquiryPayload {
   tier: string;
   travelWindow: string;
   groupSize: string;
+  budget: string;
   notes: string;
 }
 
@@ -37,6 +38,7 @@ export async function submitInquiry(
     tier: String(formData.get("tier") ?? "").trim(),
     travelWindow: String(formData.get("window") ?? "").trim(),
     groupSize: String(formData.get("group") ?? "").trim(),
+    budget: String(formData.get("budget") ?? "").trim(),
     notes: String(formData.get("notes") ?? "").trim(),
   };
 
@@ -103,6 +105,9 @@ async function notifyConcierge(payload: InquiryPayload, refCode?: string) {
     <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
     ${payload.phone ? `<p><strong>Phone:</strong> ${escapeHtml(payload.phone)}</p>` : ""}
     ${waLink ? `<p><a href="${waLink}">Message ${escapeHtml(payload.name)} on WhatsApp →</a></p>` : ""}
+    ${payload.travelWindow ? `<p><strong>Travel window:</strong> ${escapeHtml(payload.travelWindow)}</p>` : ""}
+    ${payload.groupSize ? `<p><strong>Group size:</strong> ${escapeHtml(payload.groupSize)}</p>` : ""}
+    ${payload.budget ? `<p><strong>Budget per person:</strong> ${escapeHtml(payload.budget)}</p>` : ""}
   `;
 
   try {

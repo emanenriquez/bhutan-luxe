@@ -436,6 +436,34 @@ export default function Home() {
                         placeholder="We never call before initial email/WhatsApp contact"
                       />
                     </div>
+                    <div className="form-group">
+                      <label htmlFor="m_window">When do you want to travel?</label>
+                      <input
+                        type="text"
+                        id="m_window"
+                        name="window"
+                        placeholder="e.g. March 2027, flexible"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="m_group">How many people are in your group?</label>
+                      <input
+                        type="number"
+                        id="m_group"
+                        name="group"
+                        min="1"
+                        placeholder="e.g. 2"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="m_budget">Desired budget per person?</label>
+                      <select id="m_budget" name="budget">
+                        <option value="">Select a range</option>
+                        <option value="10k-15k">$10,000 – $15,000</option>
+                        <option value="15k-25k">$15,000 – $25,000</option>
+                        <option value="25k-35k+">$25,000 – $35,000+</option>
+                      </select>
+                    </div>
                     <p
                       style={{
                         fontSize: 11,
