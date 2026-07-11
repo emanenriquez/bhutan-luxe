@@ -15,6 +15,16 @@ const faqs = [
       "Yes. From arrival to departure, guests are accompanied by an experienced Bhutanese guide who provides seamless support throughout the journey. Our affiliate partner oversees all logistics, allowing you to travel with complete peace of mind while enjoying an authentic and personalized experience.",
   },
   {
+    question: "Visa requirements?",
+    answer:
+      "All nationalities except Indian require a visa to enter Bhutan. Tourist visas are valid for up to 90 days.",
+  },
+  {
+    question: "What is the daily fee required for Bhutan tourists?",
+    answer:
+      "Bhutan currently charges most international tourists a Sustainable Development Fee (SDF) of US$100 per person, per night.\n\nAdults: US$100 per night\nChildren ages 6–11: US$50 per night\nChildren under 6: No SDF\nOne-time visa application fee: US$40 per person\n\nThe SDF is separate from hotels, meals, transportation, guides, flights and tour costs. The current reduced US$100 rate is scheduled to remain in effect through August 31, 2027, unless Bhutan changes the policy.",
+  },
+  {
     question: "Are flights included in the booking?",
     answer:
       "International flights to and from Bhutan are typically not included. Domestic arrangements within Bhutan, including ground transportation and any internal flights where applicable, are included as part of your journey. We are happy to provide guidance on the most suitable international flight options from your departure city.",
@@ -43,6 +53,11 @@ const faqs = [
     question: "Is Bhutan safe for travelers?",
     answer:
       "Bhutan is widely regarded as one of the safest destinations in the world, with low crime rates and a strong sense of community. Guests consistently remark on the warmth and hospitality of the Bhutanese people.",
+  },
+  {
+    question: "What type of power sockets and voltage does Bhutan use?",
+    answer:
+      "In Bhutan, power plugs and sockets (outlets) of type D, type F and type G are used. The standard voltage is 230 V at a frequency of 50 Hz.",
   },
 ];
 
@@ -126,7 +141,7 @@ export default function FAQ() {
                 </button>
                 <div className={`faq-answer${openIndex === i ? " open" : " closed"}`}>
                   <div className="faq-answer-inner">
-                    <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7 }}>{faq.answer}</p>
+                    <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7, whiteSpace: "pre-line" }}>{faq.answer}</p>
                   </div>
                 </div>
               </div>
