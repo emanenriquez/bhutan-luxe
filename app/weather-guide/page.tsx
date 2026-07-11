@@ -105,8 +105,9 @@ export default function WeatherGuide() {
       </div>
 
       {/* HERO */}
-      <div className="no-print wg-hero-bg" style={{ background: "url('/weather-hero.jpg') center/cover no-repeat", minHeight: 340, display: "flex", alignItems: "flex-end", paddingTop: 80 }}>
-        <div className="wg-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "60px 56px 40px" }}>
+      <div className="no-print wg-hero-bg" style={{ position: "relative", paddingTop: 80 }}>
+        <img src="/weather-hero.jpg" alt="Bhutan Tshechu festival dancers" style={{ width: "100%", display: "block" }} />
+        <div className="wg-hero-pad" style={{ position: "absolute", bottom: 0, left: 0, right: 0, width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.92) 0%, rgba(59,58,54,0.5) 55%, transparent 100%)", padding: "48px 56px 36px" }}>
           <div className="wg-hero" style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
               Preferred Path <em style={{ fontStyle: "italic", color: "#FF8C00" }}>Dates</em>
