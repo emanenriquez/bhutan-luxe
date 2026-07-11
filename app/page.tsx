@@ -300,7 +300,7 @@ export default function Home() {
             <div>
               <span className="label">Why Our Guests See More of the Real Bhutan</span>
               <h2>
-                ...Journeys
+                Authentic Cultural <em>Journeys</em>
               </h2>
               <img src="/monks-watching-dance.jpg" alt="Monks watching Bhutanese cultural dance" style={{ width: '100%', marginTop: '28px', borderRadius: '0', display: 'block' }} />
             </div>
