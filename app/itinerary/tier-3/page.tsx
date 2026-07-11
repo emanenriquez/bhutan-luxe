@@ -239,7 +239,7 @@ export default function TierThreeItinerary() {
         <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 16 }}>Ready to Begin</p>
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 400, color: "#F7F5F0", marginBottom: 24 }}>Inquire About This Journey</h2>
         <p style={{ color: "rgba(247,245,240,0.65)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>
-          Your own designed bespoke journey starts after filling out the Concierge Inquiry form and followed by a discussion with our Bhutan-Luxe Concierge travel specialist.
+          Your own designed bespoke journey starts after filling out the Concierge Inquiry form followed by a discussion with our Bhutan-Luxe Concierge travel specialist.
         </p>
         <Link href="/#tiers" style={{ display: "inline-block", background: "#FF8C00", color: "#000", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 32px", borderRadius: 8 }}>
           Inquire Privately ↗
