@@ -310,7 +310,7 @@ export default function Home() {
                 <li>Authentic cultural immersion beyond the tourist trails</li>
                 <li>Meaningful connections with local communities</li>
                 <li>Seamless support throughout your journey</li>
-                <li>Optimizes 15+ years of network trusted local relationships</li>
+                <li>Optimizes 15+ years of network and trusted local relationships</li>
                 <li>Access to regions few visitors ever reach</li>
                 <li>You have Bhutan&apos;s most respected and experienced guides</li>
               </ul>
