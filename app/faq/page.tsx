@@ -25,9 +25,40 @@ const faqs = [
       "Bhutan currently charges most international tourists a Sustainable Development Fee (SDF) of US$100 per person, per night.\n\nAdults: US$100 per night\nChildren ages 6–11: US$50 per night\nChildren under 6: No SDF\nOne-time visa application fee: US$40 per person\n\nThe SDF is separate from hotels, meals, transportation, guides, flights and tour costs. The current reduced US$100 rate is scheduled to remain in effect through August 31, 2027, unless Bhutan changes the policy.",
   },
   {
-    question: "Are flights included in the booking?",
-    answer:
-      "International flights to and from Bhutan are typically not included. Domestic arrangements within Bhutan, including ground transportation and any internal flights where applicable, are included as part of your journey. We are happy to provide guidance on the most suitable international flight options from your departure city.",
+    question: "What is covered and not typically covered on our journeys?",
+    answer: "",
+    covered: [
+      "Customized itinerary planning",
+      "Bhutan visa processing assistance",
+      "Sustainable Development Fee (when listed in the proposal)",
+      "Private English-speaking guide",
+      "Private vehicle and driver in Bhutan",
+      "Accommodations listed in the itinerary",
+      "Meals specified in the itinerary",
+      "Airport transfers within Bhutan",
+      "Scheduled sightseeing and cultural visits",
+      "Entrance fees specifically listed",
+      "Prearranged private experiences and local encounters",
+      "Domestic ground transportation",
+      "Basic bottled water during touring",
+      "Bhutan-Luxe coordination and local support",
+    ],
+    notCovered: [
+      "International flights to the Bhutan gateway city",
+      "Flights to and from Bhutan, unless specifically quoted",
+      "Travel and medical insurance",
+      "Passport and vaccination expenses",
+      "Personal shopping and souvenirs",
+      "Alcoholic beverages and premium drinks",
+      "Spa treatments and optional wellness services",
+      "Laundry, telephone and personal hotel charges",
+      "Guide and driver gratuities",
+      "Activities or excursions not included in the itinerary",
+      "Costs caused by flight delays, cancellations or itinerary changes",
+      "Single-room supplements, unless already included",
+      "Credit-card, bank-transfer or currency-conversion fees",
+      "Emergency evacuation and medical treatment",
+    ],
   },
   {
     question: "Do you offer travel insurance and medical support?",
@@ -80,7 +111,7 @@ export default function FAQ() {
         .faq-chevron.open { transform: rotate(180deg); }
         .faq-answer { overflow: hidden; transition: max-height 0.35s ease, opacity 0.3s ease; }
         .faq-answer.closed { max-height: 0; opacity: 0; }
-        .faq-answer.open { max-height: 600px; opacity: 1; }
+        .faq-answer.open { max-height: 1200px; opacity: 1; }
         .faq-answer-inner { padding-bottom: 28px; }
         @media (max-width: 600px) {
           .faq-topbar { padding: 14px 20px !important; }
@@ -141,7 +172,24 @@ export default function FAQ() {
                 </button>
                 <div className={`faq-answer${openIndex === i ? " open" : " closed"}`}>
                   <div className="faq-answer-inner">
-                    <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7, whiteSpace: "pre-line" }}>{faq.answer}</p>
+                    {"covered" in faq && faq.covered ? (
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 24px" }}>
+                        <div>
+                          <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#4CAF78", marginBottom: 10 }}>Covered — Typically Included</p>
+                          {faq.covered.map((item, j) => (
+                            <p key={j} style={{ fontSize: 13, color: "rgba(247,245,240,0.85)", lineHeight: 1.6, paddingBottom: 7, borderBottom: "1px solid rgba(247,245,240,0.07)", marginBottom: 7 }}>✓ {item}</p>
+                          ))}
+                        </div>
+                        <div>
+                          <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(247,245,240,0.4)", marginBottom: 10 }}>Not Covered — Typically Excluded</p>
+                          {faq.notCovered!.map((item, j) => (
+                            <p key={j} style={{ fontSize: 13, color: "rgba(247,245,240,0.5)", lineHeight: 1.6, paddingBottom: 7, borderBottom: "1px solid rgba(247,245,240,0.07)", marginBottom: 7 }}>– {item}</p>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <p style={{ fontSize: 16, color: "rgba(247,245,240,0.85)", lineHeight: 1.7, whiteSpace: "pre-line" }}>{faq.answer}</p>
+                    )}
                   </div>
                 </div>
               </div>
