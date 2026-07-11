@@ -123,7 +123,7 @@ export default function TierOneItinerary() {
         `}</style>
         <img src="/logo.png" alt="Bhutan-Luxe" />
         <div>
-          <h1>The Discovery Path</h1>
+          <h1>Discovery Path</h1>
           <p>10 Days · Bhutan-Luxe</p>
         </div>
       </div>
@@ -139,7 +139,7 @@ export default function TierOneItinerary() {
         <div className="itin-hero-pad" style={{ width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.95) 0%, rgba(59,58,54,0.4) 60%, transparent 100%)", padding: "80px 56px 48px" }}>
           <div className="itin-hero" style={{ maxWidth: 560, textAlign: "left", marginLeft: "auto" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "12px" }}>
-              The Discovery Path
+              Discovery Path
             </h1>
           </div>
         </div>
