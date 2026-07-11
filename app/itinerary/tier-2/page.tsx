@@ -149,7 +149,7 @@ export default function TierTwoItinerary() {
         <div className="itin-hero-pad" style={{ position: "absolute", top: "25%", left: 0, right: 0, width: "100%", background: "transparent", padding: "0 56px" }}>
           <div className="itin-hero" style={{ maxWidth: 340, textAlign: "left", marginLeft: "auto", marginRight: "8%" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1.04, fontWeight: 400, fontStyle: "italic", color: "#FF8C00", marginBottom: "12px" }}>
-              Immersion Path
+              Immersion <span style={{ color: "#F7F5F0" }}>Path</span>
             </h1>
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function TierTwoItinerary() {
         <p style={{ fontFamily: "Inter", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A843", marginBottom: 16 }}>Ready to Begin</p>
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 400, color: "#F7F5F0", marginBottom: 24 }}>Inquire About This Journey</h2>
         <p style={{ color: "rgba(247,245,240,0.65)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>
-          This itinerary is a starting point. Every detail is tailored around your interests, pace, and travel dates.
+          Your own designed bespoke journey starts after filling out the Concierge Inquiry form and followed by a discussion with our Bhutan-Luxe Concierge travel specialist.
         </p>
         <Link href="/#tiers" style={{ display: "inline-block", background: "#FF8C00", color: "#000", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 32px", borderRadius: 8 }}>
           Inquire Privately ↗
