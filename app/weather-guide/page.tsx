@@ -94,19 +94,18 @@ export default function WeatherGuide() {
         }
       `}</style>
 
-      {/* TOPBAR */}
-      <div className="no-print wg-topbar" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 80, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 40px", background: "rgba(59,58,54,0.95)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(212,168,67,0.15)" }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+      {/* HERO with overlaid nav */}
+      <div className="no-print wg-hero-bg" style={{ position: "relative" }}>
+        <img src="/weather-hero.jpg" alt="Bhutan Tshechu festival dancers" style={{ width: "100%", display: "block" }} />
+        {/* Logo top-left */}
+        <Link href="/" style={{ position: "absolute", top: 20, left: 40, display: "flex", alignItems: "center", zIndex: 80 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
-        <Link href="/#tiers" style={{ fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", border: "none", cursor: "pointer", padding: "9px 18px", borderRadius: 8 }}>
+        {/* Inquire button top-right */}
+        <Link href="/#tiers" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
           Inquire Privately ↗
         </Link>
-      </div>
-
-      {/* HERO */}
-      <div className="no-print wg-hero-bg" style={{ position: "relative", paddingTop: 80 }}>
-        <img src="/weather-hero.jpg" alt="Bhutan Tshechu festival dancers" style={{ width: "100%", display: "block" }} />
+        {/* Title overlay bottom */}
         <div className="wg-hero-pad" style={{ position: "absolute", bottom: 0, left: 0, right: 0, width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.92) 0%, rgba(59,58,54,0.5) 55%, transparent 100%)", padding: "48px 56px 36px" }}>
           <div className="wg-hero" style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
