@@ -446,13 +446,12 @@ export default function Home() {
                       />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="m_group">How many people are in your group?</label>
+                      <label htmlFor="m_group">Number of travelers?</label>
                       <input
                         type="number"
                         id="m_group"
                         name="group"
                         min="1"
-                        placeholder="e.g. 2"
                       />
                     </div>
                     <div className="form-group">
