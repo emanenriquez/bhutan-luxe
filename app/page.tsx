@@ -463,6 +463,20 @@ export default function Home() {
                         <option value="25k-35k+">$25,000 – $35,000+</option>
                       </select>
                     </div>
+                    <div className="form-group">
+                      <label htmlFor="m_theme">Desired theme to your journey?</label>
+                      <select id="m_theme" name="theme">
+                        <option value="">Select a theme</option>
+                        <option value="cultural-discovery">Cultural Discovery – Authentic living heritage and traditions</option>
+                        <option value="hiking-adventure">Hiking &amp; Adventure – Scenic trails, mountain passes, active exploration</option>
+                        <option value="photography">Photography Expeditions – Landscapes, monasteries, festivals, wildlife</option>
+                        <option value="wellness">Wellness &amp; Rejuvenation – Yoga, meditation, healing, luxury spas</option>
+                        <option value="spiritual">Spiritual Journeys – Monasteries, blessings, mindful experiences</option>
+                        <option value="festival">Festival Experiences – Journeys timed around Bhutan's Tshechus</option>
+                        <option value="luxury-romance">Luxury &amp; Romance – Honeymoons, anniversaries, exclusive escapes</option>
+                        <option value="bespoke">Bespoke Expeditions – Completely customized journeys</option>
+                      </select>
+                    </div>
                     <p
                       style={{
                         fontSize: 11,

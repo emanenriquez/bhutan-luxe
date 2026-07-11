@@ -11,6 +11,7 @@ export interface InquiryPayload {
   travelWindow: string;
   groupSize: string;
   budget: string;
+  theme: string;
   notes: string;
 }
 
@@ -39,6 +40,7 @@ export async function submitInquiry(
     travelWindow: String(formData.get("window") ?? "").trim(),
     groupSize: String(formData.get("group") ?? "").trim(),
     budget: String(formData.get("budget") ?? "").trim(),
+    theme: String(formData.get("theme") ?? "").trim(),
     notes: String(formData.get("notes") ?? "").trim(),
   };
 
@@ -108,6 +110,7 @@ async function notifyConcierge(payload: InquiryPayload, refCode?: string) {
     ${payload.travelWindow ? `<p><strong>Travel window:</strong> ${escapeHtml(payload.travelWindow)}</p>` : ""}
     ${payload.groupSize ? `<p><strong>Group size:</strong> ${escapeHtml(payload.groupSize)}</p>` : ""}
     ${payload.budget ? `<p><strong>Budget per person:</strong> ${escapeHtml(payload.budget)}</p>` : ""}
+    ${payload.theme ? `<p><strong>Journey theme:</strong> ${escapeHtml(payload.theme)}</p>` : ""}
   `;
 
   try {
