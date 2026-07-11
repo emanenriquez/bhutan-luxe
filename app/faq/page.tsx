@@ -94,7 +94,9 @@ export default function FAQ() {
 
       {/* HERO */}
       <div className="faq-hero-bg" style={{ position: "relative", paddingTop: 80 }}>
-        <img src="/faq-hero.jpg" alt="Monks at Dochula Pass, Bhutan" style={{ width: "100%", display: "block" }} />
+        <div style={{ overflow: "hidden", maxHeight: 260 }}>
+          <img src="/faq-hero.jpg" alt="Monks at Dochula Pass, Bhutan" style={{ width: "100%", display: "block", objectFit: "cover", objectPosition: "center 60%" }} />
+        </div>
         <div className="faq-hero-pad" style={{ position: "absolute", bottom: 0, left: 0, right: 0, width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.92) 0%, rgba(59,58,54,0.5) 55%, transparent 100%)", padding: "48px 56px 36px" }}>
           <div className="faq-hero" style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, fontWeight: 400, color: "#F7F5F0" }}>
