@@ -316,7 +316,9 @@ img { display:block; max-width:100%; }
   background-position: right 4px center;
   padding-right: 20px;
   cursor: pointer;
+  color: rgba(59,58,54,0.3);
 }
+.modal-step select[data-chosen="1"] { color: var(--stone); }
 .modal-step input:focus, .modal-step select:focus, .modal-step textarea:focus { border-bottom-color: var(--crimson); }
 .modal-step textarea { resize: none; min-height: 70px; }
 .modal-step input::placeholder, .modal-step textarea::placeholder { color: rgba(59,58,54,0.3); }
