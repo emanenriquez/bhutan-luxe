@@ -457,7 +457,7 @@ export default function Home() {
                     <div className="form-group">
                       <label htmlFor="m_budget">Desired budget per person?</label>
                       <select id="m_budget" name="budget">
-                        <option value="">Select a range</option>
+                        <option value="">SELECT A RANGE</option>
                         <option value="10k-15k">$10,000 – $15,000</option>
                         <option value="15k-25k">$15,000 – $25,000</option>
                         <option value="25k-35k+">$25,000 – $35,000+</option>
@@ -466,7 +466,7 @@ export default function Home() {
                     <div className="form-group">
                       <label htmlFor="m_theme">Desired theme to your journey?</label>
                       <select id="m_theme" name="theme">
-                        <option value="">Select a theme</option>
+                        <option value="">SELECT A THEME</option>
                         <option value="cultural-discovery">Cultural Discovery – Authentic living heritage and traditions</option>
                         <option value="hiking-adventure">Hiking &amp; Adventure – Scenic trails, mountain passes, active exploration</option>
                         <option value="photography">Photography Expeditions – Landscapes, monasteries, festivals, wildlife</option>
