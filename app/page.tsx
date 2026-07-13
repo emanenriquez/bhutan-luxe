@@ -37,6 +37,12 @@ export default function Home() {
   }
 
   useEffect(() => {
+    if (typeof window !== "undefined" && new URLSearchParams(window.location.search).get("inquiry") === "open") {
+      openModal();
+    }
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
     function onKey(e: KeyboardEvent) {

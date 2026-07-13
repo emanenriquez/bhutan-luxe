@@ -241,7 +241,7 @@ export default function TierThreeItinerary() {
         <p style={{ color: "rgba(247,245,240,0.65)", marginBottom: 36, maxWidth: 480, margin: "0 auto 36px" }}>
           Your own designed bespoke journey starts after filling out the Concierge Inquiry form followed by a discussion with our Bhutan-Luxe Concierge travel specialist.
         </p>
-        <Link href="/#tiers" style={{ display: "inline-block", background: "#FF8C00", color: "#000", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 32px", borderRadius: 8 }}>
+        <Link href="/?inquiry=open" style={{ display: "inline-block", background: "#FF8C00", color: "#000", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 32px", borderRadius: 8 }}>
           Inquire Privately ↗
         </Link>
       </div>
