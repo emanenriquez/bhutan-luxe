@@ -135,13 +135,39 @@ async function sendAutoReply(payload: InquiryPayload) {
     return;
   }
 
+  const tierLabels: Record<string, string> = {
+    "luxe": "Discovery Path ($11,500)",
+    "boutique-luxe": "Immersion Path ($18,000)",
+    "ultra-luxe": "Extraordinary Path ($35,000)",
+    "bespoke": "Bespoke / Custom",
+  };
+
+  const html = `
+    <p>Dear ${escapeHtml(payload.name)},</p>
+    <p>Thank you for reaching out to Bhutan-Luxe. We have received your inquiry and our Concierge travel specialist will be in touch with you shortly.</p>
+    <p>Here is a summary of the information you submitted:</p>
+    <table cellpadding="8" style="border-collapse:collapse;width:100%;max-width:520px;">
+      <tr><td style="font-weight:bold;color:#555;width:40%">Name</td><td>${escapeHtml(payload.name)}</td></tr>
+      <tr><td style="font-weight:bold;color:#555">Email</td><td>${escapeHtml(payload.email)}</td></tr>
+      ${payload.phone ? `<tr><td style="font-weight:bold;color:#555">Phone / WhatsApp</td><td>${escapeHtml(payload.phone)}</td></tr>` : ""}
+      ${payload.tier ? `<tr><td style="font-weight:bold;color:#555">Journey Tier</td><td>${escapeHtml(tierLabels[payload.tier] ?? payload.tier)}</td></tr>` : ""}
+      ${payload.travelWindow ? `<tr><td style="font-weight:bold;color:#555">Travel Window</td><td>${escapeHtml(payload.travelWindow)}</td></tr>` : ""}
+      ${payload.groupSize ? `<tr><td style="font-weight:bold;color:#555">Number of Travelers</td><td>${escapeHtml(payload.groupSize)}</td></tr>` : ""}
+      ${payload.budget ? `<tr><td style="font-weight:bold;color:#555">Budget per Person</td><td>${escapeHtml(payload.budget)}</td></tr>` : ""}
+      ${payload.theme ? `<tr><td style="font-weight:bold;color:#555">Journey Theme</td><td>${escapeHtml(payload.theme)}</td></tr>` : ""}
+      ${payload.notes ? `<tr><td style="font-weight:bold;color:#555">Notes</td><td>${escapeHtml(payload.notes)}</td></tr>` : ""}
+    </table>
+    <br/>
+    <p>Warm regards,<br/>Bhutan-Luxe Concierge</p>
+  `;
+
   try {
     const resend = new Resend(apiKey);
     await resend.emails.send({
       from: "Bhutan-Luxe Concierge <concierge@bhutan-luxe.com>",
       to: payload.email,
       subject: "We've received your inquiry — Bhutan-Luxe.com",
-      html: `<p>Thanks for getting in touch with Bhutan-Luxe.com! We are confirming that your email was received and we will revert soon!</p>`,
+      html,
     });
   } catch (err) {
     console.error("[auto-reply-failed]", err);
