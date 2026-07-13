@@ -166,7 +166,7 @@ async function sendAutoReply(payload: InquiryPayload) {
     await resend.emails.send({
       from: "Bhutan-Luxe Concierge <concierge@bhutan-luxe.com>",
       to: payload.email,
-      subject: `Concierge Email Received — ${payload.name}`,
+      subject: `Concierge Email Received ${payload.name}`,
       html,
     });
   } catch (err) {
