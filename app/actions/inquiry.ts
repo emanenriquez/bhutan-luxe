@@ -158,7 +158,7 @@ async function sendAutoReply(payload: InquiryPayload) {
       ${payload.notes ? `<tr><td style="font-weight:bold;color:#555">Notes</td><td>${escapeHtml(payload.notes)}</td></tr>` : ""}
     </table>
     <br/>
-    <p>Warm regards,<br/>Bhutan-Luxe Concierge</p>
+    <p>Please be Kind,<br/>Bhutan-Luxe Concierge</p>
   `;
 
   try {
