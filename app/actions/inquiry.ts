@@ -146,17 +146,17 @@ async function sendAutoReply(payload: InquiryPayload) {
     <p>Dear ${escapeHtml(payload.name)},</p>
     <p>Thank you for reaching out to Bhutan-Luxe. We have received your inquiry and our Concierge travel specialist will be in touch with you shortly.</p>
     <p>Here is a summary of the information you submitted:</p>
-    <table cellpadding="8" style="border-collapse:collapse;width:100%;max-width:520px;">
-      <tr><td style="font-weight:bold;color:#555;width:40%">Name</td><td>${escapeHtml(payload.name)}</td></tr>
-      <tr><td style="font-weight:bold;color:#555">Email</td><td>${escapeHtml(payload.email)}</td></tr>
-      ${payload.phone ? `<tr><td style="font-weight:bold;color:#555">Phone / WhatsApp</td><td>${escapeHtml(payload.phone)}</td></tr>` : ""}
-      ${payload.tier ? `<tr><td style="font-weight:bold;color:#555">Journey Tier</td><td>${escapeHtml(tierLabels[payload.tier] ?? payload.tier)}</td></tr>` : ""}
-      ${payload.travelWindow ? `<tr><td style="font-weight:bold;color:#555">Travel Window</td><td>${escapeHtml(payload.travelWindow)}</td></tr>` : ""}
-      ${payload.groupSize ? `<tr><td style="font-weight:bold;color:#555">Number of Travelers</td><td>${escapeHtml(payload.groupSize)}</td></tr>` : ""}
-      ${payload.budget ? `<tr><td style="font-weight:bold;color:#555">Budget per Person</td><td>${escapeHtml(payload.budget)}</td></tr>` : ""}
-      ${payload.theme ? `<tr><td style="font-weight:bold;color:#555">Journey Theme</td><td>${escapeHtml(payload.theme)}</td></tr>` : ""}
-      ${payload.notes ? `<tr><td style="font-weight:bold;color:#555">Notes</td><td>${escapeHtml(payload.notes)}</td></tr>` : ""}
-    </table>
+    <p style="line-height:2;font-family:sans-serif;font-size:14px;">
+      <strong>Name:</strong> ${escapeHtml(payload.name)}<br/>
+      <strong>Email:</strong> ${escapeHtml(payload.email)}<br/>
+      ${payload.phone ? `<strong>Phone / WhatsApp:</strong> ${escapeHtml(payload.phone)}<br/>` : ""}
+      ${payload.tier ? `<strong>Journey Tier:</strong> ${escapeHtml(tierLabels[payload.tier] ?? payload.tier)}<br/>` : ""}
+      ${payload.travelWindow ? `<strong>Desired Travel Date:</strong> ${escapeHtml(payload.travelWindow)}<br/>` : ""}
+      ${payload.groupSize ? `<strong>Number of Travelers:</strong> ${escapeHtml(payload.groupSize)}<br/>` : ""}
+      ${payload.budget ? `<strong>Budget per Person:</strong> ${escapeHtml(payload.budget)}<br/>` : ""}
+      ${payload.theme ? `<strong>Journey Theme:</strong> ${escapeHtml(payload.theme)}<br/>` : ""}
+      ${payload.notes ? `<strong>Notes:</strong> ${escapeHtml(payload.notes)}<br/>` : ""}
+    </p>
     <br/>
     <p>Please be Kind,<br/>Bhutan-Luxe Concierge</p>
   `;
