@@ -106,10 +106,12 @@ async function notifyConcierge(payload: InquiryPayload, refCode?: string) {
     <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
     ${payload.phone ? `<p><strong>Phone:</strong> ${escapeHtml(payload.phone)}</p>` : ""}
     ${waLink ? `<p><a href="${waLink}">Message ${escapeHtml(payload.name)} on WhatsApp →</a></p>` : ""}
+    ${payload.tier ? `<p><strong>Journey tier:</strong> ${escapeHtml(payload.tier)}</p>` : ""}
     ${payload.travelWindow ? `<p><strong>Travel window:</strong> ${escapeHtml(payload.travelWindow)}</p>` : ""}
     ${payload.groupSize ? `<p><strong>Group size:</strong> ${escapeHtml(payload.groupSize)}</p>` : ""}
     ${payload.budget ? `<p><strong>Budget per person:</strong> ${escapeHtml(payload.budget)}</p>` : ""}
     ${payload.theme ? `<p><strong>Journey theme:</strong> ${escapeHtml(payload.theme)}</p>` : ""}
+    ${payload.notes ? `<p><strong>Notes:</strong> ${escapeHtml(payload.notes)}</p>` : ""}
   `;
 
   try {
