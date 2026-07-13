@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bhutan-luxe.com"),
   title: "Bhutan-Luxe — The Bhutan Few Will Ever See",
   description:
     "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.",
@@ -11,6 +12,15 @@ export const metadata: Metadata = {
       "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.",
     url: "https://bhutan-luxe.com",
     siteName: "Bhutan-Luxe",
+    images: [
+      {
+        url: "/hero-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bhutan-Luxe — Bespoke Journeys to Bhutan",
+      },
+    ],
+    type: "website",
   },
 };
 
