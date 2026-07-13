@@ -51,39 +51,38 @@ export async function submitInquiry(
     return { ok: false, error: "Please choose a tier." };
   }
 
-  const supabase = createAdminClient();
-  const { data, error } = await supabase.rpc("submit_inquiry", {
-    p_name: payload.name,
-    p_email: payload.email.toLowerCase(),
-    p_phone: payload.phone || null,
-    p_tier: payload.tier || null,
-    p_travel_window: payload.travelWindow || null,
-    p_group_size: payload.groupSize ? Number(payload.groupSize) : null,
-    p_notes: payload.notes || null,
-    p_type: "inquiry",
-    p_source: "website",
-    p_ref_code: null,
-  });
+  // Attempt to save to Supabase — non-blocking; emails always go out.
+  let refCode: string | undefined;
+  try {
+    const supabase = createAdminClient();
+    const { data, error } = await supabase.rpc("submit_inquiry", {
+      p_name: payload.name,
+      p_email: payload.email.toLowerCase(),
+      p_phone: payload.phone || null,
+      p_tier: payload.tier || null,
+      p_travel_window: payload.travelWindow || null,
+      p_group_size: payload.groupSize ? Number(payload.groupSize) : null,
+      p_notes: payload.notes || null,
+      p_type: "inquiry",
+      p_source: "website",
+      p_ref_code: null,
+    });
 
-  if (error) {
-    console.error("[inquiry-rpc-failed]", { error, email: payload.email });
-    return {
-      ok: false,
-      error:
-        "We couldn't save your inquiry. Please try again, or email concierge@bhutan-luxe.com directly.",
-    };
+    if (error) {
+      console.error("[inquiry-rpc-failed]", { error, email: payload.email });
+    } else {
+      const row = Array.isArray(data) ? data[0] : data;
+      refCode = row?.ref_code;
+      console.log("[inquiry-saved]", {
+        inquiry_id: row?.inquiry_id,
+        ref: refCode,
+        tier: payload.tier,
+        email: payload.email,
+      });
+    }
+  } catch (err) {
+    console.error("[inquiry-rpc-exception]", { err, email: payload.email });
   }
-
-  // RPC returns table; supabase-js returns array. Pick first row.
-  const row = Array.isArray(data) ? data[0] : data;
-  const refCode: string | undefined = row?.ref_code;
-
-  console.log("[inquiry-saved]", {
-    inquiry_id: row?.inquiry_id,
-    ref: refCode,
-    tier: payload.tier,
-    email: payload.email,
-  });
 
   await notifyConcierge(payload, refCode);
   await sendAutoReply(payload);
