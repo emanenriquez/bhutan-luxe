@@ -448,10 +448,10 @@ export default function Home() {
                     <div className="form-group">
                       <label htmlFor="m_group">Number of travelers?</label>
                       <input
-                        type="number"
+                        type="text"
                         id="m_group"
                         name="group"
-                        min="1"
+                        placeholder="e.g. 2"
                       />
                     </div>
                     <div className="form-group">
