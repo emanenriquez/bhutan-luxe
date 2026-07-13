@@ -446,15 +446,6 @@ export default function Home() {
                       />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="m_group">Number of travelers?</label>
-                      <input
-                        type="number"
-                        id="m_group"
-                        name="group"
-                        min="1"
-                      />
-                    </div>
-                    <div className="form-group">
                       <label htmlFor="m_budget">Desired budget per person?</label>
                       <select id="m_budget" name="budget" onChange={e => e.currentTarget.setAttribute('data-chosen', e.currentTarget.value ? '1' : '')}>
                         <option value="">SELECT A RANGE</option>
