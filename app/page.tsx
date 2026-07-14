@@ -129,6 +129,7 @@ export default function Home() {
         <div className="img" />
         <div className="text">
           <span className="label">Why Bhutan. Why Now.</span>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, fontStyle: 'italic', color: 'rgba(59,58,54,0.55)', marginTop: 6, marginBottom: 0 }}>The Secret and Timeless Kingdom of the Himalayas</p>
           <h2>
             You have been
             <br />
