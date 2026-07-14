@@ -113,10 +113,12 @@ export default function Home() {
               rooted in peace, tranquility, and immersive exploration<br className="lede-break" />
               of the Kingdom's timeless spirit.
             </p>
-            <div className="actions" style={{ marginTop: '28px' }}>
-              <a href="#tiers" className="btn-ghost">
-                Explore Experiences
-              </a>
+            <div style={{ marginTop: '28px', textAlign: 'center' }}>
+              <p style={{ fontFamily: 'Inter', fontSize: 13, color: 'rgba(247,245,240,0.75)', lineHeight: 1.8, margin: 0 }}>
+                Recommended Journey Length: 10 Days<br/>
+                Starting at $11,500<br/>
+                <em style={{ fontSize: 12, color: 'rgba(247,245,240,0.5)' }}>Journeys can be longer or shorter</em>
+              </p>
             </div>
           </div>
         </div>
