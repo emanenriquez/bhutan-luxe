@@ -102,7 +102,7 @@ export default function WeatherGuide() {
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
         {/* Inquire button top-right */}
-        <Link href="/#tiers" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
+        <Link href="/?inquiry=open" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
           Inquire Privately ↗
         </Link>
         {/* Title overlay bottom */}

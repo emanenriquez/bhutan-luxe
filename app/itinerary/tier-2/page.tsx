@@ -142,7 +142,7 @@ export default function TierTwoItinerary() {
         <Link href="/" className="no-print" style={{ position: "absolute", top: 20, left: 40, display: "flex", alignItems: "center", zIndex: 80 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
-        <Link href="/#tiers" className="no-print" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
+        <Link href="/?inquiry=open" className="no-print" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
           Inquire Privately ↗
         </Link>
         <img src="/immersion-hero.jpg" alt="Immersion Path — Bhutan" style={{ width: "100%", display: "block" }} />
