@@ -547,6 +547,39 @@ export default function Home() {
         </div>
       </div>
 
+      {/* TESTIMONIALS TEASER */}
+      <section style={{ background: "#2D5016", padding: "80px 0" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 56px" }}>
+          <div style={{ textAlign: "center", marginBottom: 52 }}>
+            <span style={{ fontFamily: "Inter", fontSize: 9, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,168,67,0.65)" }}>From Those Who Traveled</span>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 3vw, 36px)", fontWeight: 400, color: "#F7F5F0", marginTop: 12, lineHeight: 1.15 }}>
+              Affiliate On-The-Ground <em style={{ fontStyle: "italic" }}>Partner Reviews</em>
+            </h2>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 36, marginBottom: 52 }}>
+            {[
+              { quote: "Go to Bhutan! Stop procrastinating. It is 1000% worth it... A bit of our hearts will be in Bhutan forever! ❤️", name: "Shari F.", country: "United States" },
+              { quote: "We still get goosebumps when we think about our Bhutan trip, and we can't wait to return.", name: "Caro Cook", country: "Ireland" },
+              { quote: "It was not a trip but a cultural and familial visit with a country, its people and its precious culture.", name: "Josh M.", country: "United States" },
+            ].map((t, i) => (
+              <div key={i} style={{ flex: "1 1 260px", borderLeft: "2px solid rgba(212,168,67,0.35)", paddingLeft: 24 }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 16, fontStyle: "italic", color: "rgba(247,245,240,0.85)", lineHeight: 1.75, marginBottom: 16 }}>
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <p style={{ fontFamily: "Inter", fontSize: 10, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#D4A843" }}>
+                  {t.name}&ensp;·&ensp;{t.country}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <a href="/testimonials" style={{ display: "inline-block", fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "12px 28px", borderRadius: 8, textDecoration: "none" }}>
+              Read All Reviews ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer>
         <div className="wrap">
