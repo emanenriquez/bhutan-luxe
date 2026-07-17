@@ -12,6 +12,7 @@ const paths = [
 const secondary = [
   { label: "Preferred Path Dates", href: "/weather-guide" },
   { label: "Frequent Questions", href: "/faq" },
+  { label: "Partner Testimonies", href: "/testimonials" },
 ];
 
 export default function NavMenu() {
