@@ -129,9 +129,11 @@ export default function NavMenu() {
 
           {/* Bottom CTA */}
           <div style={{ paddingTop: 20, borderTop: "0.5px solid rgba(212,168,67,0.2)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <Link
-              href="/?inquiry=open"
-              onClick={() => setOpen(false)}
+            <button
+              onClick={() => {
+                setOpen(false);
+                window.location.href = "/?inquiry=open";
+              }}
               style={{
                 fontFamily: "Inter, sans-serif",
                 fontSize: 10,
@@ -142,12 +144,13 @@ export default function NavMenu() {
                 background: "#FF8C00",
                 padding: "12px 24px",
                 borderRadius: 6,
-                textDecoration: "none",
+                border: "none",
+                cursor: "pointer",
                 display: "inline-block",
               }}
             >
               Concierge Inquiry ↗
-            </Link>
+            </button>
             <span style={{ fontFamily: "Inter, sans-serif", fontSize: 10, color: "rgba(247,245,240,0.25)", letterSpacing: "0.08em" }}>
               bhutan-luxe.com
             </span>
