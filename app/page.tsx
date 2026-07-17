@@ -209,7 +209,7 @@ export default function Home() {
               <li>Return home with a deeper understanding of a kingdom where tradition remains a guiding force in modern life.</li>
             </ul>
             <div className="actions">
-              <a href="/itinerary/tier-1" className="btn-line">
+              <a href="/itinerary/discovery" className="btn-line">
                 Sample Itinerary →
               </a>
             </div>
@@ -241,7 +241,7 @@ export default function Home() {
               <li>Travel through Bhutan at a thoughtful pace designed to inspire discovery, reflection, and authentic connection.</li>
             </ul>
             <div className="actions">
-              <a href="/itinerary/tier-2" className="btn-line">
+              <a href="/itinerary/immersion" className="btn-line">
                 Sample Itinerary →
               </a>
             </div>
@@ -273,7 +273,7 @@ export default function Home() {
               <li>Travel through Bhutan with exceptional comfort, personal attention, and a pace that encourages both discovery and reflection.</li>
             </ul>
             <div className="actions">
-              <a href="/itinerary/tier-3" className="btn-line">
+              <a href="/itinerary/extraordinary" className="btn-line">
                 Sample Itinerary →
               </a>
             </div>

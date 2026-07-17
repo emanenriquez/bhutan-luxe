@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const paths = [
-  { label: "Discovery Path", href: "/itinerary/tier-1", price: "from $11,500" },
-  { label: "Immersion Path", href: "/itinerary/tier-2", price: "from $18,000" },
-  { label: "Extraordinary Path", href: "/itinerary/tier-3", price: "from $35,000" },
+  { label: "Discovery Path", href: "/itinerary/discovery", price: "from $11,500" },
+  { label: "Immersion Path", href: "/itinerary/immersion", price: "from $18,000" },
+  { label: "Extraordinary Path", href: "/itinerary/extraordinary", price: "from $35,000" },
 ];
 
 const secondary = [
