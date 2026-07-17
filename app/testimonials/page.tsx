@@ -86,7 +86,7 @@ export default function Testimonials() {
           From Those Who Traveled
         </p>
         <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 400, fontStyle: "italic", color: "#F7F5F0", lineHeight: 1.1, maxWidth: 600, margin: "0 auto" }}>
-          On-The-Ground Partner<br />Testimonies
+          Affiliate On-The-Ground<br />Partner Reviews
         </h1>
         <div style={{ width: 40, height: 1, background: "#D4A843", margin: "28px auto 0" }} />
       </div>
