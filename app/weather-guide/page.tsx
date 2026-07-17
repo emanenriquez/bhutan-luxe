@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PrintButton from "./PrintButton";
+import NavMenu from "../components/NavMenu";
 
 export const metadata: Metadata = {
   title: "Preferred Path Dates — Bhutan-Luxe",
@@ -102,9 +103,12 @@ export default function WeatherGuide() {
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
         {/* Inquire button top-right */}
-        <Link href="/?inquiry=open" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
-          Inquire Privately ↗
-        </Link>
+        <div style={{ position: "absolute", top: 20, right: 40, zIndex: 80, display: "flex", alignItems: "center", gap: 12 }}>
+          <Link href="/?inquiry=open" style={{ fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
+            Inquire Privately ↗
+          </Link>
+          <NavMenu />
+        </div>
         {/* Title overlay bottom */}
         <div className="wg-hero-pad" style={{ position: "absolute", bottom: 0, left: 0, right: 0, width: "100%", background: "linear-gradient(to top, rgba(59,58,54,0.92) 0%, rgba(59,58,54,0.5) 55%, transparent 100%)", padding: "48px 56px 36px" }}>
           <div className="wg-hero" style={{ marginLeft: "auto", maxWidth: 560, textAlign: "left" }}>

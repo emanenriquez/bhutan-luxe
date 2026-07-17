@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useTransition } from "react";
 import { submitInquiry } from "./actions/inquiry";
+import NavMenu from "./components/NavMenu";
 
 type Tier = "luxe" | "boutique-luxe" | "ultra-luxe" | "bespoke" | "";
 
@@ -95,9 +96,12 @@ export default function Home() {
         <div className="meta">
           <span style={{ color: 'var(--saffron)', textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '12px', fontWeight: 700 }}>Bespoke Journeys | Authentic Bhutan | Privately Guided</span>
         </div>
-        <button className="open-form" onClick={() => openModal()}>
-          Inquire Privately ↗
-        </button>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <button className="open-form" onClick={() => openModal()}>
+            Inquire Privately ↗
+          </button>
+          <NavMenu />
+        </div>
       </div>
 
       {/* HERO */}

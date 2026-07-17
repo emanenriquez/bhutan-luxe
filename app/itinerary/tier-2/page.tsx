@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PrintButton from "./PrintButton";
+import NavMenu from "../../components/NavMenu";
 
 export const metadata: Metadata = {
   title: "Deeper Discovery Itinerary — Tier II | Bhutan-Luxe",
@@ -142,9 +143,12 @@ export default function TierTwoItinerary() {
         <Link href="/" className="no-print" style={{ position: "absolute", top: 20, left: 40, display: "flex", alignItems: "center", zIndex: 80 }}>
           <img src="/logo.png" alt="Bhutan-Luxe" style={{ height: 48, width: "auto" }} />
         </Link>
-        <Link href="/?inquiry=open" className="no-print" style={{ position: "absolute", top: 24, right: 40, zIndex: 80, fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
-          Inquire Privately ↗
-        </Link>
+        <div className="no-print" style={{ position: "absolute", top: 20, right: 40, zIndex: 80, display: "flex", alignItems: "center", gap: 12 }}>
+          <Link href="/?inquiry=open" style={{ fontFamily: "Inter", fontWeight: 500, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#000", background: "#FF8C00", padding: "9px 18px", borderRadius: 8, textDecoration: "none" }}>
+            Inquire Privately ↗
+          </Link>
+          <NavMenu />
+        </div>
         <img src="/immersion-hero.jpg" alt="Immersion Path — Bhutan" style={{ width: "100%", display: "block" }} />
         <div className="itin-hero-pad" style={{ position: "absolute", top: "25%", left: 0, right: 0, width: "100%", background: "transparent", padding: "0 56px" }}>
           <div className="itin-hero" style={{ maxWidth: 340, textAlign: "left", marginLeft: "auto", marginRight: "8%" }}>
