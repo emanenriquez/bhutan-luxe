@@ -548,7 +548,7 @@ export default function Home() {
       </div>
 
       {/* TESTIMONIALS TEASER */}
-      <section style={{ background: "#F7F5F0", padding: "80px 0" }}>
+      <section id="testimonials-teaser" style={{ background: "#F7F5F0", padding: "80px 0" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 56px" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
             <span style={{ fontFamily: "Inter", fontSize: 9, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: "#D4A843" }}>From Those Who Traveled</span>
