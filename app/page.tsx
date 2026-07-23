@@ -590,9 +590,12 @@ export default function Home() {
             </div>
             <div className="col">
               <h5>Contact</h5>
-              <a href="mailto:concierge@bhutan-luxe.com">
+              <button
+                onClick={() => openModal()}
+                style={{ background: "none", border: "none", padding: 0, cursor: "pointer", font: "inherit", color: "inherit", textAlign: "left" }}
+              >
                 concierge@bhutan-luxe.com
-              </a>
+              </button>
               <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <a
                   href="https://wa.me/84937302252"
