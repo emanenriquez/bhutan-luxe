@@ -11,15 +11,11 @@ export const adminNav: NavContribution[] = [
     { label: "Leads", href: "/admin/revenue/leads", ico: "◉", enabled: true },
     { label: "Inquiries", href: "/admin/revenue/inquiries", ico: "☰", enabled: true },
     { label: "Companies", href: "/admin/revenue/companies", ico: "▣", enabled: true },
-    { label: "Clients", href: "/admin/revenue/clients", ico: "★", enabled: true },
     { label: "Contacts", href: "/admin/contacts", ico: "⚇", enabled: true },
     { label: "Meeting Notes", href: "/admin/revenue/meetings", ico: "☰", enabled: true },
     { label: "Sales Intelligence", href: "/admin/revenue/sales-intelligence", ico: "◭", enabled: true },
   ] },
   { section: "Four Offices", group: "Revenue", subheading: "Commerce", order: 40, items: [
     { label: "Affiliates", href: "/admin/revenue/affiliates", ico: "%", enabled: true },
-  ] },
-  { section: "Workspace", group: "Settings", subheading: "Configuration", order: 10, items: [
-    { label: "Pipelines", href: "/admin/settings/pipelines", ico: "⇶" },
   ] },
 ];
