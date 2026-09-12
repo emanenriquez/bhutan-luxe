@@ -39,8 +39,9 @@ async function pageViews(since: string | null): Promise<number | null> {
   }
 }
 
+type CountTable = "inquiries" | "deals" | "marketing_content" | "email_campaigns";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function count(table: string, apply: (q: any) => PromiseLike<{ count: number | null }>): Promise<number> {
+async function count(table: CountTable, apply: (q: any) => PromiseLike<{ count: number | null }>): Promise<number> {
   const { count: n } = await apply(companyOs.from(table).select("id", { count: "exact", head: true }));
   return n ?? 0;
 }
