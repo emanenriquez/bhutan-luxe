@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { PageHead } from "@/kernel/ui/PageHead";
 import { MetricCard } from "@/kernel/ui/MetricCard";
+import { companyOs } from "@/kernel/data/supabase";
 import { Badge } from "@/kernel/ui/Badge";
 import { BarChart } from "@/kernel/ui/charts/BarChart";
 import { DonutChart } from "@/kernel/ui/charts/DonutChart";
@@ -17,7 +18,6 @@ import {
   type EmailAudience,
   type MarketingRange,
 } from "@/entities/campaigns/lib/marketing";
-import { WEEKLY_MEETINGS_GOAL, getMeetingsBookedThisWeek, getNewLeadsCount } from "@/entities/crm";
 import { getContentEngine } from "@/entities/campaigns/lib/marketing-engine";
 import { CHANNEL_LABEL } from "@/entities/campaigns/lib/marketing-calendar";
 import {
@@ -97,14 +97,23 @@ export default async function MarketingPage({ searchParams }: { searchParams: Se
   const emailAudience = parseAudience(firstParam(searchParams.email));
   const active = RANGES.find((r) => r.key === range) ?? RANGES[1];
 
-  const [traffic, email, audience, delivery, newLeads, meetingsBooked, engine, attendees, workflows, recentContacts] =
+  // Inquiries and deals opened in the range: this business runs on the
+  // inquiries board and the deal pipeline, not an SDR lead queue.
+  const since = rangeSince(range);
+  const countSince = async (table: "inquiries" | "deals") => {
+    let q = companyOs.from(table).select("id", { count: "exact", head: true });
+    if (since) q = q.gte("created_at", since);
+    const { count } = await q;
+    return count ?? 0;
+  };
+  const [traffic, email, audience, delivery, inquiries, dealsOpened, engine, attendees, workflows, recentContacts] =
     await Promise.all([
       getAnalyticsOverview(range, "public"),
       getEmailActivity(range, emailAudience),
       getAudienceBreakdown(),
       getDeliverability(range),
-      getNewLeadsCount(rangeSince(range)),
-      getMeetingsBookedThisWeek(),
+      countSince("inquiries"),
+      countSince("deals"),
       getContentEngine(),
       getWorkshopAttendeesTotal(),
       getDocumentedWorkflowsTotal(),
@@ -166,16 +175,16 @@ export default async function MarketingPage({ searchParams }: { searchParams: Se
           sub={`of ${audience.total.toLocaleString()} contacts`}
         />
         <MetricCard
-          label="New leads"
-          value={newLeads.toLocaleString()}
+          label="Inquiries"
+          value={inquiries.toLocaleString()}
           sub={active.sub}
-          href="/admin/revenue/leads"
+          href="/admin/revenue/inquiries"
         />
         <MetricCard
-          label="Meetings booked"
-          value={`${meetingsBooked} / ${WEEKLY_MEETINGS_GOAL}`}
-          sub="this week vs goal"
-          href="/admin/revenue/leads"
+          label="Deals opened"
+          value={dealsOpened.toLocaleString()}
+          sub={active.sub}
+          href="/admin/revenue/deals"
         />
       </div>
 
