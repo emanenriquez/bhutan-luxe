@@ -13,7 +13,8 @@ const ACTIVE_STATUSES = ["new_lead", "contacted", "qualified", "no_action"];
 // The inquiries board is inbound SALES contact only. Event/commerce/legacy-import
 // intake (retreat signups, checkout, newsletter, the one-off legacy 'general'
 // bulk import) lives in orders/registrations, not here.
-const NON_SALES_INQUIRY_TYPES = "(general,retreat,trip,checkout,newsletter)";
+// A trip inquiry is the sale here, so `trip` stays on the board.
+const NON_SALES_INQUIRY_TYPES = "(general,retreat,checkout,newsletter)";
 
 type EmbeddedPerson = { full_name: string | null; email: string; do_not_contact: boolean | null };
 type Row = {
