@@ -124,7 +124,8 @@ function MarketingSectionFallback() {
 // date — and anything missing is surfaced up top so nothing dies silently.
 
 // Inquiry types that are NOT inbound sales contact (events, commerce, legacy import).
-const NON_SALES_INQUIRY_TYPES = "(general,retreat,trip,checkout,newsletter)";
+// A trip inquiry is the sale here, so `trip` stays on the board.
+const NON_SALES_INQUIRY_TYPES = "(general,retreat,checkout,newsletter)";
 
 type Stage = { id: string; name: string; is_won: boolean; is_lost: boolean };
 type DealRow = {
