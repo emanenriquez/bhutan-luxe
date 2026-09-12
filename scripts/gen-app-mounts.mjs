@@ -166,9 +166,14 @@ export function appPathOf(rel) {
 }
 
 /** Every mount one deployment installs: { appPath, specifier, symbols, ...mount }. */
-export function mountsFor(root, manifest, included) {
+export function mountsFor(root, manifest, included, { unmounted = new Set(), skipCrons = new Set() } = {}) {
   const out = [];
   for (const name of [...included].sort()) {
+    // An installed entity whose code other entities import but whose own
+    // routes, APIs and crons this deployment does not serve (deployment file
+    // `unmounted`). The marketing-site entity is the case: campaigns requires
+    // it, and this deployment's public site lives in app/(site).
+    if (unmounted.has(name)) continue;
     const target = manifest.entities[name].target;
     const declared = mountsOf(root, target);
     for (const kind of ["routes", "api", "crons"]) {
@@ -182,6 +187,9 @@ export function mountsFor(root, manifest, included) {
         // the route composes, not a route: it gets no mount.
         if (symbols.length === 0) continue;
         const key = rel.slice(`${target}/`.length).replace(/\.(ts|tsx)$/, "");
+        // Deployment file `skipCrons`: "<entity>/<cron>" keeps the routine's code
+        // installed but gives it no schedule and no route.
+        if (kind === "crons" && skipCrons.has(`${name}/${key.replace(/^crons\//, "")}`)) continue;
         out.push({
           appPath,
           specifier: `@/${rel.replace(/\.(ts|tsx)$/, "")}`,
@@ -224,8 +232,10 @@ export function generateMounts(root, deploymentName, manifest = loadManifest(roo
   const deployment = loadDeployments(root).find((d) => d.name === deploymentName);
   if (!deployment) throw new Error(`gen-app-mounts: no deployments/${deploymentName}.json`);
   const included = closureOf(manifest, deployment.entities);
+  const raw = JSON.parse(fs.readFileSync(path.join(root, "deployments", `${deploymentName}.json`), "utf8"));
+  const options = { unmounted: new Set(raw.unmounted ?? []), skipCrons: new Set(raw.skipCrons ?? []) };
   const files = {};
-  for (const mount of mountsFor(root, manifest, included)) {
+  for (const mount of mountsFor(root, manifest, included, options)) {
     if (files[mount.appPath]) {
       throw new Error(`gen-app-mounts: two entities claim ${mount.appPath}`);
     }

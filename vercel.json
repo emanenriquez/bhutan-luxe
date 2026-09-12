@@ -1,3 +1,8 @@
 {
-  "crons": []
+  "crons": [
+    {
+      "path": "/api/cron/email-campaign-send/",
+      "schedule": "*/15 * * * *"
+    }
+  ]
 }

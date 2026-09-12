@@ -1,22 +1,41 @@
 {
   "$comment": [
     "Bhutan Luxe deployment: the CRM and the entities it requires, nothing else.",
-    "Excluded on purpose: site (marketing), hiring/onboarding (Talent), team, time-off, coaching",
     "(Team Portal), portal (Client Portal), campaigns, retreats, boards, htt, library.",
     "ideas and client-programs are here only because crm requires org, org requires ideas,",
     "and crm requires client-programs. They are not in the nav.",
-    "company-os owns the admin login, home and error pages, so it is required in practice."
+    "company-os owns the admin login, home and error pages, so it is required in practice.",
+    "campaigns (Revenue > Marketing) is installed. It requires site, and its overview reads library;",
+    "both are `unmounted`: their code is present but none of their routes, APIs or crons are mounted.",
+    "skipCrons keeps only campaigns/email-campaign-send scheduled; the content agents stay off."
   ],
   "name": "bhutan-luxe",
   "entities": [
     "assistant",
     "billing",
+    "campaigns",
     "client-programs",
     "company-os",
     "contacts",
     "crm",
     "finance",
     "ideas",
-    "org"
+    "library",
+    "org",
+    "site"
+  ],
+  "unmounted": [
+    "site",
+    "library"
+  ],
+  "skipCrons": [
+    "campaigns/blog-publish",
+    "campaigns/letter-agent",
+    "campaigns/letter-weekly",
+    "campaigns/marketing-digest",
+    "campaigns/marketing-recap",
+    "campaigns/marketing-weekly-pulse",
+    "campaigns/writer-agent",
+    "campaigns/writer-schedule"
   ]
 }
