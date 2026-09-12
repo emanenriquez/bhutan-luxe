@@ -15,6 +15,7 @@ import { ADMIN_SLOTS } from "@/kernel/shell/admin-ia";
 import { TEAM_SLOTS } from "@/kernel/shell/team-ia";
 import { PORTAL_SLOTS } from "@/kernel/shell/portal-ia";
 
+import { adminNav as campaignsAdminNav } from "@/entities/campaigns/client";
 import { adminNav as clientProgramsAdminNav } from "@/entities/client-programs/client";
 import { adminNav as companyOsAdminNav } from "@/entities/company-os/client";
 import { adminNav as crmAdminNav } from "@/entities/crm/client";
@@ -22,6 +23,7 @@ import { adminNav as ideasAdminNav } from "@/entities/ideas/client";
 import { adminNav as orgAdminNav } from "@/entities/org/client";
 
 const ADMIN_NAV_CONTRIBUTIONS: NavContribution[] = [
+  ...campaignsAdminNav,
   ...clientProgramsAdminNav,
   ...companyOsAdminNav,
   ...crmAdminNav,
