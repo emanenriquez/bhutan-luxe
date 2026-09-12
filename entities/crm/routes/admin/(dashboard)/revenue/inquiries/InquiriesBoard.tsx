@@ -10,7 +10,7 @@ import {
   moveInquiryStatus,
   archiveInquiry,
   markInquirySpam,
-  promoteInquiryToLead,
+  promoteInquiryToDeal,
   replyToInquiry,
 } from "./actions";
 
@@ -32,7 +32,7 @@ export type InquiryCard = {
 const COLUMNS: KanbanColumn[] = [
   { id: "new_lead", label: "New inquiry", accent: STAGE_LEAD },
   { id: "contacted", label: "Contacted", accent: STAGE_NEUTRAL },
-  { id: "qualified", label: "Promote to lead", accent: STAGE_WON },
+  { id: "qualified", label: "Promote to deal", accent: STAGE_WON },
   { id: "no_action", label: "No action", accent: STAGE_LOST },
 ];
 
@@ -50,13 +50,13 @@ export function InquiriesBoard({ initialCards }: { initialCards: InquiryCard[] }
     // Dropping on "Promote to lead" is more than a status change: the person
     // also joins the SDR queue on /admin/revenue/leads.
     const action =
-      toColumnId === "qualified" ? promoteInquiryToLead(cardId) : moveInquiryStatus(cardId, toColumnId);
+      toColumnId === "qualified" ? promoteInquiryToDeal(cardId) : moveInquiryStatus(cardId, toColumnId);
     action.then((r) => {
       if (!r.ok) {
         setCards(prev);
         setBanner({ ok: false, text: `Couldn't move card: ${r.error}` });
       } else if (toColumnId === "qualified") {
-        setBanner({ ok: true, text: "Promoted: this contact is now in the lead queue." });
+        setBanner({ ok: true, text: "Promoted: a deal is open for this contact on the Deals board." });
       }
     });
   }
@@ -183,7 +183,7 @@ function InquiryDetail({
       <div className="admin-form-actions">
         {card.columnId !== "qualified" && (
           <button type="button" className="admin-btn admin-btn--primary" onClick={onPromote}>
-            Promote to lead
+            Promote to deal
           </button>
         )}
         <button type="button" className="admin-btn" onClick={onArchive}>

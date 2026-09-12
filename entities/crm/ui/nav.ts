@@ -8,7 +8,7 @@ export const adminNav: NavContribution[] = [
   { section: "Four Offices", group: "Revenue", subheading: "CRM", order: 10, items: [
     { label: "Cockpit", href: "/admin/revenue", ico: "◎", enabled: true },
     { label: "Deals", href: "/admin/revenue/deals", ico: "$", enabled: true },
-    { label: "Leads", href: "/admin/revenue/leads", ico: "◉", enabled: true },
+    // Leads (SDR queue) is not used at this volume; inquiries promote straight to deals.
     { label: "Inquiries", href: "/admin/revenue/inquiries", ico: "☰", enabled: true },
     { label: "Companies", href: "/admin/revenue/companies", ico: "▣", enabled: true },
     { label: "Contacts", href: "/admin/contacts", ico: "⚇", enabled: true },
