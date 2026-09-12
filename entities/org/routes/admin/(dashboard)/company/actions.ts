@@ -25,6 +25,51 @@ import { type KrStatus } from "@/entities/org/lib/company/edges-shared";
 // and the company-visible /team page that reads the same row.
 
 // ---- Strategy -----------------------------------------------------------
+
+// The sections StrategyView knows how to render, pre-filled so the first edit
+// is a rewrite, not a blank page. Anything added beyond these renders as prose.
+const STRATEGY_TEMPLATE = (year: number) => `## Ambition
+Become the concierge of choice for travellers who want Bhutan at its most private and considered.
+
+## Purpose
+Open the kingdom to a few guests a year, on terms that respect Bhutan and reward our partners on the ground.
+
+## Value Proposition
+Bespoke journeys, three clear tiers, one concierge from first inquiry to the flight home.
+
+## Themes
+- ${year}: Fill the first season and prove the concierge model
+
+## Business Lines
+### Discovery Path
+Tier I. The essential Bhutan journey.
+
+### Immersion Path
+Tier II. Deeper access, longer stays.
+
+### Extraordinary Path
+Tier III. Rare access, exceptional settings, fully bespoke.
+
+## Overview
+Where the business is now, what the year is for, and what we will not do.
+`;
+
+// Seeds the first strategy row for the current year (the page shows the most
+// recent year). Idempotent: an existing row for the year is left alone.
+export async function createStrategy(): Promise<Result> {
+  const admin = await requireAdmin();
+  const year = new Date().getFullYear();
+  const { data: existing } = await companyOs.from("strategies").select("id").eq("year", year).maybeSingle();
+  if (existing) return { ok: true };
+  const row = { year, title: `Bhutan Luxe strategy ${year}`, body_md: STRATEGY_TEMPLATE(year) };
+  const { data, error } = await companyOs.from("strategies").insert(row).select("id").single();
+  if (error) return { ok: false, error: error.message };
+  await recordAudit({ table: "strategies", recordId: data.id, operation: "insert", actor: admin.email, newData: row });
+  revalidatePath("/admin/company/strategy");
+  revalidatePath("/team/strategy");
+  return { ok: true };
+}
+
 export async function updateStrategy(id: string, patch: { title?: string; body_md?: string }): Promise<Result> {
   const admin = await requireAdmin();
   if (patch.title !== undefined && !patch.title.trim()) {

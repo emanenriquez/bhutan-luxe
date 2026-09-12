@@ -4,6 +4,7 @@ import { PageHead } from "@/kernel/ui/PageHead";
 import { parseStrategy } from "@/entities/org/lib/company/strategy";
 import { StrategyView } from "@/entities/org/ui/company/StrategyView";
 import { StrategyEditor } from "./StrategyEditor";
+import { CreateStrategyButton } from "./CreateStrategyButton";
 import type { StrategyRow } from "@/entities/org/lib/company/edges-shared";
 
 export const metadata = { title: "Strategy" };
@@ -30,7 +31,12 @@ export default async function AdminStrategyPage() {
         sub={strategy ? `The plan we're running for ${strategy.year} · shown to the whole team` : "No strategy yet"}
       />
 
-      {!strategy && <div className="admin-empty">No strategy row exists yet. Seed one, then edit it here.</div>}
+      {!strategy && (
+        <div className="admin-empty u-stack u-gap-3">
+          <div>No strategy yet. Start from the template and edit it in place.</div>
+          <CreateStrategyButton />
+        </div>
+      )}
 
       {strategy && parsed && (
         <StrategyEditor id={strategy.id} initialTitle={strategy.title} initialBody={strategy.body_md ?? ""}>
