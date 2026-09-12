@@ -1,7 +1,6 @@
 "use server";
 
 import { Resend } from "resend";
-import { createAdminClient } from "@/lib/supabase/admin";
 
 export interface InquiryPayload {
   name: string;
@@ -51,37 +50,40 @@ export async function submitInquiry(
     return { ok: false, error: "Please choose a tier." };
   }
 
-  // Attempt to save to Supabase — non-blocking; emails always go out.
+  // Save to the CRM (crm/ in this repo, deployed separately). Non-blocking:
+  // emails always go out even if the CRM is unreachable.
   let refCode: string | undefined;
-  try {
-    const supabase = createAdminClient();
-    const { data, error } = await supabase.rpc("submit_inquiry", {
-      p_name: payload.name,
-      p_email: payload.email.toLowerCase(),
-      p_phone: payload.phone || null,
-      p_tier: payload.tier || null,
-      p_travel_window: payload.travelWindow || null,
-      p_group_size: payload.groupSize ? Number(payload.groupSize) : null,
-      p_notes: payload.notes || null,
-      p_type: "inquiry",
-      p_source: "website",
-      p_ref_code: null,
-    });
-
-    if (error) {
-      console.error("[inquiry-rpc-failed]", { error, email: payload.email });
-    } else {
-      const row = Array.isArray(data) ? data[0] : data;
-      refCode = row?.ref_code;
-      console.log("[inquiry-saved]", {
-        inquiry_id: row?.inquiry_id,
-        ref: refCode,
-        tier: payload.tier,
-        email: payload.email,
+  const crmUrl = process.env.CRM_INQUIRY_URL;
+  const crmSecret = process.env.CRM_INQUIRY_SECRET;
+  if (!crmUrl || !crmSecret) {
+    console.error("[inquiry-crm-skipped] CRM_INQUIRY_URL or CRM_INQUIRY_SECRET not set");
+  } else {
+    try {
+      const res = await fetch(crmUrl, {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-inquiry-secret": crmSecret },
+        body: JSON.stringify({
+          name: payload.name,
+          email: payload.email.toLowerCase(),
+          phone: payload.phone || null,
+          tier: payload.tier || null,
+          travelWindow: payload.travelWindow || null,
+          groupSize: payload.groupSize || null,
+          budget: payload.budget || null,
+          theme: payload.theme || null,
+          notes: payload.notes || null,
+        }),
       });
+      if (!res.ok) {
+        console.error("[inquiry-crm-failed]", { status: res.status, email: payload.email });
+      } else {
+        const data = (await res.json()) as { inquiryId?: string };
+        if (data.inquiryId) refCode = `BL-${data.inquiryId.slice(0, 8).toUpperCase()}`;
+        console.log("[inquiry-saved]", { inquiry_id: data.inquiryId, ref: refCode, tier: payload.tier, email: payload.email });
+      }
+    } catch (err) {
+      console.error("[inquiry-crm-exception]", { err, email: payload.email });
     }
-  } catch (err) {
-    console.error("[inquiry-rpc-exception]", { err, email: payload.email });
   }
 
   await notifyConcierge(payload, refCode);
