@@ -52,10 +52,17 @@ export function parseSubsections(body: string): Section[] {
   return out.map((s) => ({ ...s, body: s.body.trim() }));
 }
 
+// Headings that render as statement cards, in the order they appear in the
+// document. A company writes Mission and Vision or Ambition and Purpose; both
+// work, and any of these can be left out.
 export const STATEMENT_ICONS: Record<string, string> = {
+  mission: "◎",
+  vision: "◆",
   ambition: "◆",
   purpose: "◎",
   "value proposition": "✦",
+  positioning: "✦",
+  promise: "✦",
 };
 export const LINE_ICONS = ["◈", "◐", "☷"];
 
@@ -76,12 +83,9 @@ export async function parseStrategy(strategy: StrategyRow): Promise<ParsedStrate
   const sections = strategy.body_md ? parseSections(strategy.body_md) : [];
   const byName = new Map(sections.map((s) => [s.heading.toLowerCase(), s]));
 
-  const statements = ["ambition", "purpose", "value proposition"]
-    .map((key) => {
-      const s = byName.get(key);
-      return s ? { label: s.heading, body: s.body, ico: STATEMENT_ICONS[key] } : null;
-    })
-    .filter(Boolean) as { label: string; body: string; ico: string }[];
+  const statements = sections
+    .filter((s) => s.heading.toLowerCase() in STATEMENT_ICONS)
+    .map((s) => ({ label: s.heading, body: s.body, ico: STATEMENT_ICONS[s.heading.toLowerCase()] }));
 
   const themesSection = byName.get("themes");
   const themes = themesSection ? parseThemes(themesSection.body) : [];
@@ -95,7 +99,7 @@ export async function parseStrategy(strategy: StrategyRow): Promise<ParsedStrate
   // aspirational line on /admin/edges/goals.
   const overview = byName.get("overview")?.body ?? null;
 
-  const known = new Set(["overview", "ambition", "purpose", "value proposition", "themes", "business lines"]);
+  const known = new Set(["overview", "themes", "business lines", ...Object.keys(STATEMENT_ICONS)]);
   const extraSections = sections.filter((s) => !known.has(s.heading.toLowerCase()));
   const extras = await Promise.all(
     extraSections.map(async (s) => ({
