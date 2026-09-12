@@ -23,7 +23,13 @@ export function parseSections(md: string): Section[] {
     }
   }
   if (current) out.push(current);
-  return out.map((s) => ({ ...s, body: s.body.trim() }));
+  return out.map((s) => ({ ...s, body: s.body.trim() })).filter((s) => !isHidden(s.body));
+}
+
+// A section whose first line is the hidden marker is kept in the document but
+// not rendered (see strategy-doc.ts).
+function isHidden(body: string): boolean {
+  return body.split("\n")[0]?.trim() === HIDDEN_MARK;
 }
 
 export function parseThemes(body: string): { year: number; title: string }[] {
@@ -50,7 +56,7 @@ export function parseSubsections(body: string): Section[] {
     }
   }
   if (current) out.push(current);
-  return out.map((s) => ({ ...s, body: s.body.trim() }));
+  return out.map((s) => ({ ...s, body: s.body.trim() })).filter((s) => !isHidden(s.body));
 }
 
 // Headings that render as statement cards, in the order they appear in the
