@@ -5,6 +5,15 @@ import NavMenu from "../components/NavMenu";
 export const metadata: Metadata = {
   title: "Partner Testimonies — Bhutan-Luxe",
   description: "Firsthand accounts from travelers who discovered Bhutan with our on-the-ground partners.",
+  openGraph: {
+    title: "Partner Testimonies — Bhutan-Luxe",
+    description: "Firsthand accounts from travelers who discovered Bhutan with our on-the-ground partners.",
+    url: "https://bhutan-luxe.com/testimonials",
+    siteName: "Bhutan-Luxe",
+    type: "website",
+    images: [{ url: "/og/testimonials.jpg", width: 1200, height: 630, alt: "Partner Testimonies — Bhutan-Luxe" }],
+  },
+  twitter: { card: "summary_large_image", title: "Partner Testimonies — Bhutan-Luxe", description: "Firsthand accounts from travelers who discovered Bhutan with our on-the-ground partners.", images: ["/og/testimonials.jpg"] },
 };
 
 const testimonials = [

@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "Essential Bhutan Itinerary — Tier I | Bhutan-Luxe",
   description:
     "10-day curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. Paro · Thimphu · Punakha · Gangtey.",
+  openGraph: {
+    title: "Essential Bhutan Itinerary — Tier I | Bhutan-Luxe",
+    description: "10-day curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. Paro · Thimphu · Punakha · Gangtey.",
+    url: "https://bhutan-luxe.com/itinerary/discovery",
+    siteName: "Bhutan-Luxe",
+    type: "website",
+    images: [{ url: "/og/itinerary-discovery.jpg", width: 1200, height: 630, alt: "Essential Bhutan Itinerary — Tier I | Bhutan-Luxe" }],
+  },
+  twitter: { card: "summary_large_image", title: "Essential Bhutan Itinerary — Tier I | Bhutan-Luxe", description: "10-day curated introduction to Bhutan's spiritual heritage, dramatic landscapes, and living traditions. Paro · Thimphu · Punakha · Gangtey.", images: ["/og/itinerary-discovery.jpg"] },
 };
 
 const days = [

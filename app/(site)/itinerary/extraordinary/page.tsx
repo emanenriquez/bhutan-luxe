@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "The Extraordinary Path — Tier III | Bhutan-Luxe",
   description:
     "Our most exclusive Bhutan journey — 10 days combining the Kingdom's finest lodges, private spiritual encounters, luxury wilderness retreats, and extraordinary experiences.",
+  openGraph: {
+    title: "The Extraordinary Path — Tier III | Bhutan-Luxe",
+    description: "Our most exclusive Bhutan journey — 10 days combining the Kingdom's finest lodges, private spiritual encounters, luxury wilderness retreats, and extraordinary experiences.",
+    url: "https://bhutan-luxe.com/itinerary/extraordinary",
+    siteName: "Bhutan-Luxe",
+    type: "website",
+    images: [{ url: "/og/itinerary-extraordinary.jpg", width: 1200, height: 630, alt: "The Extraordinary Path — Tier III | Bhutan-Luxe" }],
+  },
+  twitter: { card: "summary_large_image", title: "The Extraordinary Path — Tier III | Bhutan-Luxe", description: "Our most exclusive Bhutan journey — 10 days combining the Kingdom's finest lodges, private spiritual encounters, luxury wilderness retreats, and extraordinary experiences.", images: ["/og/itinerary-extraordinary.jpg"] },
 };
 
 const days = [

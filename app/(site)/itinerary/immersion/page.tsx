@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "Deeper Discovery Itinerary — Tier II | Bhutan-Luxe",
   description:
     "10-day deeper exploration of Bhutan through sacred traditions, luxury wilderness retreats, private spiritual encounters, and meaningful cultural immersion.",
+  openGraph: {
+    title: "Deeper Discovery Itinerary — Tier II | Bhutan-Luxe",
+    description: "10-day deeper exploration of Bhutan through sacred traditions, luxury wilderness retreats, private spiritual encounters, and meaningful cultural immersion.",
+    url: "https://bhutan-luxe.com/itinerary/immersion",
+    siteName: "Bhutan-Luxe",
+    type: "website",
+    images: [{ url: "/og/itinerary-immersion.jpg", width: 1200, height: 630, alt: "Deeper Discovery Itinerary — Tier II | Bhutan-Luxe" }],
+  },
+  twitter: { card: "summary_large_image", title: "Deeper Discovery Itinerary — Tier II | Bhutan-Luxe", description: "10-day deeper exploration of Bhutan through sacred traditions, luxury wilderness retreats, private spiritual encounters, and meaningful cultural immersion.", images: ["/og/itinerary-immersion.jpg"] },
 };
 
 const days = [

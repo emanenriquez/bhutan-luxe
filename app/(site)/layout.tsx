@@ -8,20 +8,13 @@ export const metadata: Metadata = {
     "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.",
   openGraph: {
     title: "Bhutan-Luxe — The Bhutan Few Will Ever See",
-    description:
-      "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.",
-    url: "https://bhutan-luxe.com",
+    description: "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.",
+    url: "https://bhutan-luxe.com/",
     siteName: "Bhutan-Luxe",
-    images: [
-      {
-        url: "/hero-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Bhutan-Luxe — Bespoke Journeys to Bhutan",
-      },
-    ],
     type: "website",
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630, alt: "Bhutan-Luxe — The Bhutan Few Will Ever See" }],
   },
+  twitter: { card: "summary_large_image", title: "Bhutan-Luxe — The Bhutan Few Will Ever See", description: "We craft bespoke journeys that connect guests with the authentic heart of the Bhutan Kingdom.", images: ["/og/home.jpg"] },
 };
 
 export default function RootLayout({
