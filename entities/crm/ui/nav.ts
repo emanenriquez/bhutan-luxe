@@ -6,7 +6,7 @@ import type { NavContribution } from "@/kernel/shell/nav";
 
 export const adminNav: NavContribution[] = [
   { section: "Four Offices", group: "Revenue", subheading: "CRM", order: 10, items: [
-    { label: "Cockpit", href: "/admin/revenue", ico: "◎", enabled: true },
+    // Revenue cockpit hidden from the nav; the page stays at /admin/revenue.
     { label: "Deals", href: "/admin/revenue/deals", ico: "$", enabled: true },
     // Leads (SDR queue) is not used at this volume; inquiries promote straight to deals.
     { label: "Inquiries", href: "/admin/revenue/inquiries", ico: "☰", enabled: true },
