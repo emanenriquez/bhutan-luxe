@@ -20,3 +20,4 @@ Set these in Vercel → Project Settings → Environment Variables. There is no 
 | `SENSITIVE_VIEWERS` | Admin emails allowed to see PII and compensation. |
 | `CRON_SECRET` | Required by every cron route. |
 | `ANTHROPIC_API_KEY` | Optional. Enables the admin assistant and AI meeting summaries. |
+| `VERCEL_API_TOKEN` | Optional. A Vercel API token scoped to the `emanenriquezs-projects` team; lets the Company Dashboard show page views from Web Analytics. Without it the tile links to Vercel. |
