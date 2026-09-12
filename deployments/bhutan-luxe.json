@@ -13,6 +13,7 @@
   "entities": [
     "assistant",
     "billing",
+    "boards",
     "campaigns",
     "client-programs",
     "company-os",
@@ -29,6 +30,7 @@
     "library"
   ],
   "skipCrons": [
+    "boards/board-digest",
     "campaigns/blog-publish",
     "campaigns/letter-agent",
     "campaigns/letter-weekly",

@@ -5,7 +5,7 @@
 import type { NavContribution } from "@/kernel/shell/nav";
 
 export const adminNav: NavContribution[] = [
-  { section: "Operating System", group: "Edges", order: 20, items: [
+  { section: "Four Offices", group: "Operations", subheading: "Workspace", order: 20, items: [
     { label: "Workboard", href: "/admin/edges/workboard", ico: "▤", enabled: true },  // every open card, every board (WB-02)
   ] },
 ];
