@@ -1,0 +1,22 @@
+{
+  "$comment": [
+    "Bhutan Luxe deployment: the CRM and the entities it requires, nothing else.",
+    "Excluded on purpose: site (marketing), hiring/onboarding (Talent), team, time-off, coaching",
+    "(Team Portal), portal (Client Portal), campaigns, retreats, boards, htt, library.",
+    "ideas and client-programs are here only because crm requires org, org requires ideas,",
+    "and crm requires client-programs. They are not in the nav.",
+    "company-os owns the admin login, home and error pages, so it is required in practice."
+  ],
+  "name": "bhutan-luxe",
+  "entities": [
+    "assistant",
+    "billing",
+    "client-programs",
+    "company-os",
+    "contacts",
+    "crm",
+    "finance",
+    "ideas",
+    "org"
+  ]
+}
