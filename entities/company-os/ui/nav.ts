@@ -12,14 +12,14 @@ export const adminNav: NavContribution[] = [
     { label: "Orders", href: "/admin/revenue/orders", ico: "⛁", enabled: true },
     { label: "Invoices", href: "/admin/revenue/invoices", ico: "¤", enabled: true },
   ] },
-  { section: "Workspace", group: "Settings", subheading: "Access", order: 10, items: [
+  { section: "Four Offices", group: "Operations", subheading: "Settings", order: 10, items: [
     { label: "Admins", href: "/admin/settings/admins", ico: "⚿", enabled: true },
     { label: "Assume", href: "/admin/settings/assume", ico: "⧉", enabled: true },
   ] },
-  { section: "Workspace", group: "Settings", subheading: "Configuration", order: 20, items: [
+  { section: "Four Offices", group: "Operations", subheading: "Workspace", order: 10, items: [
     { label: "Surveys", href: "/admin/operations/surveys", ico: "✎", enabled: true },
   ] },
-  { section: "Workspace", group: null, order: 10, items: [
+  { section: "Four Offices", group: "Operations", subheading: "Settings", order: 20, items: [
     { label: "Agents", href: "/admin/settings/agents", ico: "⟳", enabled: true, superAdmin: true },
   ] },
 ];
