@@ -14,7 +14,7 @@ export const adminNav: NavContribution[] = [
   ] },
   { section: "Four Offices", group: "Operations", subheading: "Settings", order: 10, items: [
     { label: "Admins", href: "/admin/settings/admins", ico: "⚿", enabled: true },
-    { label: "Assume", href: "/admin/settings/assume", ico: "⧉", enabled: true },
+    // Assume (act as a portal member) returns with the client portal.
   ] },
   { section: "Four Offices", group: "Operations", subheading: "Workspace", order: 10, items: [
     { label: "Surveys", href: "/admin/operations/surveys", ico: "✎", enabled: true },

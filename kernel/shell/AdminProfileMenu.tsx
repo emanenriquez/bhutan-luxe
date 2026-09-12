@@ -18,6 +18,10 @@ type View = {
   href: string;
   current?: boolean;
 };
+// This deployment has one surface (Admin); the Team hub is not mounted, so the
+// view switcher stays hidden. Flip to true when /team ships.
+const SHOW_VIEW_SWITCHER = false;
+
 const VIEWS: View[] = [
   { key: "admin", label: "Admin", ico: "◈", href: "/admin", current: true },
   { key: "team", label: "Team", ico: "☷", href: "/team" },
@@ -58,6 +62,7 @@ export function AdminProfileMenu({
           <span className="admin-profilemenu-email">{user.email}</span>
         </div>
 
+        {SHOW_VIEW_SWITCHER && (<>
         <div className="admin-profilemenu-label">Switch view</div>
         {VIEWS.map((v) => {
           if (v.current) {
@@ -109,6 +114,7 @@ export function AdminProfileMenu({
             </span>
           );
         })}
+        </>)}
 
         <div className="admin-profilemenu-sep" />
 
