@@ -15,7 +15,6 @@ import type { NavSlot } from "./nav";
 
 const OS = "Operating System";
 const OFFICES = "Four Offices";
-const WORKSPACE = "Workspace";
 
 export const ADMIN_SLOTS: NavSlot[] = [
   { section: OS, group: "Company", collapsible: true },
@@ -25,24 +24,7 @@ export const ADMIN_SLOTS: NavSlot[] = [
   { section: OFFICES, group: "Revenue", subheading: "Commerce" },
   { section: OFFICES, group: "Revenue", subheading: "Marketing" },
 
-  { section: OFFICES, group: "Talent", collapsible: true },
-  { section: OFFICES, group: "Talent", subheading: "People" },
-  { section: OFFICES, group: "Talent", subheading: "ATS", superAdmin: true },
-
   { section: OFFICES, group: "Operations", collapsible: true },
-  { section: OFFICES, group: "Operations", subheading: "Time Off" },
-  { section: OFFICES, group: "Operations", subheading: "Contractors" },
-  { section: OFFICES, group: "Operations", subheading: "Retreats" },
-  { section: OFFICES, group: "Operations", subheading: "Workplace" },
-  { section: OFFICES, group: "Operations", subheading: "Insights" },
-
-  { section: OFFICES, group: "Innovation", collapsible: true },
-  { section: OFFICES, group: "Innovation", subheading: "Ideas" },
-
-  { section: WORKSPACE, group: "Settings", collapsible: true },
-  { section: WORKSPACE, group: "Settings", subheading: "Access" },
-  { section: WORKSPACE, group: "Settings", subheading: "Configuration" },
-  // Agents sits at the top level of Workspace, a peer of Settings rather than
-  // buried under it.
-  { section: WORKSPACE, group: null },
+  { section: OFFICES, group: "Operations", subheading: "Settings" },
+  { section: OFFICES, group: "Operations", subheading: "Workspace" },
 ];
