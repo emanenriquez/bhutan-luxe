@@ -1,5 +1,5 @@
 // The company-os entity's front door — what is left of the original /admin
-// Company OS after the pluggable-entity slices took the rest: operations
+// CRM after the pluggable-entity slices took the rest: operations
 // (contractors, vendors, gallery, analytics), settings, the admin shell and the
 // QuickBooks ledger plumbing. CRM went to entities/crm (RS-04), the events
 // surface to entities/retreats (RS-11), and the company itself — directory, org

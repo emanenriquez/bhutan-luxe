@@ -19,13 +19,13 @@ const RANGES: { key: AnalyticsRange; label: string; sub: string }[] = [
   { key: "all", label: "All time", sub: "since Jul 11, 2026" },
 ];
 
-// Public is the marketing site; internal is Company OS behind a login. They
+// Public is the marketing site; internal is CRM behind a login. They
 // answer different questions, so the page reports one at a time rather than
 // blending them into a single misleading "site traffic" number.
 const SEGMENTS: { key: AnalyticsSegment; label: string; blurb: string }[] = [
-  { key: "all", label: "Everything", blurb: "the marketing site and Company OS combined" },
-  { key: "public", label: "Public site", blurb: "the marketing site only, excluding Company OS" },
-  { key: "internal", label: "Company OS", blurb: "admin, team, and client portal usage" },
+  { key: "all", label: "Everything", blurb: "the marketing site and CRM combined" },
+  { key: "public", label: "Public site", blurb: "the marketing site only, excluding CRM" },
+  { key: "internal", label: "CRM", blurb: "admin, team, and client portal usage" },
 ];
 
 function parseRange(value: string | undefined): AnalyticsRange {
@@ -36,7 +36,7 @@ function parseSegment(value: string | undefined): AnalyticsSegment {
   return value === "public" || value === "internal" ? value : "all";
 }
 
-// Company OS paths are deep and repetitive, so the raw path is a poor label.
+// CRM paths are deep and repetitive, so the raw path is a poor label.
 // "/admin/talent/applications" reads better as "Talent · Applications", which
 // is also how the nav names it.
 function prettyPath(path: string): string {
@@ -62,7 +62,7 @@ export default async function AnalyticsPage(props: { searchParams: Promise<Searc
   const overview = await getAnalyticsOverview(range, segment);
 
   const isInternal = segment === "internal";
-  // Adoption is a people question, so Company OS ranks pages by unique users.
+  // Adoption is a people question, so CRM ranks pages by unique users.
   // The public site is a reach question, so it ranks by page views.
   const pageMetric = isInternal ? "visitors" : "pageviews";
 
@@ -148,7 +148,7 @@ export default async function AnalyticsPage(props: { searchParams: Promise<Searc
               <BarChart
                 data={toBars(overview.topReferrers)}
                 ariaLabel="Top referrers by page views"
-                emptyText={isInternal ? "Company OS is reached directly." : "No referrer data yet."}
+                emptyText={isInternal ? "CRM is reached directly." : "No referrer data yet."}
               />
             </div>
           </div>

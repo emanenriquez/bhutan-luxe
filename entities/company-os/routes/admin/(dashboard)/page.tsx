@@ -236,7 +236,7 @@ export default async function DashboardPage() {
   return (
     <>
       <PageHead
-        eyebrow="Company OS"
+        eyebrow="CRM"
         title="Company Dashboard"
         sub="The company at a glance, one panel per office. Open a cockpit for the full picture."
       />

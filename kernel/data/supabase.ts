@@ -27,7 +27,7 @@ export const supabase = createClient<Database>(
   }
 );
 
-// Query builder scoped to the `company_os` schema — the canonical Company OS
+// Query builder scoped to the `company_os` schema — the canonical CRM
 // (people, inquiries, candidates, applications, documents, bookings, orders).
 // Site forms write here via the service-role key (bypasses RLS). Storage stays
 // on the base `supabase` client (buckets are schema-independent).

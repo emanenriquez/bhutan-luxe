@@ -8,7 +8,7 @@ export default function AdminLoginPage() {
         <div className="admin-auth-brand">
           Bhutan Luxe CRM
         </div>
-        <p className="admin-auth-sub">Sign in to the Company OS.</p>
+        <p className="admin-auth-sub">Sign in to the CRM.</p>
         <Suspense>
           <LoginForm />
         </Suspense>

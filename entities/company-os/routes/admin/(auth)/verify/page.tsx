@@ -49,7 +49,7 @@ export default function AdminVerify() {
     }
     window.history.replaceState(null, "", window.location.pathname);
     // A recovery link exists to set a new password, so land there, not the
-    // Company OS home (the session is established either way).
+    // CRM home (the session is established either way).
     router.replace(otpType === "recovery" ? "/admin/reset-password" : "/admin");
   }
 
@@ -75,7 +75,7 @@ export default function AdminVerify() {
             <p className="admin-auth-sub">
               {otpType === "recovery"
                 ? "You’re one click away from setting a new password."
-                : "You’re one click away from the Company OS."}
+                : "You’re one click away from the CRM."}
             </p>
             <div className="admin-form-actions">
               <button

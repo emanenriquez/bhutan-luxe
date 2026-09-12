@@ -32,7 +32,7 @@ export type AnalyticsRange = "all" | "7d" | "30d" | "90d";
 
 // Which half of the site to report on.
 //
-// "internal" is Company OS: the admin, the team portal, and the client portal,
+// "internal" is CRM: the admin, the team portal, and the client portal,
 // all of which sit behind a login. "public" is everything else, which is the
 // marketing site. Splitting them matters because they answer different
 // questions and mixing them flatters one and buries the other: internal was

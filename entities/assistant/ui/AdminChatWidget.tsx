@@ -109,7 +109,7 @@ export function AdminChatWidget({ canWrite = false }: { canWrite?: boolean }) {
       }}
       emptyState={
         <>
-          <p>Ask anything about the Company OS data:</p>
+          <p>Ask anything about the CRM data:</p>
           <ul>
             <li>How many open deals do we have, and what is their total USD value?</li>
             <li>Which job requisitions are open and how many applicants each?</li>

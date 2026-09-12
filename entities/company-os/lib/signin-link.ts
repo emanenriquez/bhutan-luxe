@@ -1,4 +1,4 @@
-// Server-only. Self-serve magic-link sign-in for the /admin Company OS, from the
+// Server-only. Self-serve magic-link sign-in for the /admin CRM, from the
 // /admin/login page (no session). The admin mirror of lib/team/signin-link.ts:
 // mint the token server-side and email a link to /admin/verify, which only
 // redeems the token_hash on a button press, so corporate mail security
@@ -59,17 +59,17 @@ export async function sendAdminSelfServeSignInLink(rawEmail: string): Promise<vo
 
   await sendTransactionalEmail({
     to: email,
-    subject: "Your Bhutan Luxe CRM Company OS sign-in link",
+    subject: "Your Bhutan Luxe CRM sign-in link",
     html: `
-      <p>Here is your sign-in link for the Bhutan Luxe CRM Company OS:</p>
-      <p style="margin:20px 0;"><a href="${verifyUrl}" style="display:inline-block;background:${PALETTE.dark};color:${PALETTE.white};text-decoration:none;font-weight:600;padding:12px 28px;border-radius:10px;">Sign in to the Company OS</a></p>
+      <p>Here is your sign-in link for the Bhutan Luxe CRM:</p>
+      <p style="margin:20px 0;"><a href="${verifyUrl}" style="display:inline-block;background:${PALETTE.dark};color:${PALETTE.white};text-decoration:none;font-weight:600;padding:12px 28px;border-radius:10px;">Sign in to the CRM</a></p>
       <p style="font-size:13px;color:${PALETTE.greyMid};">The button takes you to a sign-in page. Press "Sign in" there and you're in. If the link expires, you can request a fresh one any time at <a href="${getSiteOrigin()}/admin/login">${getSiteOrigin()}/admin/login</a>.</p>
     `,
     logMeta: { source: "admin_self_serve_link" },
   });
 }
 
-// Self-serve "Forgot password" for the Company OS. Admin sign-in is magic-link
+// Self-serve "Forgot password" for the CRM. Admin sign-in is magic-link
 // first, but admins can also set a password; this sends a recovery link through
 // the same scanner-proof /admin/verify interstitial, and verifying lands the
 // person on /admin/reset-password to choose a new one. It replaces the former
@@ -93,9 +93,9 @@ export async function sendAdminSelfServePasswordReset(rawEmail: string): Promise
 
   await sendTransactionalEmail({
     to: email,
-    subject: "Reset your Bhutan Luxe CRM Company OS password",
+    subject: "Reset your Bhutan Luxe CRM password",
     html: `
-      <p>We received a request to reset the password on your Bhutan Luxe CRM Company OS account.</p>
+      <p>We received a request to reset the password on your Bhutan Luxe CRM account.</p>
       <p style="margin:20px 0;"><a href="${verifyUrl}" style="display:inline-block;background:${PALETTE.dark};color:${PALETTE.white};text-decoration:none;font-weight:600;padding:12px 28px;border-radius:10px;">Choose a new password</a></p>
       <p style="font-size:13px;color:${PALETTE.greyMid};">The button takes you to a page where you can set a new password. If you did not request this, you can safely ignore this email, and you can always sign in without a password at <a href="${getSiteOrigin()}/admin/login">${getSiteOrigin()}/admin/login</a>.</p>
     `,

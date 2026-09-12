@@ -165,7 +165,7 @@ export async function renameConversation({
   return (data ?? []).length > 0;
 }
 
-// Soft-delete a conversation (archived_at), matching Company OS convention.
+// Soft-delete a conversation (archived_at), matching CRM convention.
 export async function archiveConversation({
   id,
   surface,
