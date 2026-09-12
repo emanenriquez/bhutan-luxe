@@ -1,6 +1,7 @@
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 import type { StrategyRow } from "@/entities/org/lib/company/edges-shared";
+import { HIDDEN_MARK } from "@/entities/org/lib/company/strategy-doc";
 
 // Parsing for the designed Strategy view, shared by /team/strategy and
 // /admin/company/strategy. The strategy row's body_md is authored as `##`
