@@ -3,7 +3,6 @@
 import { Resend } from "resend";
 import { getOrCreatePerson } from "@/kernel/data/company-os";
 import { insertInquiries } from "@/entities/crm/lib/writes";
-import { promotePersonToLead } from "@/entities/crm/lib/lifecycle";
 
 export interface InquiryPayload {
   name: string;
@@ -91,10 +90,6 @@ export async function submitInquiry(
       } else {
         refCode = `BL-${data.id.slice(0, 8).toUpperCase()}`;
         console.log("[inquiry-saved]", { inquiry_id: data.id, ref: refCode, tier: payload.tier, email: payload.email });
-        // Inbound inquiry = the speed-to-lead clock starts: the person also
-        // joins the Leads queue, not just the inquiries board.
-        const promoted = await promotePersonToLead(person.id, { reason: "inbound_inquiry" });
-        if (!promoted.ok) console.error("[inquiry-lead-promotion-failed]", { error: promoted.error, email: payload.email });
       }
     }
   } catch (err) {
