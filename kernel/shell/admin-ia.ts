@@ -18,7 +18,6 @@ const OFFICES = "Four Offices";
 const WORKSPACE = "Workspace";
 
 export const ADMIN_SLOTS: NavSlot[] = [
-  { section: OS, group: "Home", collapsible: true },
   { section: OS, group: "Company", collapsible: true },
 
   { section: OFFICES, group: "Revenue", collapsible: true },
