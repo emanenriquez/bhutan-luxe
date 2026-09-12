@@ -1,8 +1,12 @@
-const TEAM_ID = "team_d4UiCMTHURZQlqlxjr8riwQD";
-const PROJECT_ID = "prj_LzyuOkqtS1ttYk56LF1wd0Q6XSo4";
+// The Vercel project whose Web Analytics this reads: bhutan-luxe on the
+// emanenriquezs-projects team. Overridable for a fork or a staging project.
+const TEAM_ID = process.env.VERCEL_TEAM_ID ?? "team_xxuALfrVsyAc6Yyh01pIgTuC";
+const PROJECT_ID = process.env.VERCEL_PROJECT_ID ?? "prj_czmNxa5EXlAYJBIaO2puHHfaVlMy";
+// One token for every Vercel API read (the dashboard uses it too).
+const ANALYTICS_TOKEN = process.env.VERCEL_API_TOKEN ?? process.env.VERCEL_ANALYTICS_TOKEN;
 const API_BASE = "https://api.vercel.com/v1/query/web-analytics";
 // Web Analytics was enabled on 2026-07-11 — there's no data before this date.
-const TRACKING_START = "2026-07-11T00:00:00.000Z";
+const TRACKING_START = "2026-09-12T00:00:00.000Z";
 const TOP_N = 8;
 // Vercel ranks the top-N by VISITORS, but these charts plot pageviews. Asking
 // for a wider slice and re-ranking locally means the rows shown are actually the
@@ -206,7 +210,7 @@ export async function getTrafficCount(
   until: string,
   segment: AnalyticsSegment = "public",
 ): Promise<{ pageviews: number; visitors: number } | null> {
-  const token = process.env.VERCEL_ANALYTICS_TOKEN;
+  const token = ANALYTICS_TOKEN;
   if (!token) return null;
   try {
     const count = await query<CountResponse>("visits/count", { since, until, filter: segmentFilter(segment) }, token);
@@ -220,9 +224,9 @@ export async function getAnalyticsOverview(
   range: AnalyticsRange = "all",
   segment: AnalyticsSegment = "all",
 ): Promise<AnalyticsResult> {
-  const token = process.env.VERCEL_ANALYTICS_TOKEN;
+  const token = ANALYTICS_TOKEN;
   if (!token) {
-    return { error: "VERCEL_ANALYTICS_TOKEN is not set. Add it as a project environment variable to enable this page." };
+    return { error: "VERCEL_API_TOKEN is not set. Add it as a project environment variable to enable this page." };
   }
 
   const sinceStr = sinceFor(range);
