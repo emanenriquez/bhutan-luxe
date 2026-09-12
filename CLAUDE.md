@@ -14,7 +14,7 @@ One Next.js 16 app, one Vercel project (`bhutan-luxe`, team `emanenriquezs-proje
 | `proxy.ts` | Supabase auth gate for `/admin/*`. |
 | `supabase/` | CRM schema as loaded into Supabase project `bhutan-luxe-crm` (ref `nvnuiejkmlvvfrmjlmwg`), schema `company_os`. |
 | `context/` | Brand style guide (docx) and the original site draft. The marketing design system is the site's own `app/(site)/globals.css`. |
-| `ENV.md` | Every environment variable and why. |
+| `ENV.md` | Every environment variable and why. The Company Dashboard page-views tile needs `VERCEL_API_TOKEN` (set on production 2026-09-12). |
 
 ## Conventions
 
