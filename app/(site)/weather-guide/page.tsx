@@ -6,6 +6,15 @@ import NavMenu from "../components/NavMenu";
 export const metadata: Metadata = {
   title: "Preferred Path Dates — Bhutan-Luxe",
   description: "The ideal seasons to experience Bhutan with Bhutan-Luxe.",
+  openGraph: {
+    title: "Preferred Path Dates — Bhutan-Luxe",
+    description: "The ideal seasons to experience Bhutan with Bhutan-Luxe.",
+    url: "https://bhutan-luxe.com/weather-guide",
+    siteName: "Bhutan-Luxe",
+    type: "website",
+    images: [{ url: "/og/weather-guide.jpg", width: 1200, height: 630, alt: "Preferred Path Dates — Bhutan-Luxe" }],
+  },
+  twitter: { card: "summary_large_image", title: "Preferred Path Dates — Bhutan-Luxe", description: "The ideal seasons to experience Bhutan with Bhutan-Luxe.", images: ["/og/weather-guide.jpg"] },
 };
 
 const windows = [
