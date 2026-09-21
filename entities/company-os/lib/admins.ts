@@ -1,6 +1,11 @@
 import { supabase, companyOs } from "@/kernel/data/supabase";
 import { envAllowlist } from "@/kernel/identity/admin-auth";
 import { byFirstName, personName } from "@/kernel/config/people-name";
+import { recordAudit } from "@/kernel/audit/audit";
+import { insertAdmins } from "@/kernel/identity/writes";
+import { getSiteOrigin } from "@/kernel/config/site-origin";
+
+export type GrantResult = { ok: true; message?: string } | { ok: false; error: string };
 
 // Data layer for Settings → Admins. Emails are stored lowercase (unique on
 // lower(email)); every write path must normalize before hitting the table.
@@ -175,4 +180,73 @@ export async function listAdminEmployeeOptions(): Promise<AdminEmployeeOption[]>
 // is re-checked at write time.
 export async function findAdminEmployee(personId: string): Promise<AdminEmployeeOption | null> {
   return (await listAdminEmployeeOptions()).find((o) => o.personId === personId) ?? null;
+}
+
+// ── Granting admin access ───────────────────────────────────────────────────
+//
+// Shared by Settings → Admins ("Add an admin" from the employee list) and the
+// Contacts "Add contact → Admin" flow. Both paths must insert the same
+// company_os.admins row, audit it, and send the same access email, so the logic
+// lives here once rather than in each route's actions.
+
+// Send the right email for the account's state: no login yet → Supabase invite
+// (creates the auth user, link lets them set a password); existing login →
+// password reset. These are generated server-side, so the link comes back via
+// the implicit flow with the session in the URL hash (#access_token=…). Land
+// straight on /admin/reset-password (which reads the hash) — NOT
+// /api/auth/callback, which only handles the PKCE ?code= flow used by the
+// browser-initiated login "forgot password" form.
+export async function sendAccessEmail(email: string): Promise<GrantResult> {
+  const redirectTo = `${getSiteOrigin()}/admin/reset-password`;
+  const existing = await findAuthUser(email);
+  if (existing) {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
+    if (error) return { ok: false, error: `Reset email failed: ${error.message}` };
+    return { ok: true, message: `Password reset link sent to ${email}.` };
+  }
+  const { error } = await supabase.auth.admin.inviteUserByEmail(email, { redirectTo });
+  if (error) return { ok: false, error: `Invite failed: ${error.message}` };
+  return { ok: true, message: `Invite sent to ${email}.` };
+}
+
+// Insert the admins row, audit it, and send the access email. The caller must
+// have ensured the person is eligible (linked people row, unarchived, with an
+// email, a team_members row that is active and not a contractor) and is not
+// already an admin — this does not re-check eligibility.
+export async function grantAdmin(opts: {
+  personId: string;
+  email: string;
+  displayName: string | null;
+  canViewSensitive: boolean;
+  actorEmail: string;
+}): Promise<GrantResult> {
+  const { personId, email, displayName, canViewSensitive, actorEmail } = opts;
+  const { data: row, error } = await insertAdmins({
+    email,
+    display_name: displayName,
+    person_id: personId,
+    can_view_sensitive: canViewSensitive,
+    created_by: actorEmail,
+  })
+    .select("id")
+    .single();
+  if (error) return { ok: false, error: error.message };
+
+  await recordAudit({
+    table: "admins",
+    recordId: row.id,
+    operation: "insert",
+    actor: actorEmail,
+    newData: { email, display_name: displayName, person_id: personId, can_view_sensitive: canViewSensitive },
+  });
+
+  const sent = await sendAccessEmail(email);
+  if (!sent.ok) {
+    // Access is already granted; only the email failed. Surface that precisely.
+    return {
+      ok: true,
+      message: `${email} added, but the email could not be sent (${sent.error}). They can use "Forgot password" on the login page.`,
+    };
+  }
+  return { ok: true, message: `${email} added. ${sent.message}` };
 }

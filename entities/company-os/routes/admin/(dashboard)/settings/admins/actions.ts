@@ -1,12 +1,11 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { companyOs, supabase } from "@/kernel/data/supabase";
+import { companyOs } from "@/kernel/data/supabase";
 import { requireAdmin } from "@/kernel/identity/admin-auth";
 import { recordAudit } from "@/kernel/audit/audit";
-import { findAdminEmployee, findAuthUser } from "@/entities/company-os/lib/admins";
-import { getSiteOrigin } from "@/kernel/config/site-origin";
-import { deleteAdmins, insertAdmins, updateAdmins } from "@/kernel/identity/writes";
+import { findAdminEmployee, grantAdmin, sendAccessEmail } from "@/entities/company-os/lib/admins";
+import { deleteAdmins, updateAdmins } from "@/kernel/identity/writes";
 
 type Result = { ok: true; message?: string } | { ok: false; error: string };
 
@@ -14,31 +13,11 @@ function refresh() {
   revalidatePath("/admin/settings/admins");
 }
 
-// Send the right email for the account's state: no login yet → Supabase invite
-// (creates the auth user, link lets them set a password); existing login →
-// password reset. These are generated server-side, so the link comes back via
-// the implicit flow with the session in the URL hash (#access_token=…). Land
-// straight on /admin/reset-password (which reads the hash) — NOT
-// /api/auth/callback, which only handles the PKCE ?code= flow used by the
-// browser-initiated login "forgot password" form.
-async function sendAccessEmail(email: string): Promise<Result> {
-  const redirectTo = `${getSiteOrigin()}/admin/reset-password`;
-  const existing = await findAuthUser(email);
-  if (existing) {
-    const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
-    if (error) return { ok: false, error: `Reset email failed: ${error.message}` };
-    return { ok: true, message: `Password reset link sent to ${email}.` };
-  }
-  const { error } = await supabase.auth.admin.inviteUserByEmail(email, { redirectTo });
-  if (error) return { ok: false, error: `Invite failed: ${error.message}` };
-  return { ok: true, message: `Invite sent to ${email}.` };
-}
-
 // Admins are granted to employees, never free-typed emails. The client sends
 // the chosen person's id and the level; email + name are re-resolved from the
 // people record server-side, and eligibility (on payroll, not a contractor,
 // not already an admin) is re-checked here — findAdminEmployee returns null
-// otherwise.
+// otherwise. The insert + invite is the shared grantAdmin helper.
 export async function addAdmin(personId: string, canViewSensitive: boolean): Promise<Result> {
   const admin = await requireAdmin();
 
@@ -46,38 +25,16 @@ export async function addAdmin(personId: string, canViewSensitive: boolean): Pro
   if (!employee) {
     return { ok: false, error: "Pick an active employee from the list (contractors and current admins are excluded)." };
   }
-  const email = employee.email; // already normalized lowercase
-  const displayName = employee.name;
 
-  const { data: row, error } = await insertAdmins({
-      email,
-      display_name: displayName,
-      person_id: personId,
-      can_view_sensitive: canViewSensitive,
-      created_by: admin.email,
-    })
-    .select("id")
-    .single();
-  if (error) return { ok: false, error: error.message };
-
-  await recordAudit({
-    table: "admins",
-    recordId: row.id,
-    operation: "insert",
-    actor: admin.email,
-    newData: { email, display_name: displayName, person_id: personId, can_view_sensitive: canViewSensitive },
+  const res = await grantAdmin({
+    personId,
+    email: employee.email, // already normalized lowercase
+    displayName: employee.name,
+    canViewSensitive,
+    actorEmail: admin.email,
   });
-
-  const sent = await sendAccessEmail(email);
   refresh();
-  if (!sent.ok) {
-    // Access is already granted; only the email failed. Surface that precisely.
-    return {
-      ok: true,
-      message: `${email} added, but the email could not be sent (${sent.error}). They can use "Forgot password" on the login page.`,
-    };
-  }
-  return { ok: true, message: `${email} added. ${sent.message}` };
+  return res;
 }
 
 // Edits the display name and the level (Super Admin => can_view_sensitive).

@@ -9,6 +9,7 @@ import { ArchivedToggle } from "@/kernel/ui/ArchivedToggle";
 import { FilterBar } from "@/kernel/ui/FilterBar";
 import { DonutChart } from "@/kernel/ui/charts/DonutChart";
 import { ContactsShelfProvider, ContactShelfRow, type ContactRow } from "./ContactsShelf";
+import { AddContactButton } from "./AddContactButton";
 
 export const metadata = {
   title: "Contacts",
@@ -109,7 +110,10 @@ export default async function ContactsPage(props: { searchParams: Promise<Search
         title="Contacts"
         sub={`${total.toLocaleString()} ${total === 1 ? "person" : "people"}${showArchived ? " · showing archived" : ""} in the Company Database`}
         action={
-          <ArchivedToggle basePath="/admin/contacts" searchParams={searchParams} showArchived={showArchived} />
+          <div className="u-row u-gap-2 u-items-center">
+            <AddContactButton />
+            <ArchivedToggle basePath="/admin/contacts" searchParams={searchParams} showArchived={showArchived} />
+          </div>
         }
       />
       {summary && (
